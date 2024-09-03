@@ -9,7 +9,7 @@
 <!-- the emojis are not set in stone! If you'd like you can remove them entirely or select your own from https://gist.github.com/rxaviers/7360908 you are welcome to -->
 
 ## :loudspeaker: About
-The objective of the workshop is  ...
+The objective of the workshop is teach Cybersecurity Concepts.
 <!-- You can look at other TAP projects if you need a better idea of how to describe your workshops objectives -->
 
 This workshop has participants do ...
