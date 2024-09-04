@@ -53,16 +53,15 @@ You can select from a range of audiences or a single auidience. Examples:
 * Daniel To
 * Brian Ramos
 * Nikki Thao
-* Team Member 4
 
 ## :mortar_board: Advisors
 <!-- name of the two professors overseeing your TAP class -->
-* Dr. John Doe
-* Dr. Jane Doe
+* Dr. Cengiz Gunay
+* Dr. Cindy Robertson
 
 
 ## :page_with_curl: Project Description
-A more thorough description of your project. Not a full walkthrough, but describe the different sections of your project and the gist of what participants will be doing when interacting with it and what they'll learn.
+This project is an exciting cybersecurity hacking game designed specifically for beginners. The game offers an engaging and interactive experience that introduces players to the fundamentals of cybersecurity and internet safety. As players navigate through various challenges, they'll learn about crucial topics like phishing, password encryption, IP configurations, and more. The game is thoughtfully designed to provide hints and clues along the way, guiding players as they solve puzzles and master the basics of cybersecurity in a fun and immersive environment.
 
 ## :memo: Publications
 <!-- team members, then professors/advisors. "Name of Publication", event, month and day, year, Georgia Gwinnett College. -->
