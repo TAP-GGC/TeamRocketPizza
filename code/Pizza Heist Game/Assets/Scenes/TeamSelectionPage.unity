@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 2138372729676182045}
   - component: {fileID: 2736724196688948104}
   m_Layer: 0
-  m_Name: PlayText
+  m_Name: WHText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,10 +662,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 0.70765895, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.79818803, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -693,28 +693,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924257259776211447}
   m_CullTransparentMesh: 1
---- !u!224 &1913285396222664198
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4957006697029353935}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2249061858144520085}
-  - {fileID: 2452419664430958447}
-  - {fileID: 5371363042658544982}
-  m_Father: {fileID: 5201264131498555774}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 107}
-  m_SizeDelta: {x: -246.1503, y: -264.2257}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1970880310600690993
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,11 +732,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 346119795815795784}
-  m_Father: {fileID: 1913285396222664198}
+  m_Father: {fileID: 5201264131498555774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 0}
+  m_AnchoredPosition: {x: -500, y: 107}
   m_SizeDelta: {x: 550, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2332232106616544356
@@ -812,11 +790,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3604786633925677191}
-  m_Father: {fileID: 1913285396222664198}
+  m_Father: {fileID: 5201264131498555774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 0}
+  m_AnchoredPosition: {x: 500, y: 107}
   m_SizeDelta: {x: 550, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2736724196688948104
@@ -865,7 +843,7 @@ GameObject:
   - component: {fileID: 6675936310708714572}
   - component: {fileID: 8472229486331270836}
   m_Layer: 0
-  m_Name: HelpText
+  m_Name: BHText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,7 +861,7 @@ GameObject:
   - component: {fileID: 8587056220098922134}
   - component: {fileID: 8738682672371991255}
   m_Layer: 0
-  m_Name: HelpOutline
+  m_Name: BHOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,9 +963,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1021,23 +999,6 @@ GameObject:
   - component: {fileID: 1039755852352498406}
   m_Layer: 0
   m_Name: ConfirmPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &4957006697029353935
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1913285396222664198}
-  - component: {fileID: 8939278153167964857}
-  m_Layer: 0
-  m_Name: ButtonContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,14 +1051,16 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1913285396222664198}
   - {fileID: 4151132174247747579}
+  - {fileID: 5371363042658544982}
+  - {fileID: 2452419664430958447}
+  - {fileID: 2249061858144520085}
   m_Father: {fileID: 1105417364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.3143921, y: -0.31451416}
+  m_SizeDelta: {x: 8.91, y: 8.9103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5215419303418167869
 CanvasRenderer:
@@ -1128,11 +1091,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 88348404062915948}
-  m_Father: {fileID: 1913285396222664198}
+  m_Father: {fileID: 5201264131498555774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000017166, y: -507}
+  m_AnchoredPosition: {x: -0.000017166, y: -400}
   m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5677673093882422926
@@ -1147,7 +1110,7 @@ GameObject:
   - component: {fileID: 5215419303418167869}
   - component: {fileID: 1506934650299895497}
   m_Layer: 0
-  m_Name: HelpPanel
+  m_Name: BHPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1242,9 +1205,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1315,7 +1278,7 @@ GameObject:
   - component: {fileID: 5169675935364530504}
   - component: {fileID: 827450692970946432}
   m_Layer: 0
-  m_Name: PlayPanel
+  m_Name: WHPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,7 +1296,7 @@ GameObject:
   - component: {fileID: 5310075433746658419}
   - component: {fileID: 80003221994008839}
   m_Layer: 0
-  m_Name: PlayOutline
+  m_Name: WHOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1526,7 +1489,7 @@ GameObject:
   - component: {fileID: 1523235566420848054}
   - component: {fileID: 6396183481990041529}
   m_Layer: 0
-  m_Name: HelpButton
+  m_Name: BHButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1580,14 +1543,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!222 &8939278153167964857
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4957006697029353935}
-  m_CullTransparentMesh: 1
 --- !u!114 &9071704306618267593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,7 +1590,7 @@ GameObject:
   - component: {fileID: 7783025768910049703}
   - component: {fileID: 4163546192246522410}
   m_Layer: 0
-  m_Name: PlayButton
+  m_Name: WHButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
