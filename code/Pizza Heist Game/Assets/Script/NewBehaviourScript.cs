@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
     [SerializeField] private Vector2[] points;
-    public Vector2 currentPosition => 
+    public Vector2 currentPosition;
 
     // Start is called before the first frame update
     void Start()
