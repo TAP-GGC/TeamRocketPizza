@@ -10,7 +10,7 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("Attribute")]
-    [SerializeField] private float projSpeed = 6f;
+    [SerializeField] private float projSpeed = 1f;
 
     private Transform target;
     // Start is called before the first frame update
@@ -34,7 +34,10 @@ public class ProjectileController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+       if (collision.gameObject.CompareTag("Enemy"))
+    {
         Destroy(gameObject);
+    }
     }
     
 }

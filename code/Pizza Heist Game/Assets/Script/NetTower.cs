@@ -1,18 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Pool;
-using UnityEngine.XR;
+using UnityEditor;
 
-public class AntiVirusTower : MonoBehaviour
-{   
-    [Header ("Attribute")]
-    [SerializeField] private float targetRange = 3f;
-    [SerializeField] private float rotationSpeed = 235f;
-    [SerializeField] private float firerate = 1f; //firerate per second
+public class NetTower : MonoBehaviour
+{
+   [Header ("Attribute")]
+    [SerializeField] private float targetRange;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float firerate; //firerate per second
 
     [Header ("Reference")]
     [SerializeField] private Transform rotPoint;
@@ -35,11 +31,22 @@ public class AntiVirusTower : MonoBehaviour
         }else{
             fireCooldown += Time.deltaTime;
             if(fireCooldown >= 1f/firerate){
-                Shoot();
+                StartCoroutine(ShootBurst());
                 fireCooldown = 0f;
+                
             }
         }
     }
+
+    private IEnumerator ShootBurst()
+{
+    for (int i = 0; i < 2; i++)
+    {
+        Shoot();
+        // Wait for a short delay between shots
+        yield return new WaitForSeconds(0.2f); // Adjust the delay as needed
+    }
+}
 
     private void Shoot(){
         GameObject projectileObj = Instantiate(projectilePrefab,firingPoint.position,Quaternion.identity);
@@ -80,3 +87,4 @@ public class AntiVirusTower : MonoBehaviour
         Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
     }
 }
+
