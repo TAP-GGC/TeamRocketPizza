@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,12 +9,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private GameObject currentInstance;
     private Canvas canvas; //grab the component from canvas
     private Camera mainCamera;
-    
-    
+    [SerializeField] private LayerMask layer;
+    private List<Transform> slotTransforms = new List<Transform>();
     void Start()
     {
         canvas = GetComponentInParent<Canvas>();
         mainCamera = Camera.main;
+       GameObject[] slots = GameObject.FindGameObjectsWithTag("Slots");
+        foreach (GameObject slot in slots)
+        {
+            slotTransforms.Add(slot.transform);
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -83,12 +89,40 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             else{
                 Debug.Log("No Instance found.");
             }
+
+            Transform closestSlot = null;
+            float closestDistance = float.MaxValue;
+
+            foreach (Transform slotTransform in slotTransforms)
+            {
+                float distance = Vector2.Distance(slotTransform.position, currentInstance.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestSlot = slotTransform;
+                }
+            }
+
+            // Snap to the closest slot if within range
+            if (closestSlot != null && closestDistance <= 1.3f)
+            {
+                Debug.Log("Snapping to closest slot");
+                currentInstance.transform.position = closestSlot.position;
+            }
+            else{
+                Destroy(currentInstance.gameObject);
+            }
+
+            
+
             // Optionally: Destroy the instantiated object or do something with it
             
         }else{
             Debug.Log("Instance is null");
         }
     }
+
+    
 
     public void OnPointerDown(PointerEventData eventData)
     {
