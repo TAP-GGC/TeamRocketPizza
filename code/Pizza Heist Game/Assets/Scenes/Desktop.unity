@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 489776530}
   - component: {fileID: 489776529}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image Window 600x600
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 909599788}
   - component: {fileID: 909599787}
   m_Layer: 5
-  m_Name: TDIcon
+  m_Name: TD Anti-Virus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,16 +797,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1104973774}
+        m_TargetAssemblyTypeName: NavController, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TDGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &909599788
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 1227928263}
   - component: {fileID: 1227928262}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text - chat room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1702,7 +1702,7 @@ GameObject:
   - component: {fileID: 1761035171}
   - component: {fileID: 1761035170}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text - main.java
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,7 +1827,7 @@ GameObject:
   - component: {fileID: 1825986931}
   - component: {fileID: 1825986930}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image Window 700x700
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
