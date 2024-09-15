@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - NetTower
+  - MalwareTower
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - UI
   - Worm
   - Projectile
-  - 
-  - 
+  - Slots
+  - Turret
   - 
   - 
   - 
