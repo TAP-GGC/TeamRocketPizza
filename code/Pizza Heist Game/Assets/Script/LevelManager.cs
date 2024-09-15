@@ -14,7 +14,6 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         main = this;
-
     }
 
     // Update is called once per frame
