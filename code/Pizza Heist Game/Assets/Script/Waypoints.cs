@@ -11,7 +11,7 @@ public class Waypoints : MonoBehaviour
     [SerializeField]
     Transform[] waypoints;
 
-    int waypointIndex = 1;
+    int waypointIndex = 0;
 
     // Start is called before the first frame update
     void Start()
