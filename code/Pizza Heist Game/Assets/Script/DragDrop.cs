@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
@@ -11,6 +12,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Camera mainCamera;
     [SerializeField] private LayerMask layer;
     private List<Transform> slotTransforms = new List<Transform>();
+
+    private Text defDesc;
+    private Text defName;
     void Start()
     {
         canvas = GetComponentInParent<Canvas>();
@@ -20,6 +24,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             slotTransforms.Add(slot.transform);
         }
+
+        defDesc = GameObject.Find("DefenseDescription").GetComponent<Text>();
+        defName = GameObject.Find("DefenseName").GetComponent<Text>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -126,6 +133,23 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+        
+        GameObject clickedObject = eventData.pointerEnter;
+
+        if(clickedObject != null){
+            if(clickedObject.CompareTag("MalwareTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                defDesc.text = "";
+                defName.text = "";
+                defName.text = "Malware Tower";
+                defDesc.text = "===========\n A defense that only defends against normal malware viruses.";
+            }
+            if(clickedObject.CompareTag("NetTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                defDesc.text = "";
+                defName.text = "";
+                defName.text = "Network Defender";
+                defDesc.text = "===========\n A 2 shot defense, it also has the ability to detects worms and destroy them.";
+            }
+        }
+        
     }
 }
