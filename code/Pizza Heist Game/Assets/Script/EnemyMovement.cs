@@ -12,20 +12,20 @@ public class EnemyMovement : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float speed;
 
-    Transform myTran;
+    //Transform myTran;
     private Transform target;
     private int waypointIndex = 0;
     void Start()
     {
         target = LevelManager.main.waypoints[waypointIndex];
-        myTran = transform;
+        //myTran = transform;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(target.position, myTran.position) < 0.1f){
+        if(Vector2.Distance(target.position, transform.position) < 0.1f){
             waypointIndex++;
             
         }

@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105886489}
   - component: {fileID: 105886488}
+  - component: {fileID: 105886490}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -226,6 +227,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &105886490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105886486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36dd9cd64fb842639dc39568ebe848b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 7820709091398515099, guid: 663463553d1e44be8a6e72265b0bbabd, type: 3}
+  baseEnemyCount: 8
+  spawnInterval: 0.5
+  timeBetweenWaves: 5
+  difficultyScalingFactor: 0.75
 --- !u!1 &270271964
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,37 +537,6 @@ Transform:
   - {fileID: 1809651802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &392291140 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7820709091398515099, guid: 663463553d1e44be8a6e72265b0bbabd, type: 3}
-  m_PrefabInstance: {fileID: 3527022236844451191}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &392291141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392291140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e178d273c2c07fd4ab349d1485f962e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  waypoints:
-  - {fileID: 818530185}
-  - {fileID: 818530185}
-  - {fileID: 1839979154}
-  - {fileID: 1849035505}
-  - {fileID: 519360530}
-  - {fileID: 1564145595}
-  - {fileID: 1853282774}
-  - {fileID: 1147095869}
-  - {fileID: 550975564}
-  - {fileID: 1534249939}
-  - {fileID: 414592321}
-  - {fileID: 1809651802}
 --- !u!1 &414592319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,19 +2466,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7820709091398515099, guid: 663463553d1e44be8a6e72265b0bbabd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 392291141}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 663463553d1e44be8a6e72265b0bbabd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1441636910}
   - {fileID: 105886489}
-  - {fileID: 3527022236844451191}
-  - {fileID: 387267915}
-  - {fileID: 310818239}
+  - {fileID: 1441636910}
   - {fileID: 1220748}
+  - {fileID: 387267915}
+  - {fileID: 3527022236844451191}
+  - {fileID: 310818239}
   - {fileID: 331484045}
