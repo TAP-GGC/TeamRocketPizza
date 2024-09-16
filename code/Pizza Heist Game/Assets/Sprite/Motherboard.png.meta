@@ -1,0 +1,4113 @@
+fileFormatVersion: 2
+guid: d287749bffdb3724a9adc68c4910e14b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Motherboard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5926df20a3b1e4da04004a91ecca0d
+      internalID: -347847850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89529f13cda8e1547b60ae266708716b
+      internalID: -337256527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aa44baf3b9aa74ead56751d94b04ab
+      internalID: -2020346115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a8b4c689191764a8e47e3027023b01
+      internalID: 225633537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d67551668fe7c45834a1189c96a242
+      internalID: -1151636147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3a3574124c92a409524eb8f36c19b7
+      internalID: -1355269685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530eb347a24af534d9ee2ad62b5ea58e
+      internalID: -1945526552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0630e2cbca3b34345988d193b1b6e68b
+      internalID: 503753006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fdb97749e3b7a4689fd258d26159e8
+      internalID: 978780329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_9
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35970a57f622bc4b800b411b9923caf
+      internalID: 1282132415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_10
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a3315e9c46cc640a209a42906fc1f7
+      internalID: 556430892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_11
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b194a0a73631ecd458940927e55c0126
+      internalID: 1546537899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_12
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fcdbc4c9134b44ba4d275b655e780d
+      internalID: -1702727606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_13
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1795b2a933d521a479fd5b64d964bd8b
+      internalID: -1833262416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_14
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76668acbf3192b3498acf4b66eb9d19e
+      internalID: 668857215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_15
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731487f7d39ede542a7853343b9bec12
+      internalID: -1268313825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_16
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c848eb54b0f57bd4488a3c6f278a6a90
+      internalID: 1374175633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_17
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 918
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c116ef0096b3d46a37be9e9ef4dfa8
+      internalID: -1261699710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79a63877a66c15459f9dd2f30002163
+      internalID: 92890654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_19
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a33e1297386f54d8774fccdb85e258
+      internalID: -1435789114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_20
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48f8dfd83ca4ab49af25adc72db1a30
+      internalID: -1781993351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_21
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274db5f60daeac345837138dfd7fbd01
+      internalID: 634155444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_22
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808bf1994e730fe44a219486ab8bef00
+      internalID: 1875644386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_23
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46f5a221fbb0fa4f91c9687273da9f4
+      internalID: -1652224247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_24
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305754cfd3ff3c042af774cb5e3e3656
+      internalID: 1019056981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_25
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cfb519d09f71447afa2021ca4f8178
+      internalID: 301337580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c309f4e6ef322f4a8d68acc1bd8991f
+      internalID: 512807720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_27
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70664627f40e880449c2a795c326f8b1
+      internalID: 1719384044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_28
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54abc12fb7cfaa749ae07fee0279bd41
+      internalID: 1067127679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_29
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb328bc632521a4aa8ff0ab4a6f21f8
+      internalID: -629992340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_30
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc0870bba13e8846bd5c42755299ee7
+      internalID: -1967340135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_31
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b069117fa5b4a15418a0c82575c12597
+      internalID: -188716729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_32
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fcf0015880c3e41aa97e66b4c30bfb
+      internalID: 1557295418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_33
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bec206f74ae0a47a098a5e6331b7a1
+      internalID: 1017253152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_34
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b615478bc2bc54d8678132cd206291
+      internalID: -441784743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_35
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 816
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacda2f94f5f9a24ba45ea31c6eeefc0
+      internalID: -232241050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b61d3d0fcd309345a8b4fc809336f4b
+      internalID: -2085656408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499ed9614de4cbe478ec1739b44326ab
+      internalID: 1433334880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_38
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b4d2d047605a9449db803a675480c7
+      internalID: -435073544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_39
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38416c4c1ea7927488bef66fe8392543
+      internalID: -1518304960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_40
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cc5eea47eb07649bf961e4b614a171
+      internalID: -1948538402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_41
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ac4bf0d22cba7408deeedd9536155d
+      internalID: 1720924544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_42
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0287e8e2445a9874392f89a9a270af26
+      internalID: -1663997199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_43
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57ad298a3937494f8bf11fbbdfd7f20
+      internalID: -1733495223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_44
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d362b25bc54545b4c8c7c0be2250be3f
+      internalID: -921985013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dff49980a4f48f4b96ac8e2baab68f3
+      internalID: 1123258216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_46
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efd540b79888bf469c3e0f986b65ea1
+      internalID: -1178457921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_47
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e25a5159fbd974d897ea97883f450d
+      internalID: -179100641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_48
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d825072e9aa8e43a2309568a0211f7
+      internalID: -1250478589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_49
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8d12bf685945c49bad8608405ff964
+      internalID: 845934520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_50
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2bc64b21c32844586a77000f94b3a4
+      internalID: 397203768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_51
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cef1cfc0db62a408e80bfcf27e64b0
+      internalID: -6934643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_52
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cbc6a588e61484c837cf2e1274f052
+      internalID: 156963939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_53
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 714
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64ee7daaa1a69d408243935cb7cac11
+      internalID: 1478405684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714a0c18e2052d143bc2782e1c7abfe8
+      internalID: -180371573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_55
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b242975b8ede4080a5886137fb530
+      internalID: -1289213635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_56
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f134d68de3f99d7479a3f667964ae5c1
+      internalID: -845768529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_57
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac8427602b80964db343d6c3eb2411c
+      internalID: -950886662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_58
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76790fb805aba9f4c8218c68241b7a9b
+      internalID: 267757381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_59
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524c684a7af78d0459ca3d91cca37a48
+      internalID: 2660243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_60
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c41ae8d1dbb9843bdd9b05e3746a78
+      internalID: 1129020149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_61
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f2021f9c0b30940b8ff7c4eae8c2ae
+      internalID: -1641674350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_62
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df684fbe93a1d4841a6b846cb0fd145b
+      internalID: 184593862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_63
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d630e289adde5342b39d0b4488afe55
+      internalID: -695726926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_64
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a3eb0d3c38d4b419daa9e36fb246d8
+      internalID: -1097806300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_65
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d71807b2f4c66247b4e9dc4fe8c77cf
+      internalID: -1580407074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_66
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9d74bc96441164783503ad7875b1a2
+      internalID: 2044643772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_67
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253fb34bff2ef68449b08bbbe09cee29
+      internalID: -1624106097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_68
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d5be55bd71d234fb5d027e29670f29
+      internalID: 1767451069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_69
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00d44c9479fc94dbb1d9826645e3fc
+      internalID: -979133250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_70
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e149b8e2f622c43ab54691dc78fdee
+      internalID: -449280348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_71
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 612
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a01891642421464ab7ec1798fd22bb0
+      internalID: 505951988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c34a9333bf84542b757ab320abb0ed
+      internalID: 647198717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_73
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6fd21e2299d2d4da9dacc85411e1a8
+      internalID: 229804296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_74
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176dc2aa0fceac0408c7757eda6f3cbe
+      internalID: 997815928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_75
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9e4deeafc928041a63eaf1fe91cc26
+      internalID: 1061139417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_76
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2237b7a7596138419ee797b074b56f8
+      internalID: 1691946262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_77
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134dbe874445b844b987b86e372787a2
+      internalID: 1404679701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_78
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd2be5b064387c4baae92112694a1f0
+      internalID: -1247342909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_79
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf31c8ae5b375846a643354ca67abba
+      internalID: -710311796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_80
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dfdfe2de98ce549969b90f01670ca3
+      internalID: -1188571939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_81
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ca6fcb1c5b65d4b874a3576b4a31b8
+      internalID: 1615610709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_82
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb1227d26334834480caa65715d5dae
+      internalID: -654762176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_83
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0625b5c7dd23065448e580bdef3e0285
+      internalID: 1025762055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_84
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443c5b9cd5be2ae46a2d51eac0f323b5
+      internalID: 1961292827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_85
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34df700ab653af4bba6a67a2149342c
+      internalID: -683957538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_86
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcf65378db4772439775c5c102de1b6
+      internalID: -699848784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_87
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39a0513392f57244999a742611c6b19
+      internalID: 266558898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_88
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baece2008ac31d4da4b70f93c73c9f1
+      internalID: -2071062298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_89
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 510
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39531778f612834cb745f675d68bd5e
+      internalID: 951517896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282e14a8187746e4298c7602e3439c14
+      internalID: -1907225513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_91
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa97de228168cd4bb229dfa0bc1833a
+      internalID: 338901046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_92
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9932fbdbdd3e646a8e5d0ab48a2352
+      internalID: 1422434525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_93
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238d7ee54fc74a0408aa040b1f369cbd
+      internalID: 145005919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_94
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2897426667b54b04fa79c9792cfda711
+      internalID: -1904760203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_95
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b96723942ff37468a294bc9a069037
+      internalID: -864501259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_96
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a586fff17e3eb75438602dbfcad8bf1c
+      internalID: -449301530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_97
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc383bfa36d418c47ab010f3a4a57e9b
+      internalID: -1418492501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_98
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccbdf613d99b93448d9bbca9ea39d1b
+      internalID: 743023573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_99
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39904c8741957942bc9831c8123801b
+      internalID: 1622453695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_100
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c34c7f9c596814cb93cf0f59fafcdf
+      internalID: -1840026335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_101
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe75aa88af5d0144b81a908663b039ef
+      internalID: -1523116032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_102
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbad1329a2e3c74a883d2022a155273
+      internalID: -1754815833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_103
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f146919b0233a9c4ca405cf30b369616
+      internalID: 785712207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_104
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fdf18881bcccf4fac27f29eca95fe5
+      internalID: 785567905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_105
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64483f0965836d94c84f312d6901416f
+      internalID: 749497714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_106
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386d3d6bd4194a1408a79e7d8dc0e9ca
+      internalID: -149446494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_107
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 408
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9692c94a428c245b99a889f7a25431
+      internalID: 1197496772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4faa794a342dad469026c8e0e3af299
+      internalID: 629367501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_109
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f5d61afbded674584e981937935e6b
+      internalID: -1939128572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_110
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5eec7d2e0672c4db403b33df6d614f
+      internalID: -876282377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_111
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036e99bc18cbae246afdcfbf2a713f44
+      internalID: -395317123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_112
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b40242baf793b4ab467a311174433a
+      internalID: 376564395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_113
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf0fc8c3d0aff3429277a98e43a83f0
+      internalID: -112059741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_114
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74033f482f2446a4cade7c13be88fd53
+      internalID: -823504178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_115
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f482ec81c2f509499cf56af31756d11
+      internalID: 490263180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_116
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed60bafabae06b742afbb5aa6dc85ea9
+      internalID: -981244295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_117
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56053e92506acde4ca811299e3813864
+      internalID: 818159782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_118
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff94b176c7cba8849ab9d1787fcd6bf9
+      internalID: 644537877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_119
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892aa9964fec9204f9c57a8c3620f4ae
+      internalID: -766329468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_120
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a8e2e3dca4fd6488eee6fbfe089f15
+      internalID: -918416189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_121
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8b8b0882a6f964381ef67f87e35ff5
+      internalID: 1169411887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_122
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6333d86fabc284cb94600b42d4af25
+      internalID: 85915623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_123
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d396a400a6467c84285caa3fa25b5efe
+      internalID: -122927877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_124
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de3af83588ccaa448dce4268e4dda65
+      internalID: -738431140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_125
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 306
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfd2a093e0989c429eabfdb033b5f4b
+      internalID: -1585002796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26a67dd4895658499656e94a7d25e95
+      internalID: 1878579053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_127
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a52b0021f765646bedf28046f67869
+      internalID: 444464480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_128
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b5226d78d3e2344a60f934a69e5e6e
+      internalID: -1722293518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_129
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bd0b33e765b3c4da2965cc8ab8509e
+      internalID: 927365326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_130
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6b063c300bfc14ea70f7c7ed5a4d1c
+      internalID: 1799486265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_131
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4590c248b6523134faf89b3d65bf4ee9
+      internalID: 1824863626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_132
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d5aa4a016a8924ea561e5f7d5d5cf4
+      internalID: -404058162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_133
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c752f63a7adbef644bb7c4b48a211a80
+      internalID: 370444343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_134
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31ea0e7b38214043990a4e4669a1075
+      internalID: -1762053884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_135
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c62ec6f7af878447a52fe6704c54f5f
+      internalID: 266822986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_136
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58d7fd0a0b47be43945cd2c7ef3a7e6
+      internalID: 1853690302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_137
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c49d477566058d4d988f1ea86ac10d4
+      internalID: -1887452404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_138
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ae381a5f4f81b4c9b2845afb30b350
+      internalID: -1408335598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_139
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e736622d86f87f43a2ec2e780553ac4
+      internalID: -728152805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_140
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49fd4466468751468ee1edbc9a4a3f0
+      internalID: -210433977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_141
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc498efef6034c4388d9326b540293a
+      internalID: -897719346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_142
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f592c93ee2a114b8fc8b38dea4685a
+      internalID: 1442561272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_143
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 204
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513e05e9b0aa7134caea486fa440aa82
+      internalID: -1830212564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f779e112391804199444807bffc690
+      internalID: 2075203184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_145
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43758eeb5dfef2047af97dddc5023f62
+      internalID: 245877390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_146
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7940f81c53eda8d43a563f2b7a017bbf
+      internalID: -1021388602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_147
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7e31f228aa2964ea021cae272b0cc6
+      internalID: 1327038863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_148
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d0e73429e3cc04ba3b325db18d1acd
+      internalID: 1805063574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_149
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5f5799db75fd441881fa22f605483b
+      internalID: 1057971988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_150
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99bac55dff2dcc4f8c60f8402f96adc
+      internalID: -1753678384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_151
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26458c60cde239c4d86c3df8d209b10d
+      internalID: -723406166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_152
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c4ebd9c7e37f9499e3714df073a06c
+      internalID: -379874081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_153
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da7057e8fdcba64b86499d6dac227d0
+      internalID: 505714210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_154
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6b0c9e5b13d38458566dc201a5084e
+      internalID: -1308656141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_155
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0948a3ba5fb854fa145e5952eeafde
+      internalID: -2094532698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_156
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4e3adfb7cccf5428adaf4b3877603d
+      internalID: -1161769034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_157
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aa8b9a822343842af9c41a09b45367
+      internalID: 1433646088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_158
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c974521cc6d1b8c46a2b9aed67d66583
+      internalID: 2039380632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_159
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7271b2cf536847e4eb8dd3a5823acfa8
+      internalID: 439921536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_160
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433c7417707f369489c9d7ae3754fea0
+      internalID: 1691940384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_161
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 102
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215ca554d9c5649428746a537ed17c7c
+      internalID: 2072894738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d50c4f5e63365c458f353ad2ddfae39
+      internalID: 844890534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_163
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c7009ed286822489210b3d04a0a578
+      internalID: 1495833010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_164
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a324cbdd2a8e86042bc36666bdf8ab87
+      internalID: 181565921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_165
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec3b738994279c409b6603df7616c07
+      internalID: 2005926277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_166
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3039cdc393599824baca414ae3aa4113
+      internalID: 1548889463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_167
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2762cc89e92fc4989102dc200ab602
+      internalID: -830283793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_168
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d4442bee2afda46937bdea83765496
+      internalID: -396009849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_169
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adaa277d73bb0d4469d967cb6d72d608
+      internalID: 2042858461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_170
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca6d4ba3d3abcf40abe116070131dfb
+      internalID: 185500717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_171
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e0b25c7e65f7f4895905d824bdf887
+      internalID: -1430584589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_172
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca21a17717b21214ea58e50f685c8d6e
+      internalID: 515881629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_173
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71c2de39ffa69b459f578a290a9802a
+      internalID: -1060790969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_174
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706cbbccf1609704abcf8be37c907485
+      internalID: -1606900687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_175
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14378603c0969564bba0a383536dc9c6
+      internalID: 523929163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_176
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14bf4611942b4a419552c553d8bad59
+      internalID: -318208735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_177
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001bd7581b9772b45976187adef0cc15
+      internalID: 342006565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_178
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153fee7490c52914aa2dc64b7c9c5b7a
+      internalID: -1712516207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Motherboard_179
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c0df39b6917f74eb807e9951bc8b35
+      internalID: 67867880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Motherboard_0: -347847850
+      Motherboard_1: -337256527
+      Motherboard_10: 556430892
+      Motherboard_100: -1840026335
+      Motherboard_101: -1523116032
+      Motherboard_102: -1754815833
+      Motherboard_103: 785712207
+      Motherboard_104: 785567905
+      Motherboard_105: 749497714
+      Motherboard_106: -149446494
+      Motherboard_107: 1197496772
+      Motherboard_108: 629367501
+      Motherboard_109: -1939128572
+      Motherboard_11: 1546537899
+      Motherboard_110: -876282377
+      Motherboard_111: -395317123
+      Motherboard_112: 376564395
+      Motherboard_113: -112059741
+      Motherboard_114: -823504178
+      Motherboard_115: 490263180
+      Motherboard_116: -981244295
+      Motherboard_117: 818159782
+      Motherboard_118: 644537877
+      Motherboard_119: -766329468
+      Motherboard_12: -1702727606
+      Motherboard_120: -918416189
+      Motherboard_121: 1169411887
+      Motherboard_122: 85915623
+      Motherboard_123: -122927877
+      Motherboard_124: -738431140
+      Motherboard_125: -1585002796
+      Motherboard_126: 1878579053
+      Motherboard_127: 444464480
+      Motherboard_128: -1722293518
+      Motherboard_129: 927365326
+      Motherboard_13: -1833262416
+      Motherboard_130: 1799486265
+      Motherboard_131: 1824863626
+      Motherboard_132: -404058162
+      Motherboard_133: 370444343
+      Motherboard_134: -1762053884
+      Motherboard_135: 266822986
+      Motherboard_136: 1853690302
+      Motherboard_137: -1887452404
+      Motherboard_138: -1408335598
+      Motherboard_139: -728152805
+      Motherboard_14: 668857215
+      Motherboard_140: -210433977
+      Motherboard_141: -897719346
+      Motherboard_142: 1442561272
+      Motherboard_143: -1830212564
+      Motherboard_144: 2075203184
+      Motherboard_145: 245877390
+      Motherboard_146: -1021388602
+      Motherboard_147: 1327038863
+      Motherboard_148: 1805063574
+      Motherboard_149: 1057971988
+      Motherboard_15: -1268313825
+      Motherboard_150: -1753678384
+      Motherboard_151: -723406166
+      Motherboard_152: -379874081
+      Motherboard_153: 505714210
+      Motherboard_154: -1308656141
+      Motherboard_155: -2094532698
+      Motherboard_156: -1161769034
+      Motherboard_157: 1433646088
+      Motherboard_158: 2039380632
+      Motherboard_159: 439921536
+      Motherboard_16: 1374175633
+      Motherboard_160: 1691940384
+      Motherboard_161: 2072894738
+      Motherboard_162: 844890534
+      Motherboard_163: 1495833010
+      Motherboard_164: 181565921
+      Motherboard_165: 2005926277
+      Motherboard_166: 1548889463
+      Motherboard_167: -830283793
+      Motherboard_168: -396009849
+      Motherboard_169: 2042858461
+      Motherboard_17: -1261699710
+      Motherboard_170: 185500717
+      Motherboard_171: -1430584589
+      Motherboard_172: 515881629
+      Motherboard_173: -1060790969
+      Motherboard_174: -1606900687
+      Motherboard_175: 523929163
+      Motherboard_176: -318208735
+      Motherboard_177: 342006565
+      Motherboard_178: -1712516207
+      Motherboard_179: 67867880
+      Motherboard_18: 92890654
+      Motherboard_19: -1435789114
+      Motherboard_2: -2020346115
+      Motherboard_20: -1781993351
+      Motherboard_21: 634155444
+      Motherboard_22: 1875644386
+      Motherboard_23: -1652224247
+      Motherboard_24: 1019056981
+      Motherboard_25: 301337580
+      Motherboard_26: 512807720
+      Motherboard_27: 1719384044
+      Motherboard_28: 1067127679
+      Motherboard_29: -629992340
+      Motherboard_3: 225633537
+      Motherboard_30: -1967340135
+      Motherboard_31: -188716729
+      Motherboard_32: 1557295418
+      Motherboard_33: 1017253152
+      Motherboard_34: -441784743
+      Motherboard_35: -232241050
+      Motherboard_36: -2085656408
+      Motherboard_37: 1433334880
+      Motherboard_38: -435073544
+      Motherboard_39: -1518304960
+      Motherboard_4: -1151636147
+      Motherboard_40: -1948538402
+      Motherboard_41: 1720924544
+      Motherboard_42: -1663997199
+      Motherboard_43: -1733495223
+      Motherboard_44: -921985013
+      Motherboard_45: 1123258216
+      Motherboard_46: -1178457921
+      Motherboard_47: -179100641
+      Motherboard_48: -1250478589
+      Motherboard_49: 845934520
+      Motherboard_5: -1355269685
+      Motherboard_50: 397203768
+      Motherboard_51: -6934643
+      Motherboard_52: 156963939
+      Motherboard_53: 1478405684
+      Motherboard_54: -180371573
+      Motherboard_55: -1289213635
+      Motherboard_56: -845768529
+      Motherboard_57: -950886662
+      Motherboard_58: 267757381
+      Motherboard_59: 2660243
+      Motherboard_6: -1945526552
+      Motherboard_60: 1129020149
+      Motherboard_61: -1641674350
+      Motherboard_62: 184593862
+      Motherboard_63: -695726926
+      Motherboard_64: -1097806300
+      Motherboard_65: -1580407074
+      Motherboard_66: 2044643772
+      Motherboard_67: -1624106097
+      Motherboard_68: 1767451069
+      Motherboard_69: -979133250
+      Motherboard_7: 503753006
+      Motherboard_70: -449280348
+      Motherboard_71: 505951988
+      Motherboard_72: 647198717
+      Motherboard_73: 229804296
+      Motherboard_74: 997815928
+      Motherboard_75: 1061139417
+      Motherboard_76: 1691946262
+      Motherboard_77: 1404679701
+      Motherboard_78: -1247342909
+      Motherboard_79: -710311796
+      Motherboard_8: 978780329
+      Motherboard_80: -1188571939
+      Motherboard_81: 1615610709
+      Motherboard_82: -654762176
+      Motherboard_83: 1025762055
+      Motherboard_84: 1961292827
+      Motherboard_85: -683957538
+      Motherboard_86: -699848784
+      Motherboard_87: 266558898
+      Motherboard_88: -2071062298
+      Motherboard_89: 951517896
+      Motherboard_9: 1282132415
+      Motherboard_90: -1907225513
+      Motherboard_91: 338901046
+      Motherboard_92: 1422434525
+      Motherboard_93: 145005919
+      Motherboard_94: -1904760203
+      Motherboard_95: -864501259
+      Motherboard_96: -449301530
+      Motherboard_97: -1418492501
+      Motherboard_98: 743023573
+      Motherboard_99: 1622453695
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

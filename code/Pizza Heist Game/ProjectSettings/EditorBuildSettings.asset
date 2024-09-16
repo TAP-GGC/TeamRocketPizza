@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeamSelectionPage.unity
     guid: 7e589a3c45e68474f8a08326e0131b79
+  - enabled: 1
+    path: Assets/Scenes/Desktop.unity
+    guid: 4a7e488bd53a7d84bbdde11d9e02813b
   m_configObjects: {}
