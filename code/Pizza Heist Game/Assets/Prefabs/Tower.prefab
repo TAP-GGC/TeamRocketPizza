@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fc3a9e337d56c4fba2d5eb5c60f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRange: 2.5
+  targetRange: 2.78
   rotationSpeed: 235
   firerate: 1
   rotPoint: {fileID: 2242516330959408394}

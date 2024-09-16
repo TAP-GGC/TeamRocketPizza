@@ -13,6 +13,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private LayerMask layer;
     private List<Transform> slotTransforms = new List<Transform>();
 
+    private int turretCost;
     private Text defDesc;
     private Text defName;
     void Start()
@@ -37,10 +38,13 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             // Instantiate the prefab in the game world
             currentInstance = Instantiate(prefabInstance);
+            
             if(currentInstance.CompareTag("MalwareTower")){
+                turretCost = 60;
                 currentInstance.GetComponent<MalwareTower>().enabled = false;
             }
             else if(currentInstance.CompareTag("NetTower")){
+                turretCost = 100;
                 currentInstance.GetComponent<NetTower>().enabled = false;
             }
             else{
@@ -111,17 +115,13 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             }
 
             // Snap to the closest slot if within range
-            if (closestSlot != null && closestDistance <= 1.3f)
+            if (closestSlot != null && closestDistance <= 1.3f && LevelManager.main.SpendCoins(turretCost))
             {
-                Debug.Log("Snapping to closest slot");
                 currentInstance.transform.position = closestSlot.position;
             }
             else{
                 Destroy(currentInstance.gameObject);
             }
-
-            
-
             // Optionally: Destroy the instantiated object or do something with it
             
         }else{

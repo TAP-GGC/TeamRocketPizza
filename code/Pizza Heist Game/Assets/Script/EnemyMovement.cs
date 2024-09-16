@@ -13,13 +13,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float speed;
 
     //Transform myTran;
+    private Virus virus;
     private Transform target;
     private int waypointIndex = 0;
     void Start()
     {
         target = LevelManager.main.waypoints[waypointIndex];
         //myTran = transform;
-        
+        virus = GetComponent<Virus>();
     }
 
     // Update is called once per frame
@@ -31,7 +32,9 @@ public class EnemyMovement : MonoBehaviour
         }
 
         if(waypointIndex == LevelManager.main.waypoints.Length){
+            EnemySpawner.enemyDestroy.Invoke();
             Destroy(gameObject);
+            virus.dealDamage();
             return;
         } else {
             target = LevelManager.main.waypoints[waypointIndex];

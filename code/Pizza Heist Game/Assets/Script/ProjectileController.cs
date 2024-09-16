@@ -13,6 +13,7 @@ public class ProjectileController : MonoBehaviour
 
     [Header("Attribute")]
     [SerializeField] private float projSpeed = 1f;
+    [SerializeField] private int projDamage = 1;
 
     private Transform target;
     // Start is called before the first frame update
@@ -50,10 +51,14 @@ public class ProjectileController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-       if (collision.gameObject.CompareTag("Enemy"))
-    {
-        Destroy(gameObject);
-    }
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Virus>().TakeDamage(projDamage);
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag("Wall")){
+            Destroy(gameObject);
+        }
     }
     
 }
