@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 909599788}
   - component: {fileID: 909599787}
   m_Layer: 5
-  m_Name: TD Anti-Virus
+  m_Name: Anti-Virus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,7 +1174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Minigame 2
+  m_Text: E-Mail
 --- !u!222 &1196561010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1456,8 +1456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.824, y: 0}
+  m_SizeDelta: {x: 19.6479, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1668471778
 MonoBehaviour:
@@ -1492,7 +1492,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Log Out
 --- !u!222 &1668471779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 1951341603}
   - component: {fileID: 1951341602}
   m_Layer: 5
-  m_Name: Minigame 2
+  m_Name: Email
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
