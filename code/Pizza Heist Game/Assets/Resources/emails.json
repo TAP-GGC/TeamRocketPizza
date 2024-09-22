@@ -1,0 +1,16 @@
+[
+    {
+        "Subject": { "Text": "Important Notice", "IsPhishing": false },
+        "SenderEmail": { "Text": "admin@bank.com", "IsPhishing": true },
+        "SenderName": { "Text": "Bank Admin", "IsPhishing": false },
+        "Body": { "Text": "Please update your account information...", "IsPhishing": true },
+        "Link": { "Text": "https://maliciouslink.com", "IsPhishing": true }
+    },
+    {
+        "Subject": { "Text": "Your Monthly Statement", "IsPhishing": false },
+        "SenderEmail": { "Text": "billing@provider.com", "IsPhishing": false },
+        "SenderName": { "Text": "Billing Dept.", "IsPhishing": false },
+        "Body": { "Text": "Your statement is ready for download...", "IsPhishing": false },
+        "Link": { "Text": "https://legitlink.com", "IsPhishing": false }
+    }
+]
