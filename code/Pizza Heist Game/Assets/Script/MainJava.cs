@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class MainJava : MonoBehaviour
 {
-
-    [SerializeField] private TextWriter textWriter;
     private Text messageText;
 
     private void Awake() {
@@ -39,6 +37,6 @@ public class MainJava : MonoBehaviour
         "        authorizedAccess(); // Calls the method to start the process\n" +
         "    }\n" +
         "}";
-        textWriter.addWriter(messageText, codeBlock, 0.01f, true);
+        TextWriter.AddWriter_Static(messageText, codeBlock, 0.01f, true, false);
     }
 }

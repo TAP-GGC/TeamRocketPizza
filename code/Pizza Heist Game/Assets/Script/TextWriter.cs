@@ -6,19 +6,48 @@ using UnityEngine.UI;
 public class TextWriter : MonoBehaviour
 {
 
+    private static TextWriter instance;
     private List<TextWriterSingle> textWriterSingleList;
 
     private void Awake() {
+        instance = this;
         textWriterSingleList = new List<TextWriterSingle>();
     }
 
-    public void addWriter(Text uiText, string textToWrite, float timePerCharacter, bool invisibleCharacters) {
-        textWriterSingleList.Add(new TextWriterSingle(uiText, textToWrite, timePerCharacter, invisibleCharacters));
+    public static TextWriterSingle AddWriter_Static(Text uiText, string textToWrite, float timePerCharacter, bool invisibleCharacters, bool removeWriterBeforeAdd) {
+        if (removeWriterBeforeAdd) {
+            instance.RemoveWriter(uiText);
+        }
+        return instance.AddWriter(uiText, textToWrite, timePerCharacter, invisibleCharacters);
+    }
+
+    private TextWriterSingle AddWriter(Text uiText, string textToWrite, float timePerCharacter, bool invisibleCharacters) {
+        TextWriterSingle textWriterSingle = new TextWriterSingle(uiText, textToWrite, timePerCharacter, invisibleCharacters);
+        textWriterSingleList.Add(textWriterSingle);
+        return textWriterSingle;
+    }
+
+    public static void RemoveWriter_Static(Text uiText) {
+        instance.RemoveWriter(uiText);
+    }
+
+    private void RemoveWriter(Text uiText) {
+        for (int i = 0; i < textWriterSingleList.Count; i++) {
+            if (textWriterSingleList[i].GetUIText() == uiText) {
+                textWriterSingleList.RemoveAt(i);
+                i--;
+            }
+        }
     }
 
     private void Update() {
+        Debug.Log(textWriterSingleList.Count);
         for (int i = 0; i <textWriterSingleList.Count; i++) {
-            textWriterSingleList[i].Update();
+            bool destroyInstance = textWriterSingleList[i].Update();
+            if (destroyInstance) {
+                textWriterSingleList.RemoveAt(i);
+                i--;
+            }
         }
     }
 
@@ -42,8 +71,8 @@ public class TextWriter : MonoBehaviour
             characterIndex = 0;
         }
 
-        public void Update() {
-            if(uiText != null) {
+        //Return true on isComplete
+        public bool Update() {
                 timer -= Time.deltaTime;
                 while (timer <= 0f) {
                     //Display next character
@@ -58,10 +87,24 @@ public class TextWriter : MonoBehaviour
                     if (characterIndex >= textToWrite.Length) {
                         //Entire string displayed
                         uiText = null;
-                        return;
+                        return true;
                     }
                 }
-            }
+                return false;
+        }
+
+        public Text GetUIText() {
+            return uiText;
+        }
+
+        public bool IsActive() {
+            return characterIndex < textToWrite.Length;
+        }
+
+        public void WriteAllAndDestroy() {
+            uiText.text = textToWrite;
+            characterIndex = textToWrite.Length;
+            TextWriter.RemoveWriter_Static(uiText);
         }
     }
 }
