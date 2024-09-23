@@ -10,11 +10,11 @@ public class Email
     // You can add more elements like links, attachments, etc.
     public Email(EmailElement subject, EmailElement senderEmail, EmailElement senderName, EmailElement body, EmailElement link)
     {
-        Subject = subject;
-        SenderEmail = senderEmail;
-        SenderName = senderName;
-        Body = body;
-        Link = link;
+        this.Subject = subject;
+        this.SenderEmail = senderEmail;
+        this.SenderName = senderName;
+        this.Body = body;
+        this.Link = link;
     }
     
 }

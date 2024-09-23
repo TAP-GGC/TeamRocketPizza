@@ -1,16 +1,19 @@
-[
-    {
-        "Subject": { "Text": "Important Notice", "IsPhishing": false },
-        "SenderEmail": { "Text": "admin@bank.com", "IsPhishing": true },
-        "SenderName": { "Text": "Bank Admin", "IsPhishing": false },
-        "Body": { "Text": "Please update your account information...", "IsPhishing": true },
-        "Link": { "Text": "https://maliciouslink.com", "IsPhishing": true }
-    },
-    {
-        "Subject": { "Text": "Your Monthly Statement", "IsPhishing": false },
-        "SenderEmail": { "Text": "billing@provider.com", "IsPhishing": false },
-        "SenderName": { "Text": "Billing Dept.", "IsPhishing": false },
-        "Body": { "Text": "Your statement is ready for download...", "IsPhishing": false },
-        "Link": { "Text": "https://legitlink.com", "IsPhishing": false }
-    }
-]
+{
+    "emails": [
+      {
+        "Subject": {"Text": "Subject 1", "IsPhishing": false},
+        "SenderEmail": {"Text": "sender1@example.com", "IsPhishing": false},
+        "SenderName": {"Text": "Sender 1", "IsPhishing": false},
+        "Body": {"Text": "This is the body of email 1", "IsPhishing": false},
+        "Link": {"Text": "http://example.com", "IsPhishing": true}
+      },
+      {
+        "Subject": {"Text": "Subject 2", "IsPhishing": true},
+        "SenderEmail": {"Text": "sender2@example.com", "IsPhishing": true},
+        "SenderName": {"Text": "Sender 2", "IsPhishing": true},
+        "Body": {"Text": "This is the body of email 2", "IsPhishing": true},
+        "Link": {"Text": "http://phishing-link.com", "IsPhishing": true}
+      }
+    ]
+  }
+  
