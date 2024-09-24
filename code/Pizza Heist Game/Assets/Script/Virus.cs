@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class Virus : MonoBehaviour
+public class Virus : MonoBehaviour
 {
 
     [Header("References")]
@@ -32,6 +32,7 @@ public abstract class Virus : MonoBehaviour
             
         }
 
+
         if(waypointIndex == LevelManager.main.waypoints.Length){
             EnemySpawner.enemyDestroy.Invoke();
             Destroy(gameObject);
@@ -40,29 +41,35 @@ public abstract class Virus : MonoBehaviour
         } else {
             target = LevelManager.main.waypoints[waypointIndex];
         }
+
+         
     }
 
-    private void FixedUpdate() {
-        Vector2 direction = (target.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+    void FixedUpdate() {
+        
+            Vector2 direction = (target.position - transform.position).normalized;
+            rb.velocity = direction * speed;
+        
     }
-
     public void TakeDamage(int dmg){
         hitPoints -= dmg;
+    }
+    
+    public bool IsDead(){
         if(hitPoints <= 0){
             EnemySpawner.enemyDestroy.Invoke();
             LevelManager.main.IncreaseCoin(coinsWorth);
             Destroy(gameObject);
-            UseAbilities();
+            return true;
         }
+        return false;
     }
-
     public void dealDamage(){
         LevelManager.main.decreaseHealth(damage);
     }
 
-    public abstract void UseAbilities();
 
+    // public abstract void UseAbilties();
 
     
     
