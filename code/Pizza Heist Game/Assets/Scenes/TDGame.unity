@@ -4334,7 +4334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673744800}
-  - component: {fileID: 1673744799}
   m_Layer: 0
   m_Name: DefenseBuilder
   m_TagString: Untagged
@@ -4342,30 +4341,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1673744799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673744798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe400569093b89e488cb250e00a9d89c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretPrefab:
-  - {fileID: 6978283939447568246, guid: bc513a5c3ba4f9649a72c1eac2caa691, type: 3}
-  - {fileID: 6651617453480871332, guid: dfd54d9a3bde2b54292beb12c31a473a, type: 3}
-  rotPoint: {fileID: 0}
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 0
-  projectilePrefab: {fileID: 0}
-  firingPoint: {fileID: 0}
-  firerate: 0
-  rotationSpeed: 0
-  targetRange: 0
 --- !u!4 &1673744800
 Transform:
   m_ObjectHideFlags: 0
