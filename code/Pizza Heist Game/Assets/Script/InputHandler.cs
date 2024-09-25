@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using System;
 
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] InputField inputField;
     [SerializeField] Text resultText;
+    [SerializeField] Button submitButton;
+    private NavController nav;
+    Boolean login;
+
+    private void Start() 
+    {
+        nav = FindObjectOfType<NavController>();
+    }
 
     public void ValidateInput() {
         string input = inputField.text;
+        login = false;
 
-        // if (input.Length < 4) {
-        //     resultText.text = "Invalid Input";
-        //     resultText.color = Color.red;
-        // } else {
-        //     resultText.text = "Valid Input";
-        //     resultText.color = Color.green;
-        // }
         // Check if the password length is between 6 and 12 characters
-
         if (input.Length < 6 || input.Length > 12)
         {
             resultText.text = "Password must be between 6 and 12 characters.";
@@ -56,7 +58,12 @@ public class InputHandler : MonoBehaviour
         }
 
         // If all checks pass
-        resultText.text = "Password is valid!";
+        //resultText.text = "Account Created.";
+        login = true;
 
+        if (login) 
+        {
+            nav.GoToScene("Desktop");
+        }
     }
 }
