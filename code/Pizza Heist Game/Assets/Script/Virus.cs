@@ -25,7 +25,7 @@ public class Virus : MonoBehaviour
         //myTran = transform;
     }
 
-    void Update()
+    protected void Update()
     {
         if(Vector2.Distance(target.position, transform.position) < 0.1f){
             waypointIndex++;
