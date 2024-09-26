@@ -15,6 +15,8 @@ public class LoadEmailController : MonoBehaviour
 
     public List<Email> emails = new List<Email>();
 
+    Email currentEmail;
+
 
 [System.Serializable]
 public class EmailList
@@ -35,6 +37,50 @@ public EmailList emailList = new EmailList();
     // Update is called once per frame
     void Update()
     {
+
+        //Check if the user has clicked on an email
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Get the mouse position
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            //Check if the user has clicked on an email
+            if (hit.collider != null)
+            {   
+                Debug.Log("Email Clicked");
+                //Get the email object that was clicked
+                GameObject emailObject = hit.collider.gameObject;
+
+                GameObject emailListItem = emailObject.transform.Find("EmailList Item(Clone)").GetComponent<GameObject>();
+
+                //Get the email object's subject and sender
+                Text subjectText = emailObject.transform.Find("Subject").GetComponent<Text>();
+                Text senderText = emailObject.transform.Find("Sender").GetComponent<Text>();
+
+                Debug.Log("Subject: " + subjectText.text + "| Sender: " + senderText.text);
+
+                // //Get the email object's subject and sender
+                // string subject = subjectText.text;
+                // string sender = senderText.text;
+
+                // //Find the email object that was clicked
+                // foreach (Email email in emails)
+                // {
+                //     if (email.Subject.Text == subject && email.SenderEmail.Text == sender)
+                //     {
+                //         currentEmail = email;
+                //         break;
+                //     }
+                // }
+
+                //Open the email
+                //OpenEmail();
+            }
+        }
+
+
+
         
     }
 
