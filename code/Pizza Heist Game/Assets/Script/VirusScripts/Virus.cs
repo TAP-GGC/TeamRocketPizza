@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Virus : MonoBehaviour
+public abstract class Virus : MonoBehaviour
 {
 
     [Header("References")]
@@ -25,7 +25,7 @@ public class Virus : MonoBehaviour
         //myTran = transform;
     }
 
-    void Update()
+    protected void Update()
     {
         if(Vector2.Distance(target.position, transform.position) < 0.1f){
             waypointIndex++;
@@ -45,7 +45,7 @@ public class Virus : MonoBehaviour
          
     }
 
-    void FixedUpdate() {
+    protected void FixedUpdate() {
         
             Vector2 direction = (target.position - transform.position).normalized;
             rb.velocity = direction * speed;
@@ -53,6 +53,7 @@ public class Virus : MonoBehaviour
     }
     public void TakeDamage(int dmg){
         hitPoints -= dmg;
+        IsDead();
     }
     
     public bool IsDead(){
@@ -69,7 +70,7 @@ public class Virus : MonoBehaviour
     }
 
 
-    // public abstract void UseAbilties();
+    public abstract void UseAbilties();
 
     
     
