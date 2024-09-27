@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class EmailTabGroup : MonoBehaviour
 {
 
     public List<EmailTabButton> tabButtons;
+    public Color tabIdle;
+    public Color tabHover;
+    public Color tabActive;
+    public EmailTabButton selectedTab;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +35,7 @@ public class EmailTabGroup : MonoBehaviour
         ResetTabs();
         if (button.background != null)
         {
-            button.background.color = button.hoverColor;
+            button.background.color = tabHover;
         }
     }
 
@@ -43,10 +48,10 @@ public class EmailTabGroup : MonoBehaviour
     {
         if (button.background != null)
         {
-            button.background.color = button.activeColor;
+            ResetTabs();
+            button.background.color = tabActive;
         }
-        ResetTabs();
-        button.background.color = button.activeColor;
+        
     }
 
     public void ResetTabs()
@@ -55,10 +60,12 @@ public class EmailTabGroup : MonoBehaviour
         {
             if (button.background != null)
             {
-                button.background.color = button.inactiveColor;
+                button.background.color = tabIdle;
             }
         }
     }
+
+
 
     // Update is called once per frame
     void Update()

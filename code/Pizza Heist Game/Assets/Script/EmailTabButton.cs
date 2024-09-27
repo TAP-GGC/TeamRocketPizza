@@ -4,20 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Image))]
+
 public class EmailTabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
     public EmailTabGroup tabGroup;
     public Image background;
 
-    public Color activeColor;
-    public Color hoverColor;
 
     // Start is called before the first frame update
     void Start()
     {
         background = GetComponent<Image>();
         tabGroup.Subscribe(this);
+
+        //Get game objected called "Content" and set it to tabGroup
+
+        tabGroup = transform.parent.parent.GetComponent<EmailTabGroup>();
+        
+
+
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
