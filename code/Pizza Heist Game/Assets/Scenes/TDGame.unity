@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!212 &88879982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1083,6 +1084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12aaa70b1dcc88c4c937b11bee1ccc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabInstance: {fileID: 6978283939447568246, guid: bc513a5c3ba4f9649a72c1eac2caa691, type: 3}
+  mapPrefab: {fileID: 1313277579247272148, guid: dcd046d23e46baf4d81a896084a31d25, type: 3}
 --- !u!225 &315029110
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1107,6 +1110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12aaa70b1dcc88c4c937b11bee1ccc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabInstance: {fileID: 6978283939447568246, guid: bc513a5c3ba4f9649a72c1eac2caa691, type: 3}
+  mapPrefab: {fileID: 0}
 --- !u!1 &331484041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,6 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!212 &1022022417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2712,6 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!212 &1074493969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2889,6 +2896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!212 &1166391865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3634,6 +3642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!1 &1409701644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,6 +3689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!212 &1409701647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3822,6 +3832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12aaa70b1dcc88c4c937b11bee1ccc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabInstance: {fileID: 6651617453480871332, guid: dfd54d9a3bde2b54292beb12c31a473a, type: 3}
+  mapPrefab: {fileID: 1313277579247272148, guid: dcd046d23e46baf4d81a896084a31d25, type: 3}
 --- !u!225 &1427690470
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3846,6 +3858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12aaa70b1dcc88c4c937b11bee1ccc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabInstance: {fileID: 6651617453480871332, guid: dfd54d9a3bde2b54292beb12c31a473a, type: 3}
+  mapPrefab: {fileID: 0}
 --- !u!1 &1439356169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,6 +3910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b4863d1588f9438d478a973a1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trans: {fileID: 0}
 --- !u!1 &1441636907
 GameObject:
   m_ObjectHideFlags: 0
