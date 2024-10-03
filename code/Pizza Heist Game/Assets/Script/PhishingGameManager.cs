@@ -24,17 +24,11 @@ public class PhishingGameController : MonoBehaviour
     public EmailList emailList = new EmailList();
     public List<Email> emails = new List<Email>();
 
+    public GameObject[] emailListObjects;
+    public GameObject[] emailDetailsObjects;
 
-    GameObject[] emailDetailsObjects;
 
 
-
-    // UI Elements for the email
-    public Button subjectButton;
-    public Button senderNameButton;
-    public Button senderEmailButton;
-    public Button bodyButton;
-    public Button linkButton;
 
     // Reference to the current email being viewed
     private Email currentEmail;
@@ -45,7 +39,16 @@ public class PhishingGameController : MonoBehaviour
         LoadEmailsFromJson();
         LoadEmailObjectstoList();
 
+       emailListObjects = GameObject.FindGameObjectsWithTag("Email Inbox Item");
         emailDetailsObjects = GameObject.FindGameObjectsWithTag("Email Details");
+
+        addListenersToGameObjects();
+
+        //Hide all email details objects
+        foreach (GameObject emailDetailsObject in emailDetailsObjects)
+        {
+            emailDetailsObject.SetActive(false);
+        }
 
 
         // Assign click events to the buttons
@@ -95,21 +98,7 @@ public class PhishingGameController : MonoBehaviour
         feedbackPanel.SetActive(true);
     }
 
-    // Call this method to load a new email (for example, when an email is clicked)
-    public void LoadEmail(Email email)
-    {
-        currentEmail = email;
-
-        // Set the UI text for the email (you could have separate UI Text objects for each element)
-        subjectButton.GetComponentInChildren<Text>().text = email.Subject.Text;
-        senderNameButton.GetComponentInChildren<Text>().text = email.SenderName.Text;
-        senderEmailButton.GetComponentInChildren<Text>().text = email.SenderEmail.Text;
-        bodyButton.GetComponentInChildren<Text>().text = email.Body.Text;
-        linkButton.GetComponentInChildren<Text>().text = email.Link.Text;
-
-        // Hide feedback when a new email is loaded
-        feedbackPanel.SetActive(false);
-    }
+    
 
 
     void LoadEmailsFromJson()
@@ -145,24 +134,27 @@ public class PhishingGameController : MonoBehaviour
         {
             GameObject emailObject = Instantiate(emailObjectPrefab, emailListPane.transform);
 
-            // string emailSubject = email.Subject.Text;
-            // string emailSender = email.SenderEmail.Text;
+            //Set the email object's email
+            InboxItemController inboxItemController = emailObject.GetComponent<InboxItemController>();
+            inboxItemController.SetEmail(email);
 
-            // Get the TextMeshProUGUI components within the prefab
-            // TextMeshProUGUI subjectText = emailObject.transform.Find("Subject").GetComponent<TextMeshProUGUI>();
-            // TextMeshProUGUI senderText = emailObject.transform.Find("Sender").GetComponent<TextMeshProUGUI>();
 
+            // Set the subject and sender text from the Email object
             Text senderText = emailObject.transform.Find("Sender").GetComponent<Text>();
             Text subjectText = emailObject.transform.Find("Subject").GetComponent<Text>();
+
+
 
             // Set the subject and sender text from the Email object
             if (subjectText != null)
             {
-                subjectText.text = email.Subject.Text;
+                subjectText.text = email.Subject;
+
             }
             if (senderText != null)
             {
-                senderText.text = email.SenderEmail.Text;
+                senderText.text = email.SenderEmail;
+
             }
 
 
@@ -181,17 +173,47 @@ public class PhishingGameController : MonoBehaviour
             
 
             //Set the email details
-            senderNameText.text = email.SenderName.Text;
-            senderEmailText.text = email.SenderEmail.Text;
-            subjectTextDetails.text = email.Subject.Text;
-            emailContentText.text = email.Body.Text;
+            senderNameText.text = email.SenderName;
+            senderEmailText.text = email.SenderEmail;
+            subjectTextDetails.text = email.Subject;
+            emailContentText.text = email.Body;
 
-            emailDetailsObject.SetActive(false);
+            //emailDetailsObject.SetActive(false);
             
 
             //Set the email details
             
         }
+
+        
+    }
+
+
+    public void addListenersToGameObjects()
+    {
+        foreach (GameObject emailObject in emailListObjects)
+        {
+            Button emailButton = emailObject.GetComponent<Button>();
+            //emailButton.onClick.AddListener(() => setCurrentEmail((emailObject.GetComponent<InboxItemController>().GetEmail())));
+            emailButton.onClick.AddListener(() => ShowEmailDetails(emails.IndexOf(emailObject.GetComponent<InboxItemController>().GetEmail())));
+        }
+    }
+
+    public void ShowEmailDetails(int emailIndex)
+    {   
+        //Set All open Email Details Objects to False
+        foreach (GameObject emailDetailsObject in emailDetailsObjects)
+        {
+            emailDetailsObject.SetActive(false);
+        }
+        
+        //Open the Email Details Object with the emailIndex
+        emailDetailsObjects[emailIndex].SetActive(true);
+    }
+
+    void setCurrentEmail(Email email)
+    {
+        currentEmail = email;
     }
 
 

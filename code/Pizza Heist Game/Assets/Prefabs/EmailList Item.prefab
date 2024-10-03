@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3691204297850604670}
   - component: {fileID: 6862926879924709289}
   - component: {fileID: 3528248217859409235}
+  - component: {fileID: 4142325352068924119}
   m_Layer: 5
   m_Name: EmailList Item
   m_TagString: Email Inbox Item
@@ -137,6 +138,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &4142325352068924119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662264876632894695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5db4f6c094b470f85e1bf611c622da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  email:
+    Subject: 
+    SenderEmail: 
+    SenderName: 
+    Body: 
+    IsPhishing: 0
+    phishingExplanation: 
 --- !u!1 &2875096459732125317
 GameObject:
   m_ObjectHideFlags: 0

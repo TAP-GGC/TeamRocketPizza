@@ -1385,11 +1385,6 @@ MonoBehaviour:
   emailList:
     emails: []
   emails: []
-  subjectButton: {fileID: 0}
-  senderNameButton: {fileID: 0}
-  senderEmailButton: {fileID: 0}
-  bodyButton: {fileID: 0}
-  linkButton: {fileID: 0}
 --- !u!4 &1916280487
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,6 +1483,27 @@ MonoBehaviour:
   emailObjectPrefab: {fileID: 662264876632894695, guid: 8b63a1c5b45ab864e97027891e636db3, type: 3}
   emailListPane: {fileID: 1638591655}
   emails: []
+  currentEmail:
+    Subject:
+      Text: 
+      IsPhishing: 0
+      elementMessage: 
+    SenderEmail:
+      Text: 
+      IsPhishing: 0
+      elementMessage: 
+    SenderName:
+      Text: 
+      IsPhishing: 0
+      elementMessage: 
+    Body:
+      Text: 
+      IsPhishing: 0
+      elementMessage: 
+    Link:
+      Text: 
+      IsPhishing: 0
+      elementMessage: 
   emailList:
     emails: []
 --- !u!1660057539 &9223372036854775807
