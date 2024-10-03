@@ -9,6 +9,7 @@ TagManager:
   - MalwareTower
   - NetTower
   - Wall
+  - Turret
   layers:
   - Default
   - TransparentFX
