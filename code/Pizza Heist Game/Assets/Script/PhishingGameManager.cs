@@ -25,6 +25,9 @@ public class PhishingGameController : MonoBehaviour
     public List<Email> emails = new List<Email>();
 
 
+    GameObject[] emailDetailsObjects;
+
+
 
     // UI Elements for the email
     public Button subjectButton;
@@ -42,17 +45,37 @@ public class PhishingGameController : MonoBehaviour
         LoadEmailsFromJson();
         LoadEmailObjectstoList();
 
+        emailDetailsObjects = GameObject.FindGameObjectsWithTag("Email Details");
+
 
         // Assign click events to the buttons
-        subjectButton.onClick.AddListener(() => CheckPhishing(currentEmail.Subject));
-        senderNameButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderName));
-        senderEmailButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderEmail));
-        bodyButton.onClick.AddListener(() => CheckPhishing(currentEmail.Body));
-        linkButton.onClick.AddListener(() => CheckPhishing(currentEmail.Link));
+        // subjectButton.onClick.AddListener(() => CheckPhishing(currentEmail.Subject));
+        // senderNameButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderName));
+        // senderEmailButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderEmail));
+        // bodyButton.onClick.AddListener(() => CheckPhishing(currentEmail.Body));
+        // linkButton.onClick.AddListener(() => CheckPhishing(currentEmail.Link));
 
         // Hide the feedback panel initially
-        feedbackPanel.SetActive(false);
+        //feedbackPanel.SetActive(false);
     }
+
+    void Update()
+    {
+        // Check if the user pressed the Escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Hide the feedback panel
+            feedbackPanel.SetActive(false);
+        }
+
+        
+    }
+
+
+
+
+
+
 
     // Method to check if an element is phishing
     void CheckPhishing(EmailElement element)
@@ -146,7 +169,25 @@ public class PhishingGameController : MonoBehaviour
 
             //Add Email Detail Panes
             GameObject emailDetailsObject = Instantiate(emailDetailsPrefab, emailDetailsPane.transform);
+            
+
+            //Load the email details to the screen
+            Text senderNameText = emailDetailsObject.transform.Find("Sender's Name Button").Find("ED Sender").GetComponent<Text>();
+            Text senderEmailText = emailDetailsObject.transform.Find("Email Button").Find("ED Email").GetComponent<Text>();
+            Text subjectTextDetails = emailDetailsObject.transform.Find("Subject Button").Find("ED Subject").GetComponent<Text>();
+            Text emailContentText = emailDetailsObject.transform.Find("Body Button").Find("ED Body").GetComponent<Text>();
+
+
+            
+
+            //Set the email details
+            senderNameText.text = email.SenderName.Text;
+            senderEmailText.text = email.SenderEmail.Text;
+            subjectTextDetails.text = email.Subject.Text;
+            emailContentText.text = email.Body.Text;
+
             emailDetailsObject.SetActive(false);
+            
 
             //Set the email details
             

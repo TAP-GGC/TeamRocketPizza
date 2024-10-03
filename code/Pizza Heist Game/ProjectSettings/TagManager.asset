@@ -9,6 +9,8 @@ TagManager:
   - MalwareTower
   - NetTower
   - Wall
+  - Email Details
+  - Email Inbox Item
   layers:
   - Default
   - TransparentFX
