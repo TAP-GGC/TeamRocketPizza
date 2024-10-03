@@ -8,25 +8,20 @@ using UnityEngine.UI;
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     [SerializeField] private GameObject prefabInstance;
-    private TilemapRenderer map;
+    [SerializeField] private GameObject prefabCollider;
+    private Tilemap map;
     private GameObject currentInstance;
     private Canvas canvas; //grab the component from canvas
     private Camera mainCamera;
-    private List<Transform> slotTransforms = new List<Transform>();
-
     private int turretCost;
     private Text defDesc;
     private Text defName;
     void Start()
     {
         canvas = GetComponentInParent<Canvas>();
+
         mainCamera = Camera.main;
-        // GameObject[] slots = GameObject.FindGameObjectsWithTag("Slots");
-        // foreach (GameObject slot in slots)
-        // {
-        //     slotTransforms.Add(slot.transform);
-        // }
-        map = GameObject.Find("Background").GetComponent<TilemapRenderer>();
+        map = GameObject.Find("Background").GetComponent<Tilemap>();
         defDesc = GameObject.Find("DefenseDescription").GetComponent<Text>();
         defName = GameObject.Find("DefenseName").GetComponent<Text>();
     }
@@ -62,17 +57,13 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             currentInstance.transform.position = worldPosition;
         }
     }
+    
     public void OnDrag(PointerEventData eventData)
     {
-        // Debug.Log("OnDrag");
+        Debug.Log("OnDrag");
 
         if (currentInstance != null)
         {
-
-            
-            // else{
-            //     Debug.Log("script didnt enable");
-            // }
             Vector3 worldPosition;
             //set the pointer to the world and not canvas
             RectTransformUtility.ScreenPointToWorldPointInRectangle(
@@ -91,6 +82,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         
         if (currentInstance != null)
         {
+            
             if(currentInstance.CompareTag("MalwareTower")){
                 currentInstance.GetComponent<MalwareTower>().enabled = true;
             }
@@ -100,37 +92,25 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             else{
                 Debug.Log("No Instance found.");
             }
-
-            // Transform closestSlot = null;
-            // float closestDistance = float.MaxValue;
-
-            // foreach (Transform slotTransform in slotTransforms)
-            // {
-            //     float distance = Vector2.Distance(slotTransform.position, currentInstance.transform.position);
-            //     if (distance < closestDistance)
-            //     {
-            //         closestDistance = distance;
-            //         closestSlot = slotTransform;
-            //     }
-            // }
-            RaycastHit hitInfo;
-
-            // Snap to the closest slot if within range
-            if (Physics.Linecast(currentInstance.transform.position, map.transform.position, out hitInfo) && LevelManager.main.SpendCoins(turretCost))
-            {
-                currentInstance.transform.position = transform.position;
-            }
-            else{
-                Destroy(currentInstance.gameObject);
-            }
-            // Optionally: Destroy the instantiated object or do something with it
+            Vector3Int cellPosition = map.WorldToCell(currentInstance.transform.position);
             
-        }else{
+            // Snap to the closest slot if within range
+            if (map.HasTile(cellPosition) && LevelManager.main.SpendCoins(turretCost))
+            {
+                if(prefabCollider == null){
+                    currentInstance.transform.position = map.GetCellCenterWorld(cellPosition);
+                }
+                
+            }
+            else
+            {
+                Destroy(currentInstance);
+            }
+        }
+        else{
             Debug.Log("Instance is null");
         }
     }
-
-    
 
     public void OnPointerDown(PointerEventData eventData)
     {
