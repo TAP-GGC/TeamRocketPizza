@@ -11,6 +11,8 @@ TagManager:
   - Wall
   - Email Details
   - Email Inbox Item
+  - NotPhishing
+  - IsPhishing
   layers:
   - Default
   - TransparentFX

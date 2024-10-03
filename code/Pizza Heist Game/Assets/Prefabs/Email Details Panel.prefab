@@ -213,8 +213,8 @@ GameObject:
   - component: {fileID: 1714730984272495890}
   - component: {fileID: 2671015445887132919}
   m_Layer: 5
-  m_Name: PlaceOrderButton
-  m_TagString: Untagged
+  m_Name: NotPhishingButton
+  m_TagString: NotPhishing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Report Spam
+  m_Text: Report Phishing
 --- !u!1 &3158654814313746674
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 9150491073234699616}
   - component: {fileID: 4357723013427651392}
   m_Layer: 5
-  m_Name: PlaceOrder
+  m_Name: NotPhishing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ACCept '
+  m_Text: Not Phishing
 --- !u!1 &3987924153953524076
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 5984239521398788105}
   m_Layer: 5
   m_Name: PhishingButton
-  m_TagString: Untagged
+  m_TagString: IsPhishing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1127,6 +1127,7 @@ GameObject:
   - component: {fileID: 1154968189252349528}
   - component: {fileID: 7279777363410237481}
   - component: {fileID: 538677347221900136}
+  - component: {fileID: 2436874252028592508}
   m_Layer: 5
   m_Name: Email Details Panel
   m_TagString: Email Details
@@ -1200,6 +1201,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2436874252028592508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681734869054208923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b86c43c5f15247178e6aa628db6d162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8639835304739411375
 GameObject:
   m_ObjectHideFlags: 0

@@ -1385,6 +1385,8 @@ MonoBehaviour:
   emailList:
     emails: []
   emails: []
+  emailListObjects: []
+  emailDetailsObjects: []
 --- !u!4 &1916280487
 Transform:
   m_ObjectHideFlags: 0

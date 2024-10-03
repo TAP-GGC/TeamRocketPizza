@@ -19,19 +19,14 @@ public class PhishingGameController : MonoBehaviour
     {
         public List<Email> emails;
     }
-    
-
     public EmailList emailList = new EmailList();
     public List<Email> emails = new List<Email>();
-
     public GameObject[] emailListObjects;
     public GameObject[] emailDetailsObjects;
 
-
-
-
     // Reference to the current email being viewed
     private Email currentEmail;
+    
 
     void Start()
     {
@@ -39,7 +34,7 @@ public class PhishingGameController : MonoBehaviour
         LoadEmailsFromJson();
         LoadEmailObjectstoList();
 
-       emailListObjects = GameObject.FindGameObjectsWithTag("Email Inbox Item");
+        emailListObjects = GameObject.FindGameObjectsWithTag("Email Inbox Item");
         emailDetailsObjects = GameObject.FindGameObjectsWithTag("Email Details");
 
         addListenersToGameObjects();
@@ -50,26 +45,12 @@ public class PhishingGameController : MonoBehaviour
             emailDetailsObject.SetActive(false);
         }
 
-
-        // Assign click events to the buttons
-        // subjectButton.onClick.AddListener(() => CheckPhishing(currentEmail.Subject));
-        // senderNameButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderName));
-        // senderEmailButton.onClick.AddListener(() => CheckPhishing(currentEmail.SenderEmail));
-        // bodyButton.onClick.AddListener(() => CheckPhishing(currentEmail.Body));
-        // linkButton.onClick.AddListener(() => CheckPhishing(currentEmail.Link));
-
-        // Hide the feedback panel initially
-        //feedbackPanel.SetActive(false);
     }
 
     void Update()
     {
-        // Check if the user pressed the Escape key
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Hide the feedback panel
-            feedbackPanel.SetActive(false);
-        }
+        // Get Active Email Details Object
+        
 
         
     }
@@ -119,9 +100,6 @@ public class PhishingGameController : MonoBehaviour
             Debug.LogError("Failed to load emails from JSON");
         }
 
-
-
-
     }
 
 
@@ -157,10 +135,11 @@ public class PhishingGameController : MonoBehaviour
 
             }
 
-
-
             //Add Email Detail Panes
             GameObject emailDetailsObject = Instantiate(emailDetailsPrefab, emailDetailsPane.transform);
+
+            EmailDetailPaneController emailDetailPaneController = emailDetailsObject.GetComponent<EmailDetailPaneController>();
+            emailDetailPaneController.SetEmail(email);
             
 
             //Load the email details to the screen
@@ -177,17 +156,10 @@ public class PhishingGameController : MonoBehaviour
             senderEmailText.text = email.SenderEmail;
             subjectTextDetails.text = email.Subject;
             emailContentText.text = email.Body;
-
-            //emailDetailsObject.SetActive(false);
-            
-
-            //Set the email details
             
         }
-
         
     }
-
 
     public void addListenersToGameObjects()
     {
