@@ -13,7 +13,7 @@ public class ChatRoom : MonoBehaviour
     private Text clickToContinue;
     private TextWriter.TextWriterSingle textWriterSingle;
     private int currentMessageIndex = 0;
-    public float delay = 45f;
+    public float delay = 60f;
     private string[] messageArray;
 
     private void Awake() {
@@ -39,11 +39,15 @@ public class ChatRoom : MonoBehaviour
     }
 
     private void OnStartChatClicked() {
-
         startChatButton.gameObject.SetActive(false);
+        chatImage.gameObject.SetActive(true);
+        StartCoroutine(DelayedChatStart());
+    }
+
+    private IEnumerator DelayedChatStart() {
+        yield return new WaitForSeconds(1f);
 
         messageText.gameObject.SetActive(true);
-        chatImage.gameObject.SetActive(true);
         bossIcon.gameObject.SetActive(true);
 
         ShowNextMessage();
@@ -69,6 +73,38 @@ public class ChatRoom : MonoBehaviour
             }
         };
     }
+
+    // private void OnStartChatClicked() {
+
+    //     startChatButton.gameObject.SetActive(false);
+
+    //     messageText.gameObject.SetActive(true);
+    //     chatImage.gameObject.SetActive(true);
+    //     bossIcon.gameObject.SetActive(true);
+
+    //     ShowNextMessage();
+
+    //     if (currentMessageIndex < messageArray.Length) {
+    //         string initialMessage = messageArray[currentMessageIndex];
+    //         currentMessageIndex++;
+    //         textWriterSingle = TextWriter.AddWriter_Static(messageText, initialMessage, .05f, true, true);
+    //         StartCoroutine(ShowClickToContinueAfterTextIsFinished());
+    //     }
+
+    //     transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
+    //         if (textWriterSingle != null && textWriterSingle.IsActive()) {
+    //             textWriterSingle.WriteAllAndDestroy();
+    //         } else {
+    //             if (currentMessageIndex < messageArray.Length) {
+    //                 HideClickToContinue();
+    //                 string message = messageArray[currentMessageIndex];
+    //                 currentMessageIndex++;
+    //                 textWriterSingle = TextWriter.AddWriter_Static(messageText, message, .05f, true, true);
+    //                 StartCoroutine(ShowClickToContinueAfterTextIsFinished());
+    //             }
+    //         }
+    //     };
+    // }
 
     private void ShowNextMessage() {
     if (currentMessageIndex < messageArray.Length) {

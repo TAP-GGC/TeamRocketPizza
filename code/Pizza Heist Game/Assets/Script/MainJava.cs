@@ -12,6 +12,12 @@ public class MainJava : MonoBehaviour
     }
 
     private void Start() {
+        StartCoroutine(DelayTextDisplay());
+    }
+
+    private IEnumerator DelayTextDisplay() {
+        yield return new WaitForSeconds(1f);
+
         string codeBlock = 
         "public class AuthorizedAccess {\n" +
         "\n" +

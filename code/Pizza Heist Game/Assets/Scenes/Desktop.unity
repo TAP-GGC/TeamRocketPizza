@@ -380,6 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324725083}
   - component: {fileID: 324725084}
+  - component: {fileID: 324725085}
   m_Layer: 5
   m_Name: MainJava
   m_TagString: Untagged
@@ -421,6 +422,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6262ecd0b403643488cdbd9b20ca5760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &324725085
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324725082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c44ad647694020e45ae72ee174b6107b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &384787727
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +499,7 @@ GameObject:
   - component: {fileID: 489776530}
   - component: {fileID: 489776529}
   - component: {fileID: 489776531}
+  - component: {fileID: 489776532}
   m_Layer: 5
   m_Name: ChatRoom
   m_TagString: Untagged
@@ -561,6 +584,27 @@ MonoBehaviour:
   chatImage: {fileID: 489776529}
   bossIcon: {fileID: 894338631}
   delay: 1
+--- !u!95 &489776532
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489776527}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 102b01c0aa9539649bc8dfc0e7d028be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &502900550
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +788,7 @@ GameObject:
   - component: {fileID: 692558092}
   - component: {fileID: 692558094}
   - component: {fileID: 692558093}
+  - component: {fileID: 692558095}
   m_Layer: 5
   m_Name: clickToContinue
   m_TagString: Untagged
@@ -783,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -812,6 +857,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692558091}
   m_CullTransparentMesh: 1
+--- !u!95 &692558095
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692558091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62c76f92165f8274dba7b45bedc5d9d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &860613765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1384,7 @@ GameObject:
   - component: {fileID: 1172577485}
   - component: {fileID: 1172577484}
   - component: {fileID: 1172577483}
+  - component: {fileID: 1172577486}
   m_Layer: 5
   m_Name: startChatButton
   m_TagString: Untagged
@@ -1428,6 +1495,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172577481}
   m_CullTransparentMesh: 1
+--- !u!95 &1172577486
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172577481}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c231ae8e3039eb74eadd2cc1aa3bb303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1180304498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1527,7 @@ GameObject:
   - component: {fileID: 1180304499}
   - component: {fileID: 1180304501}
   - component: {fileID: 1180304500}
+  - component: {fileID: 1180304502}
   m_Layer: 5
   m_Name: Text (Legacy) (1)
   m_TagString: Untagged
@@ -1507,6 +1596,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180304498}
   m_CullTransparentMesh: 1
+--- !u!95 &1180304502
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180304498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db8c6fce5928c264f9c29b3db3caa861, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1196561007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,7 +1958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -122}
+  m_AnchoredPosition: {x: 0.000061035156, y: -125}
   m_SizeDelta: {x: -90.6072, y: -439.0783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614782477
@@ -1884,7 +1994,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Urgent message from boss
+  m_Text: 'Urgent message
+
+    from boss'
 --- !u!222 &1614782478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2007,7 +2119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -701.82, y: 411}
+  m_AnchoredPosition: {x: -701.81995, y: 411}
   m_SizeDelta: {x: 350.3548, y: 75.3226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761035170
@@ -2296,7 +2408,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139004199}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
