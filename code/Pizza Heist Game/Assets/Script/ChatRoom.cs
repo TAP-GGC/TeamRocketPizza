@@ -22,12 +22,8 @@ public class ChatRoom : MonoBehaviour
 
         messageArray = new string[] {
             "Welcome new recruit.",
-            "Congratulations on logging onto your desktop for the first time.",
-            "Hopefully you made a secure password.",
-            "I will only communicate with you through chat messages.",
-            "Do not expect any emails from me.",
             "Our pizza shop is in danger of being hacked.",
-            "You will ensure the safety of our network starting with setting up the anti-virus.",
+            "You will ensure the safety of our network starting with setting up the anti-virus software.",
             "Click the anti-virus folder to begin your first task."
         };
 
@@ -74,38 +70,6 @@ public class ChatRoom : MonoBehaviour
         };
     }
 
-    // private void OnStartChatClicked() {
-
-    //     startChatButton.gameObject.SetActive(false);
-
-    //     messageText.gameObject.SetActive(true);
-    //     chatImage.gameObject.SetActive(true);
-    //     bossIcon.gameObject.SetActive(true);
-
-    //     ShowNextMessage();
-
-    //     if (currentMessageIndex < messageArray.Length) {
-    //         string initialMessage = messageArray[currentMessageIndex];
-    //         currentMessageIndex++;
-    //         textWriterSingle = TextWriter.AddWriter_Static(messageText, initialMessage, .05f, true, true);
-    //         StartCoroutine(ShowClickToContinueAfterTextIsFinished());
-    //     }
-
-    //     transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
-    //         if (textWriterSingle != null && textWriterSingle.IsActive()) {
-    //             textWriterSingle.WriteAllAndDestroy();
-    //         } else {
-    //             if (currentMessageIndex < messageArray.Length) {
-    //                 HideClickToContinue();
-    //                 string message = messageArray[currentMessageIndex];
-    //                 currentMessageIndex++;
-    //                 textWriterSingle = TextWriter.AddWriter_Static(messageText, message, .05f, true, true);
-    //                 StartCoroutine(ShowClickToContinueAfterTextIsFinished());
-    //             }
-    //         }
-    //     };
-    // }
-
     private void ShowNextMessage() {
     if (currentMessageIndex < messageArray.Length) {
         string message = messageArray[currentMessageIndex];
@@ -116,19 +80,17 @@ public class ChatRoom : MonoBehaviour
 }
 
     private IEnumerator ShowClickToContinueAfterTextIsFinished() {
-        // Wait until the text finishes writing
         while (textWriterSingle != null && textWriterSingle.IsActive()) {
             yield return null;
         }
-
-        // Now wait for the specified delay
         yield return new WaitForSeconds(delay);
 
-        Debug.Log("Showing 'click to continue' text.");
-        clickToContinue.gameObject.SetActive(true); // Show the "click to continue" text
+        if (currentMessageIndex < messageArray.Length) {
+        clickToContinue.gameObject.SetActive(true);
+    }
     }
 
     private void HideClickToContinue() {
-        clickToContinue.gameObject.SetActive(false); // Hide the "click to continue" text when clicked
+        clickToContinue.gameObject.SetActive(false);
     }
 }
