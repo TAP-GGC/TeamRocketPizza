@@ -26,9 +26,11 @@ public class PhishingGameController : MonoBehaviour
 
     // Reference to the current email being viewed
     private Email currentEmail;
+    private GameObject currentEmailInboxObject;
+    private GameObject currentEmailDetailsObject;
 
-    Button notPhishingButton;
-    Button phishingButton;
+    // Button notPhishingButton;
+    // Button phishingButton;
     
 
     void Start()
@@ -67,24 +69,46 @@ public class PhishingGameController : MonoBehaviour
 
 
     // Method to check if an element is phishing
-    void CheckPhishing(EmailElement element)
+    void CheckPhishing(Button button)
     {
-        if (element.IsPhishing)
+        // Check if the player's answer is correct
+        if (currentEmail.IsPhishing && button.tag == "IsPhishing")
         {
-            // Display positive feedback
-            feedbackText.text = "Good job! You identified a phishing attempt.\nReason: " + element.Text;
+            
+            
+            removeFromInbox(currentEmail);
+        }
+        else if (!currentEmail.IsPhishing && button.tag == "NotPhishing")
+        {
+            
+            
+            removeFromInbox(currentEmail);
         }
         else
         {
-            // Display neutral feedback (optional)
-            feedbackText.text = "This is not a phishing attempt, try again.";
+            // Display feedback
+            ShowFeedback(currentEmail);
+            removeFromInbox(currentEmail);
         }
-
-        // Show feedback
-        feedbackPanel.SetActive(true);
     }
 
-    
+    private void ShowFeedback(Email currentEmail)
+    {
+        // Show the feedback panel
+        //feedbackPanel.SetActive(true);
+
+        // Display feedback text
+        if (currentEmail.IsPhishing)
+        {
+            //feedbackText.text = "Correct! This email is a phishing email.";
+            Debug.Log(currentEmail.phishingExplanation);
+        }
+        else
+        {
+            //feedbackText.text = "Correct! This email is not a phishing email.";
+            Debug.Log(currentEmail.phishingExplanation);
+        }
+    }
 
 
     void LoadEmailsFromJson()
@@ -186,14 +210,46 @@ public class PhishingGameController : MonoBehaviour
         
         //Open the Email Details Object with the emailIndex
         emailDetailsObjects[emailIndex].SetActive(true);
-        phishingButton = emailDetailsObjects[emailIndex].transform.Find("IsPhishing").GetComponent<Button>();
-        notPhishingButton = emailDetailsObjects[emailIndex].transform.Find("NotPhishing").GetComponent<Button>();
+        currentEmailDetailsObject = emailDetailsObjects[emailIndex];
+        setCurrentEmail(emails[emailIndex]);
+
+
+
+        // phishingButton = emailDetailsObjects[emailIndex].transform.Find("IsPhishing").GetComponent<Button>();
+        // //Get the button text and print it to debug
+        // Text phishingButtonText = phishingButton.GetComponentInChildren<Text>();
+        // Debug.Log(phishingButtonText.text);
+        // notPhishingButton = emailDetailsObjects[emailIndex].transform.Find("NotPhishing").GetComponent<Button>();
+        // //Get the button text and print it to debug
+        // Text notPhishingButtonText = notPhishingButton.GetComponentInChildren<Text>();
+        // Debug.Log(notPhishingButtonText.text);
+
+        // AddListenersToButtons();
     }
+
+    // private void AddListenersToButtons()
+    // {
+    //     EmailDetailPaneController emailDetailPaneController = currentEmailDetailsObject.GetComponent<EmailDetailPaneController>();
+
+    //     notPhishingButton.onClick.AddListener(() => emailDetailPaneController.CheckPhishing(notPhishingButton));
+    //     phishingButton.onClick.AddListener(() => emailDetailPaneController.CheckPhishing(phishingButton));
+    // }
 
     void setCurrentEmail(Email email)
     {
         currentEmail = email;
     }
+
+    public void removeFromInbox(Email email)
+    {
+        emails.Remove(email);
+        Destroy(currentEmailDetailsObject);
+        LoadEmailObjectstoList();
+        emailListObjects = GameObject.FindGameObjectsWithTag("Email Inbox Item");
+        emailDetailsObjects = GameObject.FindGameObjectsWithTag("Email Details");
+        addListenersToGameObjects();
+    }
+    
 
 
 

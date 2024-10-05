@@ -55,7 +55,7 @@ public class EmailDetailPaneController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Incorrect");
+            Debug.Log(email.phishingExplanation);
         }
     }
     
