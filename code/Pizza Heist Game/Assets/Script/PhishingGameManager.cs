@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,8 +30,8 @@ public class PhishingGameController : MonoBehaviour
     private GameObject currentEmailInboxObject;
     private GameObject currentEmailDetailsObject;
 
-    // Button notPhishingButton;
-    // Button phishingButton;
+    //Game Over Controlls
+    int emailLeft;
     
 
     void Start()
@@ -44,6 +45,8 @@ public class PhishingGameController : MonoBehaviour
 
         addListenersToGameObjects();
 
+        emailLeft = emails.Count;
+
         //Hide all email details objects
         foreach (GameObject emailDetailsObject in emailDetailsObjects)
         {
@@ -55,7 +58,19 @@ public class PhishingGameController : MonoBehaviour
     void Update()
     {
         
+        if(emailLeft <= 0)
+        {
+            //Pause Game and Display Game Over
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+        }
 
+        //If player presses the space key, reload the scene
+        if (Input.GetKeyDown(KeyCode.Space)&& Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         
 
@@ -85,7 +100,8 @@ public class PhishingGameController : MonoBehaviour
             removeFromInbox(currentEmail);
         }
         else
-        {
+        {   
+    
             // Display feedback
             ShowFeedback(currentEmail);
             removeFromInbox(currentEmail);
@@ -164,31 +180,102 @@ public class PhishingGameController : MonoBehaviour
 
             }
 
+            CreateEmailDetailsPane(email, emailObject);
             //Add Email Detail Panes
-            GameObject emailDetailsObject = Instantiate(emailDetailsPrefab, emailDetailsPane.transform);
+            // GameObject emailDetailsObject = Instantiate(emailDetailsPrefab, emailDetailsPane.transform);
 
-            EmailDetailPaneController emailDetailPaneController = emailDetailsObject.GetComponent<EmailDetailPaneController>();
-            emailDetailPaneController.SetEmail(email);
-            
-
-            //Load the email details to the screen
-            Text senderNameText = emailDetailsObject.transform.Find("Sender's Name Button").Find("ED Sender").GetComponent<Text>();
-            Text senderEmailText = emailDetailsObject.transform.Find("Email Button").Find("ED Email").GetComponent<Text>();
-            Text subjectTextDetails = emailDetailsObject.transform.Find("Subject Button").Find("ED Subject").GetComponent<Text>();
-            Text emailContentText = emailDetailsObject.transform.Find("Body Button").Find("ED Body").GetComponent<Text>();
+            // EmailDetailPaneController emailDetailPaneController = emailDetailsObject.GetComponent<EmailDetailPaneController>();
+            // emailDetailPaneController.SetEmail(email);
 
 
             
 
-            //Set the email details
-            senderNameText.text = email.SenderName;
-            senderEmailText.text = email.SenderEmail;
-            subjectTextDetails.text = email.Subject;
-            emailContentText.text = email.Body;
+            // //Load the email details to the screen
+            // Text senderNameText = emailDetailsObject.transform.Find("Sender's Name Button").Find("ED Sender").GetComponent<Text>();
+            // Text senderEmailText = emailDetailsObject.transform.Find("Email Button").Find("ED Email").GetComponent<Text>();
+            // Text subjectTextDetails = emailDetailsObject.transform.Find("Subject Button").Find("ED Subject").GetComponent<Text>();
+            // Text emailContentText = emailDetailsObject.transform.Find("Body Button").Find("ED Body").GetComponent<Text>();
+
+
+            
+
+            // //Set the email details
+            // senderNameText.text = email.SenderName;
+            // senderEmailText.text = email.SenderEmail;
+            // subjectTextDetails.text = email.Subject;
+            // emailContentText.text = email.Body;
             
         }
         
     }
+
+
+    // This method is called when the player clicks on an email in the inbox list
+    public void CreateEmailDetailsPane(Email email, GameObject inboxEntry)
+    {
+        // Instantiate the email details UI
+        currentEmailDetailsObject = Instantiate(emailDetailsPrefab, emailDetailsPane.transform);
+
+        // Get the EmailDetailsController component from the instantiated prefab
+        EmailDetailPaneController emailDetailsController = currentEmailDetailsObject.GetComponent<EmailDetailPaneController>();
+
+        //Load the email details to the screen
+            Text senderNameText = currentEmailDetailsObject.transform.Find("Sender's Name Button").Find("ED Sender").GetComponent<Text>();
+            Text senderEmailText = currentEmailDetailsObject.transform.Find("Email Button").Find("ED Email").GetComponent<Text>();
+            Text subjectTextDetails = currentEmailDetailsObject.transform.Find("Subject Button").Find("ED Subject").GetComponent<Text>();
+            Text emailContentText = currentEmailDetailsObject.transform.Find("Body Button").Find("ED Body").GetComponent<Text>();
+
+        //Set the email details
+            senderNameText.text = email.SenderName;
+            senderEmailText.text = email.SenderEmail;
+            subjectTextDetails.text = email.Subject;
+            emailContentText.text = email.Body;
+
+        // Set up the email details and pass the inbox entry
+        emailDetailsController.SetUp(email, inboxEntry);
+
+        // Subscribe to the OnEmailProcessed event
+        emailDetailsController.OnEmailProcessed += HandleEmailProcessed;
+    }
+
+    private void HandleEmailProcessed(Email email, GameObject inboxEntry, bool isCorrectGuess)
+    {
+        if (isCorrectGuess)
+        {
+            // Correct guess: Remove the email from inbox and details view
+            RemoveEmail(inboxEntry, currentEmailDetailsObject);
+        }
+        else
+        {
+            emailLeft--;
+            // Incorrect guess: Show the boss's message
+            ShowBossMessage(email.phishingExplanation);
+            RemoveEmail(inboxEntry, currentEmailDetailsObject);
+        }
+    }
+
+    private void RemoveEmail(GameObject inboxEntry, GameObject detailsEntry)
+    {
+        // Destroy the inbox entry
+        if (inboxEntry != null)
+        {
+            Destroy(inboxEntry);
+        }
+
+        // Destroy the email details entry
+        if (detailsEntry != null)
+        {
+            Destroy(detailsEntry);
+        }
+    }
+
+    // Show the boss's message explaining why the email was/wasn't phishing
+    void ShowBossMessage(string message)
+    {
+        Debug.Log("Boss says: " + message);
+        // This message could be displayed on the UI in a text box
+    }
+
 
     public void addListenersToGameObjects()
     {
