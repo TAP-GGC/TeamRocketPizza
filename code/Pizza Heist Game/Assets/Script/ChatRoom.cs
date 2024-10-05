@@ -13,7 +13,7 @@ public class ChatRoom : MonoBehaviour
     private Text clickToContinue;
     private TextWriter.TextWriterSingle textWriterSingle;
     private int currentMessageIndex = 0;
-    public float delay = 60f;
+    public float delay = 30f;
     private string[] messageArray;
 
     private void Awake() {
