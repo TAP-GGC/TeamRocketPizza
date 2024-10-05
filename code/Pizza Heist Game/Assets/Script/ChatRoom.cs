@@ -22,6 +22,7 @@ public class ChatRoom : MonoBehaviour
 
         messageArray = new string[] {
             "Welcome new recruit.",
+            "Welcome new recruit.",
             "Our pizza shop is in danger of being hacked.",
             "You will ensure the safety of our network starting with setting up the anti-virus software.",
             "Click the anti-virus folder to begin your first task."

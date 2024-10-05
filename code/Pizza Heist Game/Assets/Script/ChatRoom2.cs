@@ -19,7 +19,7 @@ public class ChatRoom2 : MonoBehaviour
     clickToContinue.gameObject.SetActive(false);
 
     messageArray = new string[] {
-        "The Anti-virus software is now up and running.",
+        "Great job. The Anti-virus software is now up and running.",
         "We've recieved an influx of emails.",
         "We need you to identify and report all of the phishing emails.",
         "Click on the E-mail folder to get started."
