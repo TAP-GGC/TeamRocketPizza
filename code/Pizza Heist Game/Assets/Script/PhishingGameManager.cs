@@ -26,6 +26,9 @@ public class PhishingGameController : MonoBehaviour
 
     // Reference to the current email being viewed
     private Email currentEmail;
+
+    Button notPhishingButton;
+    Button phishingButton;
     
 
     void Start()
@@ -49,7 +52,9 @@ public class PhishingGameController : MonoBehaviour
 
     void Update()
     {
-        // Get Active Email Details Object
+        
+
+
         
 
         
@@ -181,6 +186,8 @@ public class PhishingGameController : MonoBehaviour
         
         //Open the Email Details Object with the emailIndex
         emailDetailsObjects[emailIndex].SetActive(true);
+        phishingButton = emailDetailsObjects[emailIndex].transform.Find("IsPhishing").GetComponent<Button>();
+        notPhishingButton = emailDetailsObjects[emailIndex].transform.Find("NotPhishing").GetComponent<Button>();
     }
 
     void setCurrentEmail(Email email)

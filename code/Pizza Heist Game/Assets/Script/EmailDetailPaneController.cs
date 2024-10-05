@@ -40,6 +40,11 @@ public class EmailDetailPaneController : MonoBehaviour
 
     public void CheckPhishing(Button button)
     {
+        // Check if the player's answer is correct
+        //If correct Destory the email list item object and email details object
+        //If incorrect show feedback, then destroy the email list item object and email details object
+
+        
         if (email.IsPhishing && button.tag == "IsPhishing")
         {
             Debug.Log("Correct");
