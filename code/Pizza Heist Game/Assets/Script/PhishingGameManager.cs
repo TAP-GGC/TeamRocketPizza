@@ -15,7 +15,8 @@ public class PhishingGameController : MonoBehaviour
     public GameObject emailListPane; // Parent object for the email list, aka the container that will hold the email inbox objects
     public GameObject emailDetailsPane; // Parent object for the email details, aka the container that will hold the email details objects
     public GameObject gameEndPrefab; // Prefab for the game end object, aka the game over screen,
-    
+    public GameObject bossChatPrefab; // Prefab for the boss chat object, this will be used to display the boss's messages when the player guesses incorrectly
+    public GameObject bossChatPane; // Parent object for the boss chat, aka the container that will hold the boss chat objects
 
     [System.Serializable]
     public class EmailList
@@ -187,47 +188,6 @@ public class PhishingGameController : MonoBehaviour
         Debug.Log("Email Details Pane Created");
     }
 
-    private void HandleEmailProcessed(Email email, GameObject inboxEntry, bool isCorrectGuess)
-    {
-        if (isCorrectGuess)
-        {
-            // Correct guess: Remove the email from inbox and details view
-            RemoveEmail(inboxEntry, currentEmailDetailsObject);
-        }
-        else
-        {
-            
-            // Incorrect guess: Show the boss's message
-            ShowBossMessage(email.phishingExplanation);
-            RemoveEmail(inboxEntry, currentEmailDetailsObject);
-            attemptsLeft--;
-        }
-        emailLeft--;
-        Debug.Log("Number of Emails Left: " + emailLeft);
-    }
-
-    private void RemoveEmail(GameObject inboxEntry, GameObject detailsEntry)
-    {
-        // Destroy the inbox entry
-        if (inboxEntry != null)
-        {
-            Destroy(inboxEntry);
-        }
-
-        // Destroy the email details entry
-        if (detailsEntry != null)
-        {
-            Destroy(detailsEntry );
-        }
-    }
-
-    // Show the boss's message explaining why the email was/wasn't phishing
-    void ShowBossMessage(string message)
-    {
-        Debug.Log("Boss says: " + message);
-        // This message could be displayed on the UI in a text box
-    }
-
 
     public void addListenersToGameObjects()
     {
@@ -259,6 +219,7 @@ public class PhishingGameController : MonoBehaviour
             currentEmailInboxObject = emailListObjects[emailIndex];
 
             setCurrentEmail(emails[emailIndex]);
+            //updateBossChatMessage(emails[emailIndex]);
 
             //Get the phishing and not phishing buttons from the email details object
             phishingButton = emailDetailsObjects[emailIndex].transform.Find("PhishingButton").GetComponent<Button>();
@@ -272,7 +233,22 @@ public class PhishingGameController : MonoBehaviour
 
     }
 
+    private void updateBossChatMessage(Email email)
+    {
+        string bossMessage = email.phishingExplanation;
 
+        //Split the message into an array of strings
+        string[] messageArray = bossMessage.Split('\n');
+
+        //Get the boss chat object
+        GameObject bossChatObject = Instantiate(bossChatPrefab, bossChatPane.transform);
+        BossChatController bossChatController = bossChatObject.GetComponent<BossChatController>();
+        bossChatController.setMessageArray(messageArray);
+        
+
+
+
+    }
 
     void setCurrentEmail(Email email)
     {
@@ -295,6 +271,9 @@ public class PhishingGameController : MonoBehaviour
         }
         else
         {
+            
+            //TriggerBossChatWithExplanation(currentEmail.phishingExplanation);
+
             Debug.Log(currentEmail.phishingExplanation);
             attemptsLeft--;
         }
@@ -312,6 +291,20 @@ public class PhishingGameController : MonoBehaviour
         
     }
 
+    void TriggerBossChatWithExplanation(string phishingExplanation) {
+        BossChatController bossChat = FindObjectOfType<BossChatController>();
+
+        // The messageArray could have the phishing explanation and boss dialogue
+        string[] bossMessages = new string[] {
+            phishingExplanation,
+            "Pay more attention next time."
+        };
+        
+          bossChat.setMessageArray(bossMessages);
+        bossChat.OnStartChatClicked();
+    }
+}
+
 
     
 
@@ -319,4 +312,4 @@ public class PhishingGameController : MonoBehaviour
 
 
 
-}
+
