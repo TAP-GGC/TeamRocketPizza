@@ -21,7 +21,8 @@ public class ChatRoom3 : MonoBehaviour
     messageArray = new string[] {
         "Good work, new recruit.",
         "You've completed all of your tasks.",
-        "It's about time you clock out for the day."
+        "It's about time you clock out for the day.",
+        "Don't forget to log out!"
     };
 
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
