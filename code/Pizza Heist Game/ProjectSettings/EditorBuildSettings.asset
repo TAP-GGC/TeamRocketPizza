@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TDGame.unity
     guid: da017c8cb73169448bf03dee79111b61
+  - enabled: 1
+    path: Assets/Scenes/PhishingEmails.unity
+    guid: 0a8b5a038394a4e85a7c50136c71cef7
   m_configObjects: {}
