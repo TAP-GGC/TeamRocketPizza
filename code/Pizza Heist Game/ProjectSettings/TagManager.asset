@@ -13,6 +13,7 @@ TagManager:
   - Email Inbox Item
   - NotPhishing
   - IsPhishing
+  - Phished
   layers:
   - Default
   - TransparentFX

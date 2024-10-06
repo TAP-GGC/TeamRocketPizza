@@ -8,15 +8,17 @@ public class EmailDetailPaneController : MonoBehaviour
 {
     // Start is called before the first frame update
     private Email email;
-    Button notPhishingButton;
-    Button phishingButton;
+    public Button notPhishingButton;
+    public Button phishingButton;
 
-    private Email currentEmail;  // The current email object
-    private GameObject inboxEntry; // The related inbox entry GameObject
+    public Email currentEmail;  // The current email object
+    public GameObject inboxEntry; // The related inbox entry GameObject
 
     // Delegate and event to notify the PhishingGameManager
     public delegate void EmailAction(Email email, GameObject inboxEntry, bool isCorrectGuess);
     public event EmailAction OnEmailProcessed;
+
+    
 
 
     public void SetUp(Email email, GameObject associatedInboxEntry)
@@ -24,7 +26,10 @@ public class EmailDetailPaneController : MonoBehaviour
         currentEmail = email;
         inboxEntry = associatedInboxEntry;
 
-        AddListenersToButtons();
+        notPhishingButton = GameObject.FindWithTag("NotPhishing").GetComponent<Button>();
+        phishingButton = GameObject.FindWithTag("IsPhishing").GetComponent<Button>();
+
+        //AddListenersToButtons();
     }
 
     // Update is called once per frame
@@ -38,71 +43,55 @@ public class EmailDetailPaneController : MonoBehaviour
         this.email = email;
     }
 
-    public void AddListenersToButtons()
-    {
-        // Set up the button listeners
-        phishingButton.onClick.AddListener(OnPhishingButtonClicked);
-        notPhishingButton.onClick.AddListener(OnNotPhishingButtonClicked);
-    }
-
-
-    // public void CheckPhishing(Button button)
+    // public void AddListenersToButtons()
     // {
-    //     // Check if the player's answer is correct
-    //     //If correct Destory the email list item object and email details object
-    //     //If incorrect show feedback, then destroy the email list item object and email details object
+    //     // Set up the button listeners
+    //     phishingButton.onClick.AddListener(OnPhishingButtonClicked);
+    //     notPhishingButton.onClick.AddListener(OnNotPhishingButtonClicked);
+    //     Debug.Log("Listeners added");
+    // }
 
+
+    // private void OnPhishingButtonClicked() // UNUSED
+    // {
+    //     Debug.Log("Phishing button clicked");
     //     bool isCorrect = currentEmail.IsPhishing;
-    //     if (email.IsPhishing && button.tag == "IsPhishing")
+    //     if (isCorrect)
     //     {
-    //         Debug.Log("Correct");
-    //     }
-    //     else if (!email.IsPhishing && button.tag == "NotPhishing")
-    //     {
-    //         Debug.Log("Correct");
+    //         Debug.Log("Correct! This was a phishing email.");
     //     }
     //     else
     //     {
-    //         Debug.Log(email.phishingExplanation);
+    //         Debug.Log("Incorrect. This was not a phishing email.");
     //     }
+
+
+    //     // Destroy the email list item object and email details object
+    //     //Destroy(inboxEntry);
+    //     //Destroy(gameObject);
 
     //     // Notify the PhishingGameManager with the result
     //     OnEmailProcessed?.Invoke(currentEmail, inboxEntry, isCorrect);
     // }
 
-    private void OnPhishingButtonClicked()
-    {
-        bool isCorrect = currentEmail.IsPhishing;
-        if (isCorrect)
-        {
-            Debug.Log("Correct! This was a phishing email.");
-        }
-        else
-        {
-            Debug.Log("Incorrect. This was not a phishing email.");
-        }
+    // private void OnNotPhishingButtonClicked()
+    // {
+    //     Debug.Log("Not-phishing button clicked");
+    //     bool isCorrect = !currentEmail.IsPhishing;
+    //     if (isCorrect)
+    //     {
+    //         Debug.Log("Correct! This was not a phishing email.");
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Incorrect. This was a phishing email.");
+    //     }
 
-        // Notify the PhishingGameManager with the result
-        OnEmailProcessed?.Invoke(currentEmail, inboxEntry, isCorrect);
-    }
+    //     // Destroy(inboxEntry);
+    //     // Destroy(gameObject);
 
-    private void OnNotPhishingButtonClicked()
-    {
-        bool isCorrect = !currentEmail.IsPhishing;
-        if (isCorrect)
-        {
-            Debug.Log("Correct! This was not a phishing email.");
-        }
-        else
-        {
-            Debug.Log("Incorrect. This was a phishing email.");
-        }
-
-        // Notify the PhishingGameManager with the result
-        OnEmailProcessed?.Invoke(currentEmail, inboxEntry, isCorrect);
-    }
-    
-
-
+    //     // // Notify the PhishingGameManager with the result
+    //     OnEmailProcessed?.Invoke(currentEmail, inboxEntry, isCorrect);
+    // }
 
 }
