@@ -92,7 +92,20 @@ public class InputHandlerCopy : MonoBehaviour
             accessGranted.text = jumbledMessage; 
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in.";
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in..";
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in...";
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in.";
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in..";
+        yield return new WaitForSeconds(0.2f);
+        resultText.text = "Logging in...";
+
+        yield return new WaitForSeconds(1f);
         NavigateToDesktop();
     }
 
