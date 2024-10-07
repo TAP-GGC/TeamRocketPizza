@@ -1,155 +1,124 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
+    using System.Collections.Generic;
+    using Unity.VisualScripting;
+    using UnityEngine;
+    using UnityEngine.EventSystems;
+    using UnityEngine.Tilemaps;
+    using UnityEngine.UI;
 
-public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
-{
-    [SerializeField] private GameObject prefabInstance;
-    private GameObject currentInstance;
-    private Canvas canvas; //grab the component from canvas
-    private Camera mainCamera;
-    [SerializeField] private LayerMask layer;
-    private List<Transform> slotTransforms = new List<Transform>();
-
-    private int turretCost;
-    private Text defDesc;
-    private Text defName;
-    void Start()
+    public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
     {
-        canvas = GetComponentInParent<Canvas>();
-        mainCamera = Camera.main;
-       GameObject[] slots = GameObject.FindGameObjectsWithTag("Slots");
-        foreach (GameObject slot in slots)
+        [SerializeField] private GameObject prefabInstance;
+        [SerializeField] private GameObject prefabCollider;
+        private Tilemap map;
+        private GameObject currentInstance;
+        private Canvas canvas; //grab the component from canvas
+        private Camera mainCamera;
+        private Defense tower;
+        private BoxCollider2D towerCollider;
+        private Text defDesc;
+        private Text defName;
+        void Start()
         {
-            slotTransforms.Add(slot.transform);
+            canvas = GetComponentInParent<Canvas>();
+
+            mainCamera = Camera.main;
+            map = GameObject.Find("Background").GetComponent<Tilemap>();
+            defDesc = GameObject.Find("DefenseDescription").GetComponent<Text>();
+            defName = GameObject.Find("DefenseName").GetComponent<Text>();
         }
 
-        defDesc = GameObject.Find("DefenseDescription").GetComponent<Text>();
-        defName = GameObject.Find("DefenseName").GetComponent<Text>();
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("OnBeginDrag");
-
-        if (prefabInstance != null)
+        public void OnBeginDrag(PointerEventData eventData)
         {
-            // Instantiate the prefab in the game world
-            currentInstance = Instantiate(prefabInstance);
-            
-            if(currentInstance.CompareTag("MalwareTower")){
-                turretCost = 60;
-                currentInstance.GetComponent<MalwareTower>().enabled = false;
-            }
-            else if(currentInstance.CompareTag("NetTower")){
-                turretCost = 100;
-                currentInstance.GetComponent<NetTower>().enabled = false;
-            }
-            else{
-                Debug.Log("No Instance found.");
-            }
-            // Set the initial position of the object
-            Vector3 worldPosition;
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                canvas.GetComponent<RectTransform>(),
-                eventData.position,
-                mainCamera,
-                out worldPosition
-            );
-            currentInstance.transform.position = worldPosition;
-        }
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        // Debug.Log("OnDrag");
-
-        if (currentInstance != null)
-        {
-
-            
-            // else{
-            //     Debug.Log("script didnt enable");
-            // }
-            Vector3 worldPosition;
-            //set the pointer to the world and not canvas
-            RectTransformUtility.ScreenPointToWorldPointInRectangle(
-                canvas.GetComponent<RectTransform>(),
-                eventData.position,
-                mainCamera,
-                out worldPosition
-            );
-            currentInstance.transform.position = worldPosition;
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        Debug.Log("OnEndDrag");
+            Debug.Log("OnBeginDrag");
         
-        if (currentInstance != null)
-        {
-            if(currentInstance.CompareTag("MalwareTower")){
-                currentInstance.GetComponent<MalwareTower>().enabled = true;
+            if (prefabInstance != null)
+            {
+                // Instantiate the prefab in the game world
+                currentInstance = Instantiate(prefabInstance);
+                tower = currentInstance.GetComponent<Defense>();
+                
+                tower.enabled = false;
+                
+                // Set the initial position of the object
+                Vector3 worldPosition;
+                RectTransformUtility.ScreenPointToWorldPointInRectangle(
+                    canvas.GetComponent<RectTransform>(),
+                    eventData.position,
+                    mainCamera,
+                    out worldPosition
+                );
+                currentInstance.transform.position = worldPosition;
             }
-            else if(currentInstance.CompareTag("NetTower")){
-                currentInstance.GetComponent<NetTower>().enabled = true;
+        }
+        
+        public void OnDrag(PointerEventData eventData)
+        {
+            Debug.Log("OnDrag");
+
+            if (currentInstance != null)
+            {
+                Vector3 worldPosition;
+                //set the pointer to the world and not canvas
+                RectTransformUtility.ScreenPointToWorldPointInRectangle(
+                    canvas.GetComponent<RectTransform>(),
+                    eventData.position,
+                    mainCamera,
+                    out worldPosition
+                );
+                currentInstance.transform.position = worldPosition;
+            }
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            Debug.Log("OnEndDrag");
+            if (currentInstance != null)
+            {
+                tower.enabled = true;
+                
+                // towerCollider.enabled = true;
+                Vector3Int cellPosition = map.WorldToCell(currentInstance.transform.position);
+                    if (map.HasTile(cellPosition))
+                    {
+                        if(!tower.isColliding && LevelManager.main.SpendCoins(tower.cost)){
+                            Debug.Log("is not colliding with anything");
+                            currentInstance.transform.position = map.GetCellCenterWorld(cellPosition);
+                            
+                        }else{
+                            Debug.Log("is Colliding");
+                            Destroy(currentInstance);
+                        }
+                    }
+                    else
+                    {
+                        Destroy(currentInstance);
+                    }
+                    
             }
             else{
-                Debug.Log("No Instance found.");
+                Debug.Log("Instance is null");
             }
+        }
 
-            Transform closestSlot = null;
-            float closestDistance = float.MaxValue;
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            
+            GameObject clickedObject = eventData.pointerEnter;
 
-            foreach (Transform slotTransform in slotTransforms)
-            {
-                float distance = Vector2.Distance(slotTransform.position, currentInstance.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closestSlot = slotTransform;
+            if(clickedObject != null){
+                if(clickedObject.CompareTag("MalwareTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                    defDesc.text = "";
+                    defName.text = "";
+                    defName.text = "Malware Tower";
+                    defDesc.text = "===========\n A defense that only defends against normal malware viruses.";
+                }
+                if(clickedObject.CompareTag("NetTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                    defDesc.text = "";
+                    defName.text = "";
+                    defName.text = "Network Defender";
+                    defDesc.text = "===========\n A 2 shot defense, it also has the ability to detects worms and destroy them.";
                 }
             }
-
-            // Snap to the closest slot if within range
-            if (closestSlot != null && closestDistance <= 1.3f && LevelManager.main.SpendCoins(turretCost))
-            {
-                currentInstance.transform.position = closestSlot.position;
-            }
-            else{
-                Destroy(currentInstance.gameObject);
-            }
-            // Optionally: Destroy the instantiated object or do something with it
             
-        }else{
-            Debug.Log("Instance is null");
         }
     }
-
-    
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        
-        GameObject clickedObject = eventData.pointerEnter;
-
-        if(clickedObject != null){
-            if(clickedObject.CompareTag("MalwareTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
-                defDesc.text = "";
-                defName.text = "";
-                defName.text = "Malware Tower";
-                defDesc.text = "===========\n A defense that only defends against normal malware viruses.";
-            }
-            if(clickedObject.CompareTag("NetTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
-                defDesc.text = "";
-                defName.text = "";
-                defName.text = "Network Defender";
-                defDesc.text = "===========\n A 2 shot defense, it also has the ability to detects worms and destroy them.";
-            }
-        }
-        
-    }
-}

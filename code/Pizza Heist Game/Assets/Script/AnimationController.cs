@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour
+public class AnimationController : MonoBehaviour
 {
-    
-    private Transform trans;
-
+    [SerializeField] Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        trans = GetComponent<Transform>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,5 +16,4 @@ public class Slot : MonoBehaviour
     {
         
     }
-    
 }
