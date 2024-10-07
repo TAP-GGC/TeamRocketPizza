@@ -16,7 +16,7 @@ public class EmailDetailPaneController : MonoBehaviour
 
     // Delegate and event to notify the PhishingGameManager
     public delegate void EmailAction(Email email, GameObject inboxEntry, bool isCorrectGuess);
-    public event EmailAction OnEmailProcessed;
+    // public event EmailAction OnEmailProcessed;
 
     
 

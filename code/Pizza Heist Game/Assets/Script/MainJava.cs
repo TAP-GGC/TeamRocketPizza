@@ -40,7 +40,7 @@ public class MainJava : MonoBehaviour
         "    }\n" +
         "\n" +
         "    public static void main(String[] args) throws InterruptedException {\n" +
-        "        authorizedAccess(); // Calls the method to start the process\n" +
+        "        authorizedAccess();\n" +
         "    }\n" +
         "}";
         TextWriter.AddWriter_Static(messageText, codeBlock, 0.01f, true, false);

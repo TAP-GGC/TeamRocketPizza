@@ -9,11 +9,7 @@ TagManager:
   - MalwareTower
   - NetTower
   - Wall
-  - Email Details
-  - Email Inbox Item
-  - NotPhishing
-  - IsPhishing
-  - Phished
+  - Turret
   layers:
   - Default
   - TransparentFX

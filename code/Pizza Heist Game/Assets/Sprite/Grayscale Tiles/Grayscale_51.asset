@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Grayscale_51
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -882785171, guid: ccbb65386ad46d5418651ff2864d2d31, type: 3}
+  m_Sprite: {fileID: 435954698, guid: ccbb65386ad46d5418651ff2864d2d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
