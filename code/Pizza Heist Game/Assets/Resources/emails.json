@@ -1,0 +1,101 @@
+{
+    "emails": [
+      {
+        "Subject": "Free Pizza Coupon - Claim Now!",
+        "SenderEmail": "promo@bigcaesars.pizza",
+        "SenderName": "Big Caesars Promo Team",
+        "Body": "Congratulations! You've won a free pizza. Click this link to claim your coupon: http://bit.ly/freepizza",
+        "IsPhishing": true,
+        "phishingExplanation": "Hey kid, this one's clearly a scam. We don't give out free pizzas like this, especially from a weird link that isn't even our website. Real promos come from BigCaesars.com, not some shady short URL."
+      },
+      {
+        "Subject": "Order Confirmation #12345",
+        "SenderEmail": "orders@bigcaesars.pizza",
+        "SenderName": "Big Caesars Orders",
+        "Body": "Thanks for your order! Your pizza will arrive in 30 minutes or it's free. If you didn't make this order, contact us immediately.",
+        "IsPhishing": false,
+        "phishingExplanation": "You almost flagged this one, huh? But it's a real confirmation from us. Notice the email's right, and there’s nothing suspicious here. Just the usual pizza business. Always check the sender’s email before you panic."
+      },
+      {
+        "Subject": "Immediate Action Required - Account Compromised",
+        "SenderEmail": "security@bigcaesars.pizza",
+        "SenderName": "Big Caesars Security",
+        "Body": "Your account has been compromised. Please log in immediately to verify your details: http://verify.bigcaesars.secure-login.com",
+        "IsPhishing": true,
+        "phishingExplanation": "Whoa, slow down. That link's fishier than a tuna pizza. Real security alerts wouldn't ask you to log in through some weird URL. Always go to the official site directly, don’t trust sneaky links."
+      },
+      {
+        "Subject": "Staff Pizza Party This Friday!",
+        "SenderEmail": "manager@bigcaesars.pizza",
+        "SenderName": "Big Caesars Manager",
+        "Body": "Hey team, don't forget about the pizza party this Friday! It's on me. See you all there.",
+        "IsPhishing": false,
+        "phishingExplanation": "I get it, this might look suspicious, but it's from me, the Big Boss! This one's legit. Nothing fishy about a staff pizza party, right? Just check the sender if you're unsure."
+      },
+      {
+        "Subject": "Update Your Payment Info Now",
+        "SenderEmail": "billing@bigcaesars.payments.com",
+        "SenderName": "Big Caesars Billing Dept",
+        "Body": "We noticed an issue with your last payment. Please update your credit card info here: http://update-billing.com",
+        "IsPhishing": true,
+        "phishingExplanation": "This email's a straight-up con. We’d never ask for payment info through some third-party site. Look at that link—it’s nowhere near our official 'bigcaesars.pizza' domain. Watch out for these tricks!"
+      },
+      {
+        "Subject": "Exclusive Pizza Deal for You!",
+        "SenderEmail": "offers@bigcaesars.pizza",
+        "SenderName": "Big Caesars Offers",
+        "Body": "Hey there! As a loyal customer, you're getting an exclusive deal: 50% off your next order. Just use code LOYALTY50 at checkout.",
+        "IsPhishing": false,
+        "phishingExplanation": "Gotcha worried again, huh? This one’s totally legit. We do send out exclusive deals like this, especially if you’re one of our regulars. No weird links or suspicious requests—just pizza love."
+      },
+      {
+        "Subject": "Order Receipt for Order #54321",
+        "SenderEmail": "order-confirm@big-ceasers.pizza",
+        "SenderName": "Big Caesars Support",
+        "Body": "Your order has been processed. Please find your receipt attached.",
+        "IsPhishing": true,
+        "phishingExplanation": "Look closely at that sender's email—'big-ceasers' instead of 'bigcaesars.' They switched up the name! A classic phishing move. Always check the small details, they're trying to trick you."
+      },
+      {
+        "Subject": "Employee Survey: Help Us Improve!",
+        "SenderEmail": "hr@bigcaesars.pizza",
+        "SenderName": "Big Caesars HR",
+        "Body": "We value your feedback! Take 5 minutes to complete this survey and help us improve the workplace. Your responses are anonymous.",
+        "IsPhishing": false,
+        "phishingExplanation": "A simple survey from HR. Nothing unusual here. It’s not asking for personal info or sending you to a shady site. When it’s just about feedback, you're probably in the clear."
+      },
+      {
+        "Subject": "Urgent: Pizza Recipe Stolen",
+        "SenderEmail": "executive@bigcaesars.secrets.com",
+        "SenderName": "Big Caesars Executive",
+        "Body": "The secret pizza recipe has been stolen! Click here to secure it before it's too late: http://emergency-recipe.com",
+        "IsPhishing": true,
+        "phishingExplanation": "Whoa, kid, calm down. We don’t handle ‘emergencies’ like this through email, especially not with a random URL. They’re preying on your fear. Stick to official channels and ignore this nonsense."
+      },
+      {
+        "Subject": "Special Pizza Toppings Now Available!",
+        "SenderEmail": "toppings@bigcaesars.pizza",
+        "SenderName": "Big Caesars Toppings Dept",
+        "Body": "We’ve added new toppings to our menu! Try them out: Garlic Crust, Buffalo Chicken, and Truffle Oil. Order today!",
+        "IsPhishing": false,
+        "phishingExplanation": "New toppings? Sounds delicious! And legit. Look at the sender and the offer—nothing shady, just us expanding the menu. Not every new offer is phishing!"
+      },
+      {
+        "Subject": "Final Notice: Unpaid Pizza Bill",
+        "SenderEmail": "billing@bigcaesars-pizza-support.com",
+        "SenderName": "Big Caesars Billing Dept",
+        "Body": "You have an unpaid bill. Please resolve this now: http://pay-now.com",
+        "IsPhishing": true,
+        "phishingExplanation": "Look at that email closely—'bigcaesars-pizza-support.com'? That's fake! We’d never send you a link like that. Don't fall for this trick!"
+      },
+      {
+        "Subject": "New Pizza Store Opening: You're Invited!",
+        "SenderEmail": "events@bigcaesars.pizza",
+        "SenderName": "Big Caesars Events",
+        "Body": "You're invited to our grand opening next Saturday! Free slices for the first 50 guests. Don’t miss it!",
+        "IsPhishing": false,
+        "phishingExplanation": "It’s just an invite to our grand opening! You almost flagged this one, but it’s real. Check the email address—it’s from our events team, no tricks here."
+      }
+    ]    
+  }
+  

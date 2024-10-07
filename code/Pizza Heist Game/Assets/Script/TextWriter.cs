@@ -10,6 +10,7 @@ public class TextWriter : MonoBehaviour
     private List<TextWriterSingle> textWriterSingleList;
 
     private void Awake() {
+        Time.timeScale = 1;
         instance = this;
         textWriterSingleList = new List<TextWriterSingle>();
     }

@@ -1,5 +1,5 @@
 [System.Serializable]
-public class Email
+public class Emailv2
 {
     public string Subject;
     public string SenderEmail;
@@ -8,7 +8,7 @@ public class Email
     public bool IsPhishing;
     public string phishingExplanation;
 
-    public Email(string subject, string senderEmail, string senderName, string body, bool isPhishing, string phishingExplanation)
+    public Emailv2(string subject, string senderEmail, string senderName, string body, bool isPhishing, string phishingExplanation)
     {
         this.Subject = subject;
         this.SenderEmail = senderEmail;
