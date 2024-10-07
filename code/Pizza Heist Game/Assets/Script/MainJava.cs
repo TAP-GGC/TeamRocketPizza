@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class MainJava : MonoBehaviour
 {
-
-    [SerializeField] private TextWriter textWriter;
     private Text messageText;
 
     private void Awake() {
@@ -14,6 +12,12 @@ public class MainJava : MonoBehaviour
     }
 
     private void Start() {
+        StartCoroutine(DelayTextDisplay());
+    }
+
+    private IEnumerator DelayTextDisplay() {
+        yield return new WaitForSeconds(1f);
+
         string codeBlock = 
         "public class AuthorizedAccess {\n" +
         "\n" +
@@ -36,9 +40,9 @@ public class MainJava : MonoBehaviour
         "    }\n" +
         "\n" +
         "    public static void main(String[] args) throws InterruptedException {\n" +
-        "        authorizedAccess(); // Calls the method to start the process\n" +
+        "        authorizedAccess();\n" +
         "    }\n" +
         "}";
-        textWriter.addWriter(messageText, codeBlock, 0.01f, true);
+        TextWriter.AddWriter_Static(messageText, codeBlock, 0.01f, true, false);
     }
 }
