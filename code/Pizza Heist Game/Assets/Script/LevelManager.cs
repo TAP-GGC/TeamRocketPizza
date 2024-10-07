@@ -98,7 +98,8 @@ public class LevelManager : MonoBehaviour
            HideAllGroup();
         }
         else if(currentState == 4){
-            SceneManager.LoadScene("Desktop");
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Desktop 2");
         }
     }
 
