@@ -54,10 +54,10 @@ public class Defense : MonoBehaviour
         rotPoint.rotation = Quaternion.RotateTowards(rotPoint.rotation,targetRotation,rotationSpeed * Time.deltaTime);
     }
 
-    public void OnDrawGizmosSelected(){ // draws a circle trigger range
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
-    }
+    // public void OnDrawGizmosSelected(){ // draws a circle trigger range
+    //     Handles.color = Color.cyan;
+    //     Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
+    // }
 
     
     public void OnTriggerEnter2D(Collider2D collision)
