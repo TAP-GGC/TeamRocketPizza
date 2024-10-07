@@ -1042,6 +1042,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 895855408}
+    - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NavController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7989229358369010192, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

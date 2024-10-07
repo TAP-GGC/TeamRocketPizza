@@ -364,12 +364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -601,6 +601,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 895855408}
     - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NavController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Help
       objectReference: {fileID: 0}
@@ -721,6 +729,10 @@ PrefabInstance:
     - target: {fileID: 2904585088655263153, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: NavController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002620093285436961, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
+      propertyPath: m_Text
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7989229358369010192, guid: 0058c6ee6eff90046995dbfc31ab8df2, type: 3}
       propertyPath: m_Pivot.x
