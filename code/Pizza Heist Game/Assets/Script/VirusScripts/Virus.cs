@@ -17,7 +17,7 @@ public abstract class Virus : MonoBehaviour
     private int waypointIndex = 0;
     private Transform target;
     // Update is called once per frame
-    [SerializeField] Animator anim;
+    
 
     void Start()
     {

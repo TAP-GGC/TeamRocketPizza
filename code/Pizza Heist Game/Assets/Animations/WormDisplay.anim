@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MalwareWalk
+  m_Name: WormDisplay
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
+      value: {fileID: 1298192131, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: 17e0d2a2845a84417aff771e24fd0dbb, type: 3}
+      value: {fileID: 851263471, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
+      value: {fileID: 1298192131, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
     attribute: m_Sprite
     path: 
-    classID: 212
-    script: {fileID: 0}
+    classID: 114
+    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
@@ -40,17 +40,17 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
+      attribute: 2015549526
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
-    - {fileID: 21300000, guid: 17e0d2a2845a84417aff771e24fd0dbb, type: 3}
-    - {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
+    - {fileID: 1298192131, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
+    - {fileID: 851263471, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
+    - {fileID: 1298192131, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -62,7 +62,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 1
+    m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0

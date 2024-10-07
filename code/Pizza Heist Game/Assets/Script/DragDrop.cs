@@ -36,9 +36,9 @@
                 // Instantiate the prefab in the game world
                 currentInstance = Instantiate(prefabInstance);
                 tower = currentInstance.GetComponent<Defense>();
-                towerCollider = currentInstance.GetComponent<BoxCollider2D>();
+                
                 tower.enabled = false;
-                // towerCollider.enabled = false;
+                
                 // Set the initial position of the object
                 Vector3 worldPosition;
                 RectTransformUtility.ScreenPointToWorldPointInRectangle(
@@ -72,20 +72,18 @@
         public void OnEndDrag(PointerEventData eventData)
         {
             Debug.Log("OnEndDrag");
-            
             if (currentInstance != null)
             {
                 tower.enabled = true;
+                
                 // towerCollider.enabled = true;
                 Vector3Int cellPosition = map.WorldToCell(currentInstance.transform.position);
-                
-                
                     if (map.HasTile(cellPosition))
                     {
                         if(!tower.isColliding && LevelManager.main.SpendCoins(tower.cost)){
                             Debug.Log("is not colliding with anything");
                             currentInstance.transform.position = map.GetCellCenterWorld(cellPosition);
-                    
+                            
                         }else{
                             Debug.Log("is Colliding");
                             Destroy(currentInstance);
@@ -95,9 +93,7 @@
                     {
                         Destroy(currentInstance);
                     }
-                
-                
-                
+                    
             }
             else{
                 Debug.Log("Instance is null");
