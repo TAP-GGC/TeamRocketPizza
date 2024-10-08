@@ -42,7 +42,7 @@ public class TextWriter : MonoBehaviour
     }
 
     private void Update() {
-        Debug.Log(textWriterSingleList.Count);
+        //Debug.Log(textWriterSingleList.Count);
         for (int i = 0; i <textWriterSingleList.Count; i++) {
             bool destroyInstance = textWriterSingleList[i].Update();
             if (destroyInstance) {

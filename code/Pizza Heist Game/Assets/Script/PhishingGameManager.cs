@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class PhishingGameController : MonoBehaviour
 {
-    public Text feedbackText; // UI Text to display feedback
-    public GameObject feedbackPanel; // Optional UI Panel to show feedback
+
     //PREFAB SETUP -------------------------------------------------------------------------------------------------------------
     public TextAsset emailsJson; // JSON file containing the emails
     public GameObject emailObjectPrefab; // Prefab for the email Inbox object
@@ -16,7 +15,7 @@ public class PhishingGameController : MonoBehaviour
     public GameObject emailDetailsPane; // Parent object for the email details, aka the container that will hold the email details objects
     public GameObject gameEndPrefab; // Prefab for the game end object, aka the game over screen,
     public GameObject bossChatPrefab; // Prefab for the boss chat object, this will be used to display the boss's messages when the player guesses incorrectly
-    public GameObject bossChatPane; // Parent object for the boss chat, aka the container that will hold the boss chat objects
+    //public GameObject bossChatPane; // Parent object for the boss chat, aka the container that will hold the boss chat objects
 
     [System.Serializable]
     public class EmailList
@@ -44,6 +43,7 @@ public class PhishingGameController : MonoBehaviour
     void Start()
     {   
         gameEndPrefab.SetActive(false);
+        bossChatPrefab.SetActive(false);
         
 
         //Load all the emails from the json file
@@ -233,22 +233,7 @@ public class PhishingGameController : MonoBehaviour
 
     }
 
-    private void updateBossChatMessage(Email email)
-    {
-        string bossMessage = email.phishingExplanation;
-
-        //Split the message into an array of strings
-        string[] messageArray = bossMessage.Split('\n');
-
-        //Get the boss chat object
-        GameObject bossChatObject = Instantiate(bossChatPrefab, bossChatPane.transform);
-        BossChatController bossChatController = bossChatObject.GetComponent<BossChatController>();
-        bossChatController.setMessageArray(messageArray);
-        
-
-
-
-    }
+    
 
     void setCurrentEmail(Email email)
     {
@@ -273,6 +258,7 @@ public class PhishingGameController : MonoBehaviour
         {
             
             //TriggerBossChatWithExplanation(currentEmail.phishingExplanation);
+            OnPlayerMistake();
 
             Debug.Log(currentEmail.phishingExplanation);
             attemptsLeft--;
@@ -303,6 +289,19 @@ public class PhishingGameController : MonoBehaviour
           bossChat.setMessageArray(bossMessages);
         bossChat.OnStartChatClicked();
     }
+
+    void OnPlayerMistake() 
+    {   
+        bossChatPrefab.SetActive(true);
+        bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>().text = currentEmail.phishingExplanation;
+
+        Button ContinueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
+        ContinueButton.onClick.AddListener(() => bossChatPrefab.SetActive(false));
+        
+    }
+
+
+
 }
 
 
