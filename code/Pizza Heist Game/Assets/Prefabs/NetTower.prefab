@@ -255,13 +255,11 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7134113900414053473, guid: 76730a2b0bb763d4dbcd2789a1f3d2bd, type: 3}
   firingPoint: {fileID: 5972746602488956456}
   firerate: 1
-  rotationSpeed: 235
+  rotationSpeed: 300
   targetRange: 3
-  cost: 100
-  number: 0
+  cost: 60
   target: {fileID: 0}
   fireCooldown: 0
-  isColliding: 0
 --- !u!61 &2325860955871780378
 BoxCollider2D:
   m_ObjectHideFlags: 0

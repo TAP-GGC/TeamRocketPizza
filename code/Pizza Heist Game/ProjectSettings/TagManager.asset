@@ -10,6 +10,10 @@ TagManager:
   - NetTower
   - Wall
   - Turret
+  - Occupied
+  - Email Details
+  - NotPhishing
+  - IsPhishing
   layers:
   - Default
   - TransparentFX

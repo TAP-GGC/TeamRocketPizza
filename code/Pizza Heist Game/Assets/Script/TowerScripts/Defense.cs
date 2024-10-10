@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class Defense : MonoBehaviour
 {
+
+    
     [Header("References")]
     public Transform rotPoint;
     public LayerMask enemyMask;
     public GameObject projectilePrefab;
     public Transform firingPoint;
 
+
     [Header("Attribute")]
     public float firerate;
     public float rotationSpeed;
     public float targetRange;
     public int cost;
-    public int number;
     public Transform target;
     public float fireCooldown;
 
-    public bool isColliding;
+    // public bool isColliding;
 
     public void FindTarget(){
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
@@ -58,20 +60,6 @@ public class Defense : MonoBehaviour
     //     Handles.color = Color.cyan;
     //     Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
     // }
-
-    
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject otherGO = collision.gameObject;
-        if(otherGO.CompareTag("Turret")){
-            Debug.Log($"Collided with: {otherGO.name}, Tag: {otherGO.tag}");
-            isColliding = true;
-        }
-        else{
-            Debug.Log("No Collision");
-            isColliding = false;
-        }
-    }
 }
 
 

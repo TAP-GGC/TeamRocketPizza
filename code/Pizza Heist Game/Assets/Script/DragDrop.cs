@@ -9,20 +9,24 @@
     {
         [SerializeField] private GameObject prefabInstance;
         [SerializeField] private GameObject prefabCollider;
-        private Tilemap map;
         private GameObject currentInstance;
         private Canvas canvas; //grab the component from canvas
         private Camera mainCamera;
         private Defense tower;
-        private BoxCollider2D towerCollider;
+        private List<Transform> slotTransforms = new List<Transform>();
         private Text defDesc;
         private Text defName;
+
+
         void Start()
         {
             canvas = GetComponentInParent<Canvas>();
-
+            GameObject[] slots = GameObject.FindGameObjectsWithTag("Slots");
+            foreach (GameObject slot in slots)
+            {
+                slotTransforms.Add(slot.transform);
+            }
             mainCamera = Camera.main;
-            map = GameObject.Find("Background").GetComponent<Tilemap>();
             defDesc = GameObject.Find("DefenseDescription").GetComponent<Text>();
             defName = GameObject.Find("DefenseName").GetComponent<Text>();
         }
@@ -75,24 +79,43 @@
             if (currentInstance != null)
             {
                 tower.enabled = true;
-                
-                // towerCollider.enabled = true;
-                Vector3Int cellPosition = map.WorldToCell(currentInstance.transform.position);
-                    if (map.HasTile(cellPosition))
+                Transform closestSlot = null;
+                float closestDistance = float.MaxValue;
+
+                foreach (Transform slotTransform in slotTransforms)
+                {
+                    float distance = Vector2.Distance(slotTransform.position, currentInstance.transform.position);
+                    if (distance < closestDistance)
                     {
-                        if(!tower.isColliding && LevelManager.main.SpendCoins(tower.cost)){
-                            Debug.Log("is not colliding with anything");
-                            currentInstance.transform.position = map.GetCellCenterWorld(cellPosition);
-                            
-                        }else{
-                            Debug.Log("is Colliding");
-                            Destroy(currentInstance);
-                        }
+                        closestDistance = distance;
+                        closestSlot = slotTransform;
+                    }
+                }
+
+                // Snap to the closest slot if within range
+                if (closestSlot != null && closestDistance <= 1.3f & closestSlot.CompareTag("Slots") && closestSlot.tag != "Occupied")
+                {
+                    // Check if the slot is already tagged as "Occupied"
+                    // Spend coins and place tower only if enough coins are available
+                    if (LevelManager.main.SpendCoins(tower.cost))
+                    {
+                        Debug.Log("Snapping to closest slot and spending coins");
+                        currentInstance.transform.position = closestSlot.position;
+                        // Mark the slot as occupied by setting the tag
+                        closestSlot.tag = "Occupied";
                     }
                     else
                     {
-                        Destroy(currentInstance);
+                        Debug.Log("Not enough coins to place the tower");
+                        Destroy(currentInstance.gameObject); // Destroy the object if not enough coins
                     }
+                    
+                }
+                else
+                {
+                    Debug.Log("No valid slot within range");
+                    Destroy(currentInstance.gameObject); // Destroy the object if no valid slot is found
+                }
                     
             }
             else{

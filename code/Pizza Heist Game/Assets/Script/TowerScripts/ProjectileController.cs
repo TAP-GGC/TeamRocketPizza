@@ -16,16 +16,19 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private int projDamage = 1;
 
     private Transform target;
+    private Vector2 direction;
+    private bool isDirectionSet = false; // Flag to ensure direction is only set once
+    private bool targetDestroyed = false; // Check if target has been destroyed
+    
     // Start is called before the first frame update
 
     // Update is called once per frame
     void FixedUpdate(){
         if(!target) return;
-        Vector2 direction = (target.position - transform.position).normalized;
-        RotateTowardsTarget();
-        
-        
-        rb.velocity = direction * projSpeed;
+        if (isDirectionSet && !targetDestroyed)
+        {
+            rb.velocity = direction * projSpeed;
+        }
     }
 
     private void RotateTowardsTarget(){ 
@@ -41,7 +44,19 @@ public class ProjectileController : MonoBehaviour
     }
 
     public void SetTarget(Transform _target){
-        target = _target;
+        if(_target != null){
+            target = _target;
+            direction = (target.position - transform.position).normalized;
+            RotateTowardsTarget();
+            isDirectionSet = true;
+        }
+        else{
+            // If no target is set, mark as direction is set, but do not attempt rotation
+            isDirectionSet = true;
+            targetDestroyed = true;
+
+        }
+        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

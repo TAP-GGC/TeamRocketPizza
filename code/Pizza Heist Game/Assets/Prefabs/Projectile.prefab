@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -5128325871714943325}
   rotPoint: {fileID: 3720414131174089396}
-  projSpeed: 4
+  projSpeed: 7
   projDamage: 1
 --- !u!58 &-949949044705156413
 CircleCollider2D:
