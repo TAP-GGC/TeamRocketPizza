@@ -16,6 +16,23 @@ public class PhishingGameController : MonoBehaviour
     public GameObject gameEndPrefab; // Prefab for the game end object, aka the game over screen,
     public GameObject bossChatPrefab; // Prefab for the boss chat object, this will be used to display the boss's messages when the player guesses incorrectly
     //public GameObject bossChatPane; // Parent object for the boss chat, aka the container that will hold the boss chat objects
+    public GameObject HeartPrefab; // Prefab for a life heart object
+    public GameObject HeartContainer; // Parent object for the life hearts, aka the container that will hold the life heart objects
+    public GameObject AnswerCorrectPrefab; // Prefab for the correct answer object
+
+    //private TextWriter.TextWriterSingle textWriterSingle;
+    //TEXTWRITER SETUP -------------------------------------------------------------------------------------------------------------
+    public Text dialogueText;           // UI Text that will display the message
+    public Button continueButton;       // Continue Button to proceed to the next message
+    public string[] messageArray;       // Array of messages to cycle through
+    private int currentMessageIndex = 0; // Tracks the current message index
+    private bool isTyping = false;      // Tracks if the typewriter is currently animating
+    private TextWriter.TextWriterSingle textWriterSingle;
+
+
+
+
+    //GAME SETUP -------------------------------------------------------------------------------------------------------------
 
     [System.Serializable]
     public class EmailList
@@ -44,6 +61,8 @@ public class PhishingGameController : MonoBehaviour
     {   
         gameEndPrefab.SetActive(false);
         bossChatPrefab.SetActive(false);
+        displayHearts();
+        AnswerCorrectPrefab.SetActive(false);
         
 
         //Load all the emails from the json file
@@ -64,7 +83,11 @@ public class PhishingGameController : MonoBehaviour
             emailDetailsObject.SetActive(false);
         }
 
+        bossChatTutorialIntro();
+
     }
+
+    
 
     void Update()
     {
@@ -249,10 +272,12 @@ public class PhishingGameController : MonoBehaviour
         if (currentEmail.IsPhishing && button.tag == "IsPhishing")
         {
             Debug.Log("Correct! This was a phishing email.");
+            displayAnswerCorrect();
         }
         else if (!currentEmail.IsPhishing && button.tag == "NotPhishing")
         {
             Debug.Log("Correct! This was not a phishing email.");
+            displayAnswerCorrect();
         }
         else
         {
@@ -261,7 +286,7 @@ public class PhishingGameController : MonoBehaviour
             OnPlayerMistake();
 
             Debug.Log(currentEmail.phishingExplanation);
-            attemptsLeft--;
+            removeHeart();
         }
 
         currentEmailDetailsObject.tag = "Phished";
@@ -277,31 +302,199 @@ public class PhishingGameController : MonoBehaviour
         
     }
 
-    void TriggerBossChatWithExplanation(string phishingExplanation) {
-        BossChatController bossChat = FindObjectOfType<BossChatController>();
-
-        // The messageArray could have the phishing explanation and boss dialogue
-        string[] bossMessages = new string[] {
-            phishingExplanation,
-            "Pay more attention next time."
-        };
-        
-          bossChat.setMessageArray(bossMessages);
-        bossChat.OnStartChatClicked();
-    }
 
     void OnPlayerMistake() 
     {   
-        bossChatPrefab.SetActive(true);
-        bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>().text = currentEmail.phishingExplanation;
+        // bossChatPrefab.SetActive(true);
+        // bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>().text = currentEmail.phishingExplanation;
+        // Button ContinueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
+        // ContinueButton.onClick.AddListener(() => bossChatPrefab.SetActive(false));
 
-        Button ContinueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
-        ContinueButton.onClick.AddListener(() => bossChatPrefab.SetActive(false));
+        messageArray = new string[] {
+            currentEmail.phishingExplanation
+        };
+
+        bossChatPrefab.SetActive(true);
+        dialogueText = bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>();
+        continueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
+
+        continueButton.onClick.AddListener(OnContinuePressed);
+        dialogueText.text = "";         // Clear the dialogue box initially
+        continueButton.gameObject.SetActive(false); // Hide the button at first
+        ShowNextMessage(); 
+
+
+    }
+
+    void bossChatTutorialIntro()
+    {
+        //Set the message array for the boss chat
+        messageArray = new string[] {
+            "Welcome to the Phishing Game!",
+            "You will be presented with a series of emails.",
+            "Some of these emails are phishing emails.",
+            "Your job is to identify the phishing emails.",
+            "If you guess correctly, you will be rewarded.",
+            "If you guess incorrectly, you will lose a life.",
+            "You have 3 lives. Good luck!"
+        };
+
+        bossChatPrefab.SetActive(true);
+        dialogueText = bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>();
+        continueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
+
+        continueButton.onClick.AddListener(OnContinuePressed);
+        dialogueText.text = "";         // Clear the dialogue box initially
+        continueButton.gameObject.SetActive(false); // Hide the button at first
+        ShowNextMessage(); 
+
         
+
+    }
+
+    public void ShowNextMessage()
+    {
+        if (currentMessageIndex < messageArray.Length)
+        {
+            string message = messageArray[currentMessageIndex]; // Get the current message
+            currentMessageIndex++;
+
+            // Start typewriter effect
+            textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.05f, false, true);
+            
+            isTyping = true;  // Set typing flag
+            StartCoroutine(WaitForTypewriterToFinish());
+        }
+
+    }
+
+    private IEnumerator WaitForTypewriterToFinish()
+    {
+        // Wait until typewriter has finished
+        while (textWriterSingle != null && textWriterSingle.IsActive())
+        {
+            yield return null;  // Keep waiting until typing is done
+        }
+
+        // Enable "Continue" button after typing finishes
+        continueButton.gameObject.SetActive(true);
+        isTyping = false;  // Typing is done
+    }
+
+    private void OnContinuePressed()
+    {
+        if (!isTyping)
+        {
+            continueButton.gameObject.SetActive(false);  // Hide button after it's clicked
+
+            if (currentMessageIndex < messageArray.Length)
+            {
+                // Show the next message
+                ShowNextMessage();
+            }
+            else
+            {
+                // End of messages, can add logic to close dialogue box or something else
+                Debug.Log("All messages have been displayed.");
+                bossChatPrefab.SetActive(false);
+            }
+        }
     }
 
 
 
+
+
+
+    private void displayHearts()
+    {
+        for (int i = 0; i < attemptsLeft; i++)
+        {
+            GameObject heart = Instantiate(HeartPrefab, HeartContainer.transform);
+        }
+    }
+
+    private void removeHeart()
+    {
+        if (attemptsLeft > 0)
+        {
+            //Grab a heart from the heart container
+            GameObject heart = HeartContainer.transform.GetChild(HeartContainer.transform.childCount - 1).gameObject;
+            Image heartImage = heart.GetComponent<Image>();
+            // MAke the heart flash from red and white for 2 seconds before destroying it
+            for (int i = 0; i < 2; i++)
+            {
+                heartImage.color = Color.red;
+                StartCoroutine(WaitForSeconds(1));
+                heartImage.color = Color.white;
+                StartCoroutine(WaitForSeconds(1));
+            }
+            //Destroy the heart
+            Destroy(heart);
+            
+            //Destroy(HeartContainer.transform.GetChild(HeartContainer.transform.childCount - 1).gameObject);
+            attemptsLeft--;
+        }
+    }
+
+    IEnumerator WaitForSeconds(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
+
+    private string FlashHeart(Image heartImage)
+    {
+        //Flash the heart red and white for 2 seconds
+        for (int i = 0; i < 2; i++)
+        {
+            heartImage.color = Color.red;
+            StartCoroutine(WaitForSeconds(1));
+            heartImage.color = Color.white;
+            StartCoroutine(WaitForSeconds(1));
+        }
+        return "Heart Flashed";
+    }
+
+    private void displayAnswerCorrect()
+    {   
+        //An Array of 5 different correct answer confirmation strings
+        string[] correctAnswerMessages = new string[] {
+            "Correct!",
+            "Good Job!",
+            "You got it!",
+            "Nice!",
+            "Well done!",
+            "Great work!",
+            "You're right!",
+            "You're correct!",
+            "You're on fire!",
+            "You're a genius!",
+            "You're a pro!",
+            "You're a master!",
+            "You're a legend!",
+            "You're a champion!",
+            "Awesome! Good job!",
+            "Keep Going!",
+        };
+
+        //Randomly select a message from the array
+        int randomIndex = Random.Range(0, correctAnswerMessages.Length);
+
+        //Turn on the correct answer object, the wait a few seconds and slowly fade it out
+        AnswerCorrectPrefab.SetActive(true);
+        //Ensure the text is visible
+        AnswerCorrectPrefab.GetComponent<Text>().CrossFadeAlpha(1, 0, false);
+
+        //Set the text of the correct answer object to the randomly selected message
+        AnswerCorrectPrefab.GetComponent<Text>().text = correctAnswerMessages[randomIndex];
+
+        StartCoroutine(WaitForSeconds(1));
+        AnswerCorrectPrefab.GetComponent<Text>().CrossFadeAlpha(0, 2, false);
+        
+
+    }
+
+    
 }
 
 
