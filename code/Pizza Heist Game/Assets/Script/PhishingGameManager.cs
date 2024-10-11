@@ -24,10 +24,11 @@ public class PhishingGameController : MonoBehaviour
     //TEXTWRITER SETUP -------------------------------------------------------------------------------------------------------------
     public Text dialogueText;           // UI Text that will display the message
     public Button continueButton;       // Continue Button to proceed to the next message
-    public string[] messageArray;       // Array of messages to cycle through
+    public string[] messages;       // Array of messages to cycle through
     private int currentMessageIndex = 0; // Tracks the current message index
     private bool isTyping = false;      // Tracks if the typewriter is currently animating
     private TextWriter.TextWriterSingle textWriterSingle;
+
 
 
 
@@ -310,9 +311,10 @@ public class PhishingGameController : MonoBehaviour
         // Button ContinueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
         // ContinueButton.onClick.AddListener(() => bossChatPrefab.SetActive(false));
 
-        messageArray = new string[] {
-            currentEmail.phishingExplanation
-        };
+        //Break the phishingexplanation into an array of strings by splitting it after each period
+        
+
+        
 
         bossChatPrefab.SetActive(true);
         dialogueText = bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>();
@@ -321,7 +323,7 @@ public class PhishingGameController : MonoBehaviour
         continueButton.onClick.AddListener(OnContinuePressed);
         dialogueText.text = "";         // Clear the dialogue box initially
         continueButton.gameObject.SetActive(false); // Hide the button at first
-        ShowNextMessage(); 
+        ShowMessage(currentEmail.phishingExplanation); 
 
 
     }
@@ -329,14 +331,14 @@ public class PhishingGameController : MonoBehaviour
     void bossChatTutorialIntro()
     {
         //Set the message array for the boss chat
-        messageArray = new string[] {
-            "Welcome to the Phishing Game!",
-            "You will be presented with a series of emails.",
-            "Some of these emails are phishing emails.",
-            "Your job is to identify the phishing emails.",
-            "If you guess correctly, you will be rewarded.",
-            "If you guess incorrectly, you will lose a life.",
-            "You have 3 lives. Good luck!"
+        messages = new string[] {
+            "Alright Roookie, \nlets take a moment to talk about phishing emails.",
+            "Phishing is a type of cyber attack where a malicious actor sends an email that appears to be from a legitimate source.\nAll in an attempt to trick you to interact with it, exposing your personal information.",
+            "Attackers use phishing emails to steal sensitive information, install malware, or gain access to your computer and do damage.\nIts important to be able to identify these emails and avoid them.",
+            "I need you to clean up our emails, some of which are phishing emails.\nYour job is to identify the them and destroy them. So pay close attention to the details.",
+            "On your left is the list of emails, click on an email to view its details.\nOnce you've identified a phishing email, click on the 'Phishing' button to mark it as phishing. I will take care of the rest.\nIf you think an email is not phishing, click on the 'Not Phishing' button.",
+            "You have 3 attempts to guess the phishing emails correctly.\nIf you run out of attempts, you will be hacked and I am not gonna be happy.",
+            "Good luck Rookie, I'm counting on you."
         };
 
         bossChatPrefab.SetActive(true);
@@ -346,26 +348,26 @@ public class PhishingGameController : MonoBehaviour
         continueButton.onClick.AddListener(OnContinuePressed);
         dialogueText.text = "";         // Clear the dialogue box initially
         continueButton.gameObject.SetActive(false); // Hide the button at first
-        ShowNextMessage(); 
+        ShowMessages(messages); 
 
         
 
     }
 
-    public void ShowNextMessage()
+    public void ShowMessages(string[] messagesArray)
     {
-        if (currentMessageIndex < messageArray.Length)
-        {
-            string message = messageArray[currentMessageIndex]; // Get the current message
-            currentMessageIndex++;
+        messages = messagesArray;  // Store the array of messages
+        currentMessageIndex = 0;   // Reset index
+        ShowMessage(messages[currentMessageIndex]);  // Show the first message
+    }
 
-            // Start typewriter effect
-            textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.05f, false, true);
-            
-            isTyping = true;  // Set typing flag
-            StartCoroutine(WaitForTypewriterToFinish());
-        }
-
+    private void ShowMessage(string message)
+    {
+        // Start typewriter effect for the current message
+        textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.05f, false, true);
+        
+        isTyping = true;  // Set typing flag
+        StartCoroutine(WaitForTypewriterToFinish());
     }
 
     private IEnumerator WaitForTypewriterToFinish()
@@ -386,17 +388,21 @@ public class PhishingGameController : MonoBehaviour
         if (!isTyping)
         {
             continueButton.gameObject.SetActive(false);  // Hide button after it's clicked
+            
+            currentMessageIndex++;  // Move to the next message
 
-            if (currentMessageIndex < messageArray.Length)
+            if (currentMessageIndex < messages.Length)
             {
-                // Show the next message
-                ShowNextMessage();
+                // Show the next message in the array
+                ShowMessage(messages[currentMessageIndex]);
             }
             else
             {
-                // End of messages, can add logic to close dialogue box or something else
-                Debug.Log("All messages have been displayed.");
+                // If no more messages, end the dialogue
+                // dialogueText.gameObject.SetActive(false);  // Optionally hide dialogue text
+                Debug.Log("All messages finished. Dialogue ends.");
                 bossChatPrefab.SetActive(false);
+                
             }
         }
     }
