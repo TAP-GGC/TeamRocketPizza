@@ -56,11 +56,20 @@ public class EnemySpawner : MonoBehaviour
         if(enemiesAlive == 0 && enemiesLeftToSpawn == 0){
             EndWave();
         }
-        if(currentEnemyWave >=5){
+        if(currentEnemyWave >=20){
             LevelManager.main.WinGame();
             
         }
-        if(currentEnemyWave == 3 && !isSpawning){
+        if(currentEnemyWave == 4 && !isSpawning){
+            LevelManager.main.Warning();
+        }
+        if(currentEnemyWave == 8 && !isSpawning){
+            LevelManager.main.Warning();
+        }
+        if(currentEnemyWave == 12 && !isSpawning){
+            LevelManager.main.Warning();
+        }
+        if(currentEnemyWave == 16 && !isSpawning){
             LevelManager.main.Warning();
         }
     }
@@ -83,16 +92,14 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         int index = UnityEngine.Random.Range(0, enemyPrefabs.Length);
-
-        if(currentEnemyWave <= 2){
-            GameObject prefabSpawn = enemyPrefabs[0];
-            Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
-        }
-        else if(currentEnemyWave >= 3){
+        if(currentEnemyWave >= 4){
             GameObject prefabSpawn = enemyPrefabs[index];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
-        
+        else{
+            GameObject prefabSpawn = enemyPrefabs[0];
+            Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
+        }
     }
 
     IEnumerator StartWave()

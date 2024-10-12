@@ -57,7 +57,7 @@ public class Defense : MonoBehaviour
     }
 
     // public void OnDrawGizmosSelected(){ // draws a circle trigger range
-    //     Handles.color = Color.cyan;
+    //     Gizmos.color = Color.cyan;
     //     Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
     // }
 }

@@ -68,8 +68,6 @@ public abstract class Virus : MonoBehaviour
     public void dealDamage(){
         LevelManager.main.decreaseHealth(damage);
     }
-
-
     public abstract void UseAbilties();
 
     

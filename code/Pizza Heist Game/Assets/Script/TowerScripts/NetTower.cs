@@ -33,7 +33,7 @@ public class NetTower : Defense
         {
             Shoot();
             // Wait for a short delay between shots
-            yield return new WaitForSeconds(0.2f); // Adjust the delay as needed
+            yield return new WaitForSeconds(0.4f); // Adjust the delay as needed
         }
     }
 }
