@@ -133,7 +133,8 @@ public class PhishingGameController : MonoBehaviour
         // Store the list of emails
         if (emailListWrapper != null)
         {
-            emails = emailListWrapper.emails;
+            emails = emailRandomizer(emailListWrapper.emails);
+            
         }
         else
         {
@@ -142,6 +143,24 @@ public class PhishingGameController : MonoBehaviour
 
     }
 
+    private List<Email> emailRandomizer(List<Email> emails)
+    {
+        //Randomize the emails in the list and get 10 non repeating emails
+        List<Email> randomEmails = new List<Email>();
+        List<int> randomIndex = new List<int>();
+        int index = 0;
+        while (randomEmails.Count < 10)
+        {
+            index = Random.Range(0, emails.Count);
+            if (!randomIndex.Contains(index))
+            {
+                randomEmails.Add(emails[index]);
+                randomIndex.Add(index);
+            }
+        }
+        return randomEmails;
+
+    }
 
     public void LoadEmailObjectstoList()
     {
@@ -333,10 +352,10 @@ public class PhishingGameController : MonoBehaviour
         //Set the message array for the boss chat
         messages = new string[] {
             "Alright Roookie, \nlets take a moment to talk about phishing emails.",
-            "Phishing is a type of cyber attack where a malicious actor sends an email that appears to be from a legitimate source.\nAll in an attempt to trick you to interact with it, exposing your personal information.",
-            "Attackers use phishing emails to steal sensitive information, install malware, or gain access to your computer and do damage.\nIts important to be able to identify these emails and avoid them.",
-            "I need you to clean up our emails, some of which are phishing emails.\nYour job is to identify the them and destroy them. So pay close attention to the details.",
-            "On your left is the list of emails, click on an email to view its details.\nOnce you've identified a phishing email, click on the 'Phishing' button to mark it as phishing. I will take care of the rest.\nIf you think an email is not phishing, click on the 'Not Phishing' button.",
+            "Phishing is a type of cyber attack where a malicious actor sends an email that appears to be from a legitimate source.\nAll in an attempt to trick you to interact with it, like clicking on a link that looks real for example.",
+            "Attackers use phishing emails to steal sensitive information, install malware, or gain access to your computer and do damage.\nIts important to be able to identify these kinds of attacks and avoid them.",
+            "I need you to clean up our emails, some of which are phishing emails.\nYour job is to identify them and destroy them. So pay close attention to the details.",
+            "On your left is the list of emails, click on an email to view its details.\n\nOnce you've identified a phishing email, click on the 'Phishing' button to mark it as phishing. I will take care of the rest.\n\nIf you think an email is not phishing, click on the 'Not Phishing' button.",
             "You have 3 attempts to guess the phishing emails correctly.\nIf you run out of attempts, you will be hacked and I am not gonna be happy.",
             "Good luck Rookie, I'm counting on you."
         };
@@ -364,7 +383,7 @@ public class PhishingGameController : MonoBehaviour
     private void ShowMessage(string message)
     {
         // Start typewriter effect for the current message
-        textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.05f, false, true);
+        textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.025f, false, true);
         
         isTyping = true;  // Set typing flag
         StartCoroutine(WaitForTypewriterToFinish());
