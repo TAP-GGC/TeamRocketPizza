@@ -257,7 +257,7 @@ MonoBehaviour:
   firerate: 1
   rotationSpeed: 300
   targetRange: 3
-  cost: 60
+  cost: 80
   target: {fileID: 0}
   fireCooldown: 0
 --- !u!61 &2325860955871780378

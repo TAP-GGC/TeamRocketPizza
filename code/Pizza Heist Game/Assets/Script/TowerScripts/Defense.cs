@@ -35,7 +35,7 @@ public class Defense : MonoBehaviour
             target = hits[0].transform;
         }
     }
-    public void Shoot(){
+    public virtual void Shoot(){
         GameObject projectileObj = Instantiate(projectilePrefab,firingPoint.position,Quaternion.identity);
         ProjectileController projectileScript = projectileObj.GetComponent<ProjectileController>();
         projectileScript.SetTarget(target);
@@ -56,10 +56,10 @@ public class Defense : MonoBehaviour
         rotPoint.rotation = Quaternion.RotateTowards(rotPoint.rotation,targetRotation,rotationSpeed * Time.deltaTime);
     }
 
-    // public void OnDrawGizmosSelected(){ // draws a circle trigger range
-    //     Gizmos.color = Color.cyan;
-    //     Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
-    // }
+    public void OnDrawGizmosSelected(){ // draws a circle trigger range
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position,targetRange);
+    }
 }
 
 

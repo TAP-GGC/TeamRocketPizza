@@ -173,10 +173,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1236783950609211819}
+  spriteRenderer: {fileID: 4709224523584973798}
   hitPoints: 3
   coinsWorth: 15
   damage: 3
   speed: 3
+  virusPrefab: {fileID: 8220003293621112347}
+  numberOfDuplicates: 2
 --- !u!95 &2402309755605405243
 Animator:
   serializedVersion: 5
