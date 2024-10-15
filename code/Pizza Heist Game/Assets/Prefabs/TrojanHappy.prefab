@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3026367909825825951}
   - component: {fileID: 4343115744456443922}
   - component: {fileID: -4131819350595092493}
-  - component: {fileID: 8582465355239286612}
-  m_Layer: 11
-  m_Name: RansomwareVirus
+  - component: {fileID: -7672885305018813979}
+  m_Layer: 6
+  m_Name: TrojanHappy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -485990117, guid: 1f5b6cc761dbff14ea9a644c9b0f692f, type: 3}
-  m_Color: {r: 0.7433963, g: 0.6249496, b: 0.15008187, a: 1}
+  m_Sprite: {fileID: -1387451681, guid: 4a200886b73f61f43b3f7d6415764cc0, type: 3}
+  m_Color: {r: 0.98490566, g: 0.9023632, b: 0.19883943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8582465355239286612
+--- !u!114 &-7672885305018813979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,15 +190,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6478179148469254328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbf9c87ddd57df47919810b90f12fcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d90d08b1af43f143ab31453b2e33eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4343115744456443922}
   spriteRenderer: {fileID: 2800373004583112690}
   hitPoints: 3
   coinsWorth: 20
-  damage: 2
-  speed: 3
+  damage: 1
+  speed: 1
   waypointIndex: 0
   target: {fileID: 0}
-  taxAmount: 30
+  happySprite: {fileID: -1387451681, guid: 4a200886b73f61f43b3f7d6415764cc0, type: 3}
+  angrySprite: {fileID: 1084108809, guid: 4a200886b73f61f43b3f7d6415764cc0, type: 3}
+  berserkSpeed: 3
+  berserkHealth: 10

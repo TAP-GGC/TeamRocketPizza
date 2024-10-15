@@ -950,7 +950,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278294380}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -9773,12 +9773,12 @@ MonoBehaviour:
   - {fileID: 8220003293621112347, guid: 328b08942568cfd4f8332a9ceab0ce05, type: 3}
   - {fileID: 6478179148469254328, guid: 4c73fbd7791108441987037a28b1dbf3, type: 3}
   - {fileID: 6478179148469254328, guid: 24924c7bc0ff0a94aad26683dfd3bde8, type: 3}
+  - {fileID: 6478179148469254328, guid: b1030d4bcf3d4194db6dacb63236155a, type: 3}
   baseEnemyCount: 8
   spawnInterval: 0.5
   enemiesPerSecondCap: 15
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
-  currentEnemyWave: 1
 --- !u!1 &1819213600
 GameObject:
   m_ObjectHideFlags: 0

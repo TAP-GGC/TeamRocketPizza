@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     private bool gameOver;
     private GameStateEnum currentState;
     private EnemySpawner enemySpawner;
-    private Text wave;
+
     private enum GameStateEnum
     {
         StartGame,
@@ -68,7 +68,6 @@ public class LevelManager : MonoBehaviour
         };
 
         enemySpawner = GetComponent<EnemySpawner>();
-        wave = GameObject.Find("WaveText").GetComponent<Text>();
         _cgroup = GameObject.Find("StateMenu").GetComponent<CanvasGroup>();
         imgGroup = GameObject.Find("VirusPanel").GetComponent<CanvasGroup>();
         GameState = GameObject.Find("GameState").GetComponent<Text>();
@@ -220,7 +219,7 @@ public class LevelManager : MonoBehaviour
         if(gameOver){
             LoseGame();
         }
-        wave.text = "Wave: " + enemySpawner.currentEnemyWave;
+        
         coinText.text = "Coins: " + coins;
         healthText.text = "Health: " + health;
     }

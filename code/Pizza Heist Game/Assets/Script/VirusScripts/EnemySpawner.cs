@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -13,20 +14,20 @@ public class EnemySpawner : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private int baseEnemyCount = 8;
     [SerializeField] private float spawnInterval = 0.75f;
-     [SerializeField] private float enemiesPerSecondCap = 15f;
+    [SerializeField] private float enemiesPerSecondCap = 15f;
     [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
 
     [Header("Events")]
     public static UnityEvent enemyDestroy = new UnityEvent();
 
-    public int currentEnemyWave = 1;
+    private int currentEnemyWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private float eps; //enemies per second
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
-
+    private Text wave;
     
 
     private void Awake(){
@@ -36,11 +37,14 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {   
-       StartCoroutine(StartWave()); 
+        wave = GameObject.Find("WaveText").GetComponent<Text>();
+        StartCoroutine(StartWave()); 
     }
 
     void Update()
     {   
+        wave.text = "Wave: " + currentEnemyWave;
+
         if(!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
@@ -90,13 +94,20 @@ public class EnemySpawner : MonoBehaviour
     }
     private void SpawnEnemy()
     {
-        
-        if(currentEnemyWave >= 4){
-            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,1)];
+        if(currentEnemyWave >= 16){
+            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,5)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
-        else if(currentEnemyWave >= 2){
-            GameObject prefabSpawn = enemyPrefabs[3];
+        else if(currentEnemyWave >= 12){
+            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,4)];
+            Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
+        }
+        else if(currentEnemyWave >= 8){
+            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,3)];
+            Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
+        }
+        else if(currentEnemyWave >= 4){
+            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,2)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
         else{

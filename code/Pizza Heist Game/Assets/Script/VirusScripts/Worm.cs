@@ -59,8 +59,10 @@ public class Worm : Virus
             }
         }
         
-        Destroy(gameObject);
+        Destroy(gameObject, 0.2f);
+       
     } 
+
 
     protected override void Update()
     {

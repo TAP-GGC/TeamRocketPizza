@@ -27,6 +27,7 @@ public class Dos : Virus
                     if (tower != null)
                     {
                     StartCoroutine(StunTower(tower, stunDuration));
+                    // play animation
                 }
                 }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,13 +32,17 @@ public abstract class Virus : MonoBehaviour
         origSpeed = speed;
     }
 
+
+    public IEnumerator WaitTimer(){
+        yield return new WaitForSeconds(0.2f);
+    }
     protected virtual void Update()
     {
         if(Vector2.Distance(target.position, transform.position) < 0.1f){
             waypointIndex++;
             
         }
-
+        
 
         if(waypointIndex == LevelManager.main.waypoints.Length){
             EnemySpawner.enemyDestroy.Invoke();
