@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Events")]
     public static UnityEvent enemyDestroy = new UnityEvent();
 
-    private int currentEnemyWave = 1;
+    public int currentEnemyWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private float eps; //enemies per second
@@ -91,9 +90,13 @@ public class EnemySpawner : MonoBehaviour
     }
     private void SpawnEnemy()
     {
-        int index = UnityEngine.Random.Range(0, enemyPrefabs.Length);
+        
         if(currentEnemyWave >= 4){
-            GameObject prefabSpawn = enemyPrefabs[index];
+            GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,1)];
+            Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
+        }
+        else if(currentEnemyWave >= 2){
+            GameObject prefabSpawn = enemyPrefabs[3];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
         else{

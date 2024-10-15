@@ -23,7 +23,7 @@ public abstract class Virus : MonoBehaviour
     private Color originalColor;
     private Coroutine slowEffectCoroutine; 
 
-    void Start()
+    public virtual void Start()
     {
         target = LevelManager.main.waypoints[waypointIndex];
         //myTran = transform;

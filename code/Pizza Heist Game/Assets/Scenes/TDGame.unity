@@ -4066,14 +4066,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5421492, b: 0.07075471, a: 1}
+  m_Color: {r: 0.42443246, g: 0.06074225, b: 0.8584906, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1298192131, guid: 10d3a6f33f4b6a84685577db4f613b3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9691,6 +9691,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 6478179148469254328, guid: 7ee60aaf5ebe5024b9838cb08b97b287, type: 3}
   - {fileID: 8220003293621112347, guid: 328b08942568cfd4f8332a9ceab0ce05, type: 3}
+  - {fileID: 6478179148469254328, guid: 4c73fbd7791108441987037a28b1dbf3, type: 3}
   baseEnemyCount: 8
   spawnInterval: 0.5
   enemiesPerSecondCap: 15

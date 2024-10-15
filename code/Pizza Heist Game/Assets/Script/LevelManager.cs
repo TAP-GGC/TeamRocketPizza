@@ -24,6 +24,8 @@ public class LevelManager : MonoBehaviour
     public int health;
     private bool gameOver;
     private GameStateEnum currentState;
+    private EnemySpawner enemySpawner;
+    private Text wave;
     private enum GameStateEnum
     {
         StartGame,
@@ -64,7 +66,9 @@ public class LevelManager : MonoBehaviour
             { "Ransomware", "Ransomware encrypts your files and demands payment for the decryption key. It can cause significant data loss and financial strain you if not addressed promptly. Preventing it begins with frequently backing up your data, and restoring it before the attack.\n\nEffective defenses: BackUp Tower. \nAbilities: Data Encryption." },
             { "DoS", "Denial-of-Service (DoS) attacks overwhelm systems, causing them to crash or become unavailable. They target network resources and can disrupt service for users. IDS (Intrusion Detection System) helps detects these threats and prevent them from pursuing.\n\nEffective defenses: IDS Tower. \nAbilities: Traffic Monitoring." }
         };
-        
+
+        enemySpawner = GetComponent<EnemySpawner>();
+        wave = GameObject.Find("WaveText").GetComponent<Text>();
         _cgroup = GameObject.Find("StateMenu").GetComponent<CanvasGroup>();
         imgGroup = GameObject.Find("VirusPanel").GetComponent<CanvasGroup>();
         GameState = GameObject.Find("GameState").GetComponent<Text>();
@@ -216,7 +220,7 @@ public class LevelManager : MonoBehaviour
         if(gameOver){
             LoseGame();
         }
-        
+        wave.text = "Wave: " + enemySpawner.currentEnemyWave;
         coinText.text = "Coins: " + coins;
         healthText.text = "Health: " + health;
     }

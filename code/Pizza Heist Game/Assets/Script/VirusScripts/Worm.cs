@@ -9,6 +9,13 @@ public class Worm : Virus
     private static int activeDuplicates = 0; // Tracks how many duplicates are still alive
     private bool isOriginal = true; // Indicates whether this is the original Worm
 
+    private ParticleSystem explode;
+
+    public override void Start(){
+        base.Start();
+        explode = GetComponentInChildren<ParticleSystem>();
+    }
+
     public override void UseAbilties()
     {
         Debug.Log("UseAbilities");
@@ -40,6 +47,7 @@ public class Worm : Virus
         
         if(isOriginal){
             EnemySpawner.enemyDestroy.Invoke();
+            explode.Play();
             UseAbilties();
         }
         else{
