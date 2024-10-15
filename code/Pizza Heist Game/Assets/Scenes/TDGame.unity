@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 76527435}
   - component: {fileID: 76527434}
   m_Layer: 5
-  m_Name: Firewall
+  m_Name: Backup
   m_TagString: MalwareTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.67145586, b: 0, a: 1}
+  m_Color: {r: 0.59044695, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -713,7 +713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $30
+  m_Text: $100
 --- !u!222 &152778275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1623,6 +1623,7 @@ RectTransform:
   - {fileID: 1346880543}
   - {fileID: 1971925889}
   - {fileID: 585866208}
+  - {fileID: 566443256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1784,7 +1785,7 @@ GameObject:
   - component: {fileID: 404853304}
   - component: {fileID: 404853303}
   m_Layer: 5
-  m_Name: FirewallShopButton (2)
+  m_Name: BackupShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,6 +2298,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &566443255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566443256}
+  - component: {fileID: 566443258}
+  - component: {fileID: 566443257}
+  m_Layer: 5
+  m_Name: WaveText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &566443256
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566443255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 331484045}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -64, y: 489.01}
+  m_SizeDelta: {x: 293.5526, y: 56.1868}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &566443257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566443255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 55
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 55
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Wave:'
+--- !u!222 &566443258
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566443255}
+  m_CullTransparentMesh: 1
 --- !u!1 &585866207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8783,7 +8863,7 @@ GameObject:
   - component: {fileID: 1634550673}
   - component: {fileID: 1634550672}
   m_Layer: 5
-  m_Name: Firewall
+  m_Name: IDS
   m_TagString: MalwareTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8847,7 +8927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.67145586, b: 0, a: 1}
+  m_Color: {r: 0.6698113, g: 0.24657795, b: 0.0473923, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8993,7 +9073,7 @@ GameObject:
   - component: {fileID: 1681016792}
   - component: {fileID: 1681016791}
   m_Layer: 5
-  m_Name: FirewallShopButton (1)
+  m_Name: IDSShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9365,7 +9445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $30
+  m_Text: $60
 --- !u!222 &1721882615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9692,11 +9772,13 @@ MonoBehaviour:
   - {fileID: 6478179148469254328, guid: 7ee60aaf5ebe5024b9838cb08b97b287, type: 3}
   - {fileID: 8220003293621112347, guid: 328b08942568cfd4f8332a9ceab0ce05, type: 3}
   - {fileID: 6478179148469254328, guid: 4c73fbd7791108441987037a28b1dbf3, type: 3}
+  - {fileID: 6478179148469254328, guid: 24924c7bc0ff0a94aad26683dfd3bde8, type: 3}
   baseEnemyCount: 8
   spawnInterval: 0.5
   enemiesPerSecondCap: 15
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
+  currentEnemyWave: 1
 --- !u!1 &1819213600
 GameObject:
   m_ObjectHideFlags: 0
