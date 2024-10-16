@@ -60,7 +60,6 @@ public class Worm : Virus
         }
         
         Destroy(gameObject, 0.2f);
-       
     } 
 
 

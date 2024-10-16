@@ -11,6 +11,11 @@ public class Ransomware : Virus
         if(waypointIndex == LevelManager.main.waypoints.Length){
             if(LevelManager.main.coins >= 0){
                 LevelManager.main.coins -= taxAmount;
+                if(LevelManager.main.coins <= 0)
+                {
+                   LevelManager.main.coins =0; 
+                }
+                
             }
             
         }

@@ -23,7 +23,7 @@ public class Trojan : Virus
         // Set initial happy state
         spriteRenderer.sprite = happySprite;
         spriteRenderer.color = Color.yellow; // Set the color to yellow for happy
-        // animator.Play("HappyWalking");
+        animator.Play("HappyWalk");
     }
     public override void UseAbilties()
     {
@@ -38,7 +38,7 @@ public class Trojan : Virus
             spriteRenderer.color = Color.red; // Change the color to red for angry
             speed = berserkSpeed;
             hitPoints = berserkHealth; // Increase speed
-            // animator.Play("AngryWalking");
+            animator.Play("AngryWalk");
             Debug.Log("Trojan is now berserk!");
             
             // Optionally, add visual or sound effects here

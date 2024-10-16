@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 2990568828101914352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.169, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 5926269501401449140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0.029, z: 0}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,8 +137,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 82cd36a8ac2d4fb48b3d715d32580443, type: 3}
-  m_Color: {r: 0.9528302, g: 0.71761304, b: 0.31910825, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 674e7afed16fd7c4fa728037747eb895, type: 3}
+  m_Color: {r: 0.6545906, g: 0.3176471, b: 0.9529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,11 +158,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9184699851640963693}
   - component: {fileID: 2241524253538836748}
-  - component: {fileID: 6878810121821811879}
   - component: {fileID: 2325860955871780378}
   - component: {fileID: 2718278365874900837}
+  - component: {fileID: 4052564246182619109}
   m_Layer: 9
-  m_Name: FirewalTower
+  m_Name: BackupTower
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,41 +226,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: eed0ae145816879499778d35bb62703c, type: 3}
-  m_Color: {r: 0.6698113, g: 0.63215274, b: 0.4518067, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 0.67058825, g: 0.4509804, b: 0.6363597, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6878810121821811879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651617453480871332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9dbf2af3588c34bbe7640ec4bfda0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotPoint: {fileID: 8170389153624102281}
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 7360
-  projectilePrefab: {fileID: 0}
-  firingPoint: {fileID: 5972746602488956456}
-  firerate: 0.5
-  rotationSpeed: 360
-  targetRange: 3
-  cost: 50
-  target: {fileID: 0}
-  fireCooldown: 0
 --- !u!61 &2325860955871780378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -333,6 +309,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+--- !u!114 &4052564246182619109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651617453480871332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be26fa6d88394a7498f875a465d31009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotPoint: {fileID: 8170389153624102281}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  projectilePrefab: {fileID: 7134113900414053473, guid: 76730a2b0bb763d4dbcd2789a1f3d2bd, type: 3}
+  firingPoint: {fileID: 5972746602488956456}
+  firerate: 0.5
+  rotationSpeed: 0
+  targetRange: 2
+  cost: 60
+  target: {fileID: 0}
+  fireCooldown: 0
+  shockDamage: 3
 --- !u!1 &8389826415131585815
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,8 +360,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8389826415131585815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.09999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -936,7 +937,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -5168,7 +5169,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c028cf2f6a4dbb40a408437f3f7b220, type: 2}
+  - {fileID: 2100000, guid: d207f9340ad0c3c4eb2fba00bbfca55a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

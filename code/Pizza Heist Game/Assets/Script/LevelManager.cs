@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
 
         currentState = GameStateEnum.MalwareDetail;
         Time.timeScale = 0;
-        coins = 70;
+        coins = 100;
         health = 20;
         gameOver = false;
         
