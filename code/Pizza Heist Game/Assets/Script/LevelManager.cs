@@ -17,8 +17,9 @@ public class LevelManager : MonoBehaviour
     private Text healthText;
     private Text coinText;
     private Text GameState;
-    private Text Detail;
+
     private CanvasGroup _cgroup;
+    private CanvasGroup Chatcgroup;
     private CanvasGroup imgGroup;
     public int coins;
     public int health;
@@ -29,16 +30,11 @@ public class LevelManager : MonoBehaviour
     private enum GameStateEnum
     {
         StartGame,
-        HideMalware,
-        MalwareDetail,
-        HideWorm,
-        WormDetail,
-        HideRansom,
-        RansomDetail,
-        HideDos,
-        DosDetail,
-        HideTrojan,
-        TrojanDetail,
+        Malware,
+        Worm,
+        Dos,
+        Ransomware,
+        Trojan,
         EndGame
     }
      
@@ -52,7 +48,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start(){
 
-        currentState = GameStateEnum.MalwareDetail;
+        currentState = GameStateEnum.Malware;
         Time.timeScale = 0;
         coins = 100;
         health = 20;
@@ -69,9 +65,10 @@ public class LevelManager : MonoBehaviour
 
         enemySpawner = GetComponent<EnemySpawner>();
         _cgroup = GameObject.Find("StateMenu").GetComponent<CanvasGroup>();
+        Chatcgroup = GameObject.Find("BossChat").GetComponent<CanvasGroup>();
         imgGroup = GameObject.Find("VirusPanel").GetComponent<CanvasGroup>();
         GameState = GameObject.Find("GameState").GetComponent<Text>();
-        Detail = GameObject.Find("DetailText").GetComponent<Text>();
+        
         healthText = GameObject.Find("HealthText").GetComponent<Text>();
         coinText = GameObject.Find("CoinsText").GetComponent<Text>();
     }
@@ -92,7 +89,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void sellTurret(int amount){
-        coins += amount/4;
+        coins += amount;
     }
 
     public void decreaseHealth(int amount){
@@ -110,50 +107,30 @@ public class LevelManager : MonoBehaviour
             case GameStateEnum.StartGame:
                 SceneManager.LoadScene("TDGame");
                 break;
-            case GameStateEnum.MalwareDetail:
-                GameState.text = "";
-                ShowDetail("Malware"); // Show details for Malware
-                currentState = GameStateEnum.HideMalware; // Transition to hide Malware
-                break;
-            case GameStateEnum.HideMalware:
+            case GameStateEnum.Malware:
                 HideAllGroup();
-                currentState = GameStateEnum.WormDetail; // Transition to Worm detail
+                ShowGroup();
+                currentState = GameStateEnum.Worm; // Transition to hide Malware
                 break;
-            case GameStateEnum.WormDetail:
-                GameState.text = "";
-                ShowDetail("Worm"); // Show details for Worm
-                currentState = GameStateEnum.HideWorm; // Transition to hide Worm
-                break;
-            case GameStateEnum.HideWorm:
+            case GameStateEnum.Worm:
                 HideAllGroup();
-                currentState = GameStateEnum.RansomDetail; // Transition to start the game
+                ShowGroup();
+                currentState = GameStateEnum.Dos; // Transition to Worm detail
                 break;
-            case GameStateEnum.RansomDetail:
-                GameState.text = "";
-                ShowDetail("Ransomware"); // Show details for Worm
-                currentState = GameStateEnum.HideRansom; // Transition to hide Worm
-                break;
-            case GameStateEnum.HideRansom:
+            case GameStateEnum.Dos:
                 HideAllGroup();
-                currentState = GameStateEnum.DosDetail; // Transition to start the game
+                ShowGroup();
+                currentState = GameStateEnum.Ransomware; // Transition to hide Worm
                 break;
-            case GameStateEnum.DosDetail:
-                GameState.text = "";
-                ShowDetail("DoS"); // Show details for Worm
-                currentState = GameStateEnum.HideDos; // Transition to hide Worm
-                break;
-            case GameStateEnum.HideDos:
+            case GameStateEnum.Ransomware:
                 HideAllGroup();
-                currentState = GameStateEnum.TrojanDetail; // Transition to start the game
+                ShowGroup();
+                currentState = GameStateEnum.Trojan; // Transition to start the game
                 break;
-            case GameStateEnum.TrojanDetail:
-                GameState.text = "";
-                ShowDetail("Trojan"); // Show details for Worm
-                currentState = GameStateEnum.HideTrojan; // Transition to hide Worm
-                break;
-            case GameStateEnum.HideTrojan:
+            case GameStateEnum.Trojan:
                 HideAllGroup();
-                currentState = GameStateEnum.EndGame; // Transition to start the game
+                ShowGroup();
+                currentState = GameStateEnum.EndGame; // Transition to hide Worm
                 break;
             case GameStateEnum.EndGame:
                 Time.timeScale = 1;
@@ -174,7 +151,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoseGame(){
         
-        GameState.text = "Game Over!\nYou Lose\nClick below to Restart";
+        GameState.text = "Game Over!\nYou Lose\nClick to Restart";
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
         Time.timeScale = 0;
@@ -183,10 +160,16 @@ public class LevelManager : MonoBehaviour
     }
     public void HideAllGroup(){
         GameState.text = "";
-        Detail.text = "";
         imgGroup.alpha = 0f;
         _cgroup.alpha = 0f;
         _cgroup.interactable = false;
+        
+    }
+
+    public void ShowGroup(){
+        imgGroup.alpha = 1f;
+        Chatcgroup.alpha = 1f;
+        Chatcgroup.interactable = true;
         Time.timeScale = 1;
     }
 
@@ -200,18 +183,7 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    public void ShowDetail(string virusName)
-    {
-        if (virusDescriptions.TryGetValue(virusName, out string description))
-        {
-            imgGroup.alpha = 1f;
-            Detail.text = $"This virus is {virusName}:\n\n{description}";
-        }
-        else
-        {
-            Detail.text = "Virus not found.";
-        }
-    }
+
 
     // Update is called once per frame
     void Update()

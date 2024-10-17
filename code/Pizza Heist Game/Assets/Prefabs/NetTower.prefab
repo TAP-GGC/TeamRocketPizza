@@ -251,7 +251,7 @@ MonoBehaviour:
   rotPoint: {fileID: 8170389153624102281}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1216
   projectilePrefab: {fileID: 7134113900414053473, guid: 76730a2b0bb763d4dbcd2789a1f3d2bd, type: 3}
   firingPoint: {fileID: 5972746602488956456}
   firerate: 1

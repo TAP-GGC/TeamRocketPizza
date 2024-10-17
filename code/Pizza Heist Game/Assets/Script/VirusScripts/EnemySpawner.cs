@@ -15,12 +15,16 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int baseEnemyCount = 8;
     [SerializeField] private float spawnInterval = 0.75f;
     [SerializeField] private float enemiesPerSecondCap = 15f;
-    [SerializeField] private float timeBetweenWaves = 5f;
+    [SerializeField] private float timeBetweenWaves = 2f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
 
     [Header("Events")]
     public static UnityEvent enemyDestroy = new UnityEvent();
+    [SerializeField] private Button startWaveButton;
+    [SerializeField] private Color originalColor; // Original color
+    [SerializeField] private Color dullColor; // Dull color
 
+    private Image buttonImage;
     private int currentEnemyWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
@@ -37,12 +41,20 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {   
+        buttonImage = startWaveButton.GetComponent<Image>();
         wave = GameObject.Find("WaveText").GetComponent<Text>();
-        StartCoroutine(StartWave()); 
+        if (startWaveButton != null)
+        {
+            startWaveButton.onClick.AddListener(OnStartWaveButtonClicked);
+        }
+        buttonImage.color = originalColor;
+        // Hide the button initially
+        startWaveButton.enabled = true;
     }
 
     void Update()
     {   
+        SetButtonState();
         wave.text = "Wave: " + currentEnemyWave;
 
         if(!isSpawning) return;
@@ -83,9 +95,9 @@ public class EnemySpawner : MonoBehaviour
     {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
-
         currentEnemyWave++;
-        StartCoroutine(StartWave()); 
+        // Show the button to allow starting the next wave
+        startWaveButton.enabled = true;
     }
 
     private void EnemiesDestroyed()
@@ -136,5 +148,26 @@ public class EnemySpawner : MonoBehaviour
     private float EnemiesPerSecond(){
         enemiesLeftToSpawn = baseEnemyCount + (currentEnemyWave * 2);
         return Mathf.Clamp(spawnInterval * Mathf.Pow(currentEnemyWave, difficultyScalingFactor), 0,enemiesPerSecondCap);
+    }
+
+    private void OnStartWaveButtonClicked()
+    {
+        // Start the next wave
+        StartCoroutine(StartWave());
+
+        // Hide the button after starting the wave
+        startWaveButton.enabled = false;
+        
+        
+    }
+
+    public void SetButtonState()
+    {
+        if(startWaveButton.enabled == false){
+            buttonImage.color = dullColor;
+        }
+        else{
+            buttonImage.color = originalColor;
+        }// Change color based on state
     }
 }

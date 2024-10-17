@@ -8,11 +8,12 @@ public class Dos : Virus
     public float stunDuration; // Duration of the stun effect
     public float stunCooldown; // Time between stun effects
     private float nextStunTime; // Keeps track of when the next stun can occur // Duration for which the towers are disabled
-
+    private ParticleSystem partSys;
 
     public override void Start()
     {
         base.Start();
+        partSys = GetComponentInChildren<ParticleSystem>();
         nextStunTime = Time.time;
     }
     public override void UseAbilties()
@@ -23,16 +24,25 @@ public class Dos : Virus
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, stunRange);
                 foreach (Collider2D collider in colliders)
                 {
+                    
                     Defense tower = collider.GetComponent<Defense>(); // Assuming Tower is the base class for your towers
                     if (tower != null)
                     {
                     StartCoroutine(StunTower(tower, stunDuration));
                     // play animation
+                    partSys.Play();
                 }
                 }
 
                 nextStunTime = Time.time + stunCooldown; // Reset the stun timer
             }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stunRange);
     }
 
     private IEnumerator StunTower(Defense tower, float duration)

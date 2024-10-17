@@ -125,9 +125,7 @@
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            
-            GameObject clickedObject = eventData.pointerEnter;
-
+        GameObject clickedObject = eventData.pointerEnter;
             if(clickedObject != null){
                 if(clickedObject.CompareTag("MalwareTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
                     defDesc.text = "";
@@ -144,4 +142,21 @@
             }
             
         }
+
+    private void SellCurrentInstance()
+    {
+    // Assuming currentInstance has a 'Defense' component with the cost
+        Defense towerDefense = currentInstance.GetComponent<Defense>();
+        if (towerDefense != null)
+        {
+            int refundAmount = towerDefense.cost / 4;
+            LevelManager.main.sellTurret(refundAmount);
+
+            // Destroy the currentInstance
+            Destroy(currentInstance);
+            currentInstance = null; // Clear the reference to avoid further interaction
+
+            Debug.Log("Current turret sold for " + refundAmount + " coins.");
+        }
     }
+}

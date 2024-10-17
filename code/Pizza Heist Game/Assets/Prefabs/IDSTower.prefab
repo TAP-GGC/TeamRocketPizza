@@ -240,7 +240,7 @@ MonoBehaviour:
   rotPoint: {fileID: 2242516330959408394}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 7360
+    m_Bits: 5312
   projectilePrefab: {fileID: 7381564733212395892}
   firingPoint: {fileID: 8278872378499535167}
   firerate: 1
@@ -384,10 +384,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5099887424426113565, guid: 4cb4cf6241ac62f45a39af6d99f4b399, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167905295392202609, guid: 4cb4cf6241ac62f45a39af6d99f4b399, type: 3}
-      propertyPath: TriggerModule.enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
