@@ -29,7 +29,11 @@ public class PhishingGameController : MonoBehaviour
     private bool isTyping = false;      // Tracks if the typewriter is currently animating
     private TextWriter.TextWriterSingle textWriterSingle;
 
-
+    //START BUTTON FUNCTIONALITY -------------------------------------------------------------------------------------------------------------
+    public Button menuButton; // computer menu button in taskbar
+    public GameObject menuPanel; // computer menu panel
+    public Button reloadGameButton; // reload game button in computer menu
+    public Button reloadInstructionsButton; // reload instructions button in computer menu
 
 
 
@@ -64,6 +68,7 @@ public class PhishingGameController : MonoBehaviour
         bossChatPrefab.SetActive(false);
         displayHearts();
         AnswerCorrectPrefab.SetActive(false);
+        menuPanel.SetActive(false);
         
 
         //Load all the emails from the json file
@@ -85,6 +90,8 @@ public class PhishingGameController : MonoBehaviour
         }
 
         bossChatTutorialIntro();
+
+        addListenersToMenuButtons();
 
     }
 
@@ -110,6 +117,8 @@ public class PhishingGameController : MonoBehaviour
             //Instantiate the Game End Object for the entire screen
             //Lose text will be Red
             gameEndPrefab.SetActive(true);
+            //Hide Return to Menu Button
+            gameEndPrefab.transform.Find("Panel").Find("ReturnButton").gameObject.SetActive(false);
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().color = Color.red;
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "You got hacked!!";
             
@@ -357,7 +366,8 @@ public class PhishingGameController : MonoBehaviour
             "I need you to clean up our emails, some of which are phishing emails.\nYour job is to identify them and destroy them. So pay close attention to the details.",
             "On your left is the list of emails, click on an email to view its details.\n\nOnce you've identified a phishing email, click on the 'Phishing' button to mark it as phishing. I will take care of the rest.\n\nIf you think an email is not phishing, click on the 'Not Phishing' button.",
             "You have 3 attempts to guess the phishing emails correctly.\nIf you run out of attempts, you will be hacked and I am not gonna be happy.",
-            "Good luck Rookie, I'm counting on you."
+            "Our domain name is 'BigCaesarsPizza.com', so keep that in mind as well. Play close attention to the sender's email and the content of the email.",
+            "If you get stuck, click on the 'Start' button to open the menu and I'll help you out.\n\nGood luck Rookie, I'm counting on you.",
         };
 
         bossChatPrefab.SetActive(true);
@@ -517,6 +527,14 @@ public class PhishingGameController : MonoBehaviour
         AnswerCorrectPrefab.GetComponent<Text>().CrossFadeAlpha(0, 2, false);
         
 
+    }
+
+
+    void addListenersToMenuButtons()
+    {
+        menuButton.onClick.AddListener(() => menuPanel.SetActive(!menuPanel.activeSelf));
+        reloadGameButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
+        reloadInstructionsButton.onClick.AddListener(() => bossChatTutorialIntro());
     }
 
     
