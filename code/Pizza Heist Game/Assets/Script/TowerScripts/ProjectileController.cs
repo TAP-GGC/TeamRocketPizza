@@ -16,19 +16,30 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private int projDamage = 1;
 
     private Transform target;
-    // Start is called before the first frame update
+    private Vector2 direction;
+   
+    void Start(){
+        // If no target is set, move in the default forward direction
+        if (target == null){
+            direction = transform.up; // Default forward direction of the projectile
+        }
+    }
+    
+    void Update(){
+       if(target != null) 
+        {
+            // Calculate direction towards the target
+            direction = (target.position - transform.position).normalized;
+            RotateTowardsTarget();
+        }
 
-    // Update is called once per frame
-    void FixedUpdate(){
-        if(!target) return;
-        Vector2 direction = (target.position - transform.position).normalized;
-        RotateTowardsTarget();
-        
-        
+        // Continue moving in the last known direction, even if the target is destroyed
         rb.velocity = direction * projSpeed;
     }
 
     private void RotateTowardsTarget(){ 
+        if (target == null) return; // Avoid trying to rotate if there's no target
+
         float angle = Mathf.Atan2( // Algorithm to track angle rotation towards target
         target.position.y - transform.position.y,
         target.position.x - transform.position.x) 
@@ -42,6 +53,9 @@ public class ProjectileController : MonoBehaviour
 
     public void SetTarget(Transform _target){
         target = _target;
+        if (target != null) {
+            direction = (target.position - transform.position).normalized;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

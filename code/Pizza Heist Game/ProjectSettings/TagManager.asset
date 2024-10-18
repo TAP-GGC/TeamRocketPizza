@@ -15,6 +15,13 @@ TagManager:
   - NotPhishing
   - IsPhishing
   - Phished
+  - Occupied
+  - Email Details
+  - NotPhishing
+  - IsPhishing
+  - FirewallTower
+  - IDSTower
+  - BackupTower
   layers:
   - Default
   - TransparentFX
@@ -26,9 +33,9 @@ TagManager:
   - Worm
   - Projectile
   - Turret
-  - 
-  - 
-  - 
+  - DoS
+  - Ransomware
+  - Trojan
   - 
   - 
   - 

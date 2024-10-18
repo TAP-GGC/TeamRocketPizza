@@ -2,26 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Defense : MonoBehaviour
 {
+
+    
     [Header("References")]
     public Transform rotPoint;
     public LayerMask enemyMask;
     public GameObject projectilePrefab;
     public Transform firingPoint;
 
+
     [Header("Attribute")]
     public float firerate;
     public float rotationSpeed;
     public float targetRange;
     public int cost;
-    public int number;
     public Transform target;
     public float fireCooldown;
 
-    public bool isColliding;
+    // public bool isColliding;
+    public bool isSold = false;
+    public Transform occupiedSlot;
+    private AudioSource audioOrig;
 
+    private void Start(){
+        audioOrig = GetComponent<AudioSource>();
+    }
     public void FindTarget(){
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
         transform.position,
@@ -33,7 +42,8 @@ public class Defense : MonoBehaviour
             target = hits[0].transform;
         }
     }
-    public void Shoot(){
+    public virtual void Shoot(){
+        audioOrig.Play();
         GameObject projectileObj = Instantiate(projectilePrefab,firingPoint.position,Quaternion.identity);
         ProjectileController projectileScript = projectileObj.GetComponent<ProjectileController>();
         projectileScript.SetTarget(target);
@@ -54,22 +64,53 @@ public class Defense : MonoBehaviour
         rotPoint.rotation = Quaternion.RotateTowards(rotPoint.rotation,targetRotation,rotationSpeed * Time.deltaTime);
     }
 
-    // public void OnDrawGizmosSelected(){ // draws a circle trigger range
-    //     Handles.color = Color.cyan;
-    //     Handles.DrawWireDisc(transform.position,transform.forward,targetRange);
-    // }
+    public void OnDrawGizmosSelected(){ // draws a circle trigger range
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position,targetRange);
+    }
 
-    
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void SetOccupiedSlot(Transform slot)
     {
-        GameObject otherGO = collision.gameObject;
-        if(otherGO.CompareTag("Turret")){
-            Debug.Log($"Collided with: {otherGO.name}, Tag: {otherGO.tag}");
-            isColliding = true;
+        occupiedSlot = slot;
+    }
+
+    public void ClickEvent(){
+        if (Input.GetMouseButtonDown(1)) // Right-click
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Hit detected on: " + hit.collider.gameObject.name);
+
+                if (hit.collider.gameObject == gameObject)
+                {
+                    Debug.Log("Right-click detected on this turret");
+                    SellCurrentInstance(); // Call your sell method here
+                }
+            }
         }
-        else{
-            Debug.Log("No Collision");
-            isColliding = false;
+    }
+    public void SellCurrentInstance()
+    {
+    // Assuming currentInstance has a 'Defense' component with the cost
+        
+        if (gameObject != null)
+        {
+            int refundAmount = Mathf.FloorToInt(cost * 0.75f);
+            LevelManager.main.IncreaseCoin(refundAmount);
+
+            // Reset the slot's tag to null or unoccupied
+            if (occupiedSlot != null)
+            {
+                occupiedSlot.tag = "Slots"; // Resetting the slot to unoccupied
+            }
+
+            // Destroy the currentInstance
+            Destroy(gameObject);
+            isSold = true;
+            Debug.Log("Current turret sold for " + refundAmount + " coins.");
         }
     }
 }
