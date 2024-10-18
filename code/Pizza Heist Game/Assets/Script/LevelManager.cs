@@ -159,6 +159,7 @@ public class LevelManager : MonoBehaviour
         _cgroup.alpha = 1f;
         GameState.fontSize = 100;
         _cgroup.interactable = true;
+        _cgroup.blocksRaycasts = true;
         Time.timeScale = 0;
         currentState = GameStateEnum.EndGame;
     }
