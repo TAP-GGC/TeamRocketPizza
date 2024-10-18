@@ -26,6 +26,11 @@ public class Defense : MonoBehaviour
     // public bool isColliding;
     public bool isSold = false;
     public Transform occupiedSlot;
+    private AudioSource audioOrig;
+
+    private void Start(){
+        audioOrig = GetComponent<AudioSource>();
+    }
     public void FindTarget(){
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
         transform.position,
@@ -38,6 +43,7 @@ public class Defense : MonoBehaviour
         }
     }
     public virtual void Shoot(){
+        audioOrig.Play();
         GameObject projectileObj = Instantiate(projectilePrefab,firingPoint.position,Quaternion.identity);
         ProjectileController projectileScript = projectileObj.GetComponent<ProjectileController>();
         projectileScript.SetTarget(target);

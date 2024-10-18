@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Unity.VisualScripting;
 
 public class BackupTower : Defense
 {
     
-  
-
     private void Update(){
         ClickEvent();
         if (target == null){
@@ -33,6 +32,7 @@ public class BackupTower : Defense
         for (int i = 0; i < 3; i++)
         {
             Shoot();
+            
             // Wait for a short delay between shots
             yield return new WaitForSeconds(0.4f); // Adjust the delay as needed
         }

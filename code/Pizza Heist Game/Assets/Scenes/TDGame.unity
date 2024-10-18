@@ -11034,7 +11034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 436.35, y: 162}
+  m_AnchoredPosition: {x: 443.9, y: 189.3}
   m_SizeDelta: {x: 238.242, y: 227.0327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1776037649
@@ -11292,8 +11292,8 @@ MonoBehaviour:
   - {fileID: 152381148}
   - {fileID: 1366528972}
   - {fileID: 1600358871}
-  coins: 0
-  health: 0
+  coins: 500
+  health: 20
   images: {fileID: 1180493841}
   malware: {fileID: 21300000, guid: acaa511baf6284567b84a1346c017903, type: 3}
   Ransomware: {fileID: 2095370877, guid: 1f5b6cc761dbff14ea9a644c9b0f692f, type: 3}

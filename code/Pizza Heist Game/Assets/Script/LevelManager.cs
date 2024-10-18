@@ -72,8 +72,7 @@ public class LevelManager : MonoBehaviour
         imgGroup.interactable = false;
         currentState = GameStateEnum.Malware;
         Time.timeScale = 0;
-        coins = 100;
-        health = 20;
+        
         gameOver = false;
         
         

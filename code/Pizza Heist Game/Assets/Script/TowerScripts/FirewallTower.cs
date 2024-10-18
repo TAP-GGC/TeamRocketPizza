@@ -7,9 +7,10 @@ public class FirewallTower : Defense
 {
     
     private ParticleSystem partSys;
-
+    private new AudioSource audio;
     private void Start(){
         partSys = GetComponentInChildren<ParticleSystem>();
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update(){
@@ -46,6 +47,7 @@ public class FirewallTower : Defense
     public override void Shoot()
     {
         partSys.Play();
+        audio.Play();
         Firepulse();
 
     }

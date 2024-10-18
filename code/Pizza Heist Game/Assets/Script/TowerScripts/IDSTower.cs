@@ -8,8 +8,9 @@ public class IDSTower : Defense
     
     private ParticleSystem partSys;
     public int laserDamage;
-
+    private new AudioSource audio;
     private void Start(){
+        audio = GetComponent<AudioSource>();
         partSys = GetComponentInChildren<ParticleSystem>();
     }
 
@@ -38,7 +39,7 @@ public class IDSTower : Defense
     public override void Shoot()
     {
         partSys.Play();
-
+        audio.Play();
     }
 }
 

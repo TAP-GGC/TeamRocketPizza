@@ -8,9 +8,10 @@ public class NetworkTower : Defense
     
     private ParticleSystem partSys;
     public int shockDamage;
-
+    private new AudioSource audio;
     private void Start(){
         partSys = GetComponentInChildren<ParticleSystem>();
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update(){
@@ -47,6 +48,7 @@ public class NetworkTower : Defense
     public override void Shoot()
     {
         partSys.Play();
+        audio.Play();
         Shockpulse();
 
     }
