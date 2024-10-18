@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Defense : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class Defense : MonoBehaviour
     public float fireCooldown;
 
     // public bool isColliding;
-
+    public bool isSold = false;
+    public Transform occupiedSlot;
     public void FindTarget(){
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
         transform.position,
@@ -59,6 +61,51 @@ public class Defense : MonoBehaviour
     public void OnDrawGizmosSelected(){ // draws a circle trigger range
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position,targetRange);
+    }
+
+    public void SetOccupiedSlot(Transform slot)
+    {
+        occupiedSlot = slot;
+    }
+
+    public void ClickEvent(){
+        if (Input.GetMouseButtonDown(1)) // Right-click
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Hit detected on: " + hit.collider.gameObject.name);
+
+                if (hit.collider.gameObject == gameObject)
+                {
+                    Debug.Log("Right-click detected on this turret");
+                    SellCurrentInstance(); // Call your sell method here
+                }
+            }
+        }
+    }
+    public void SellCurrentInstance()
+    {
+    // Assuming currentInstance has a 'Defense' component with the cost
+        
+        if (gameObject != null)
+        {
+            int refundAmount = Mathf.FloorToInt(cost * 0.75f);
+            LevelManager.main.IncreaseCoin(refundAmount);
+
+            // Reset the slot's tag to null or unoccupied
+            if (occupiedSlot != null)
+            {
+                occupiedSlot.tag = "Slots"; // Resetting the slot to unoccupied
+            }
+
+            // Destroy the currentInstance
+            Destroy(gameObject);
+            isSold = true;
+            Debug.Log("Current turret sold for " + refundAmount + " coins.");
+        }
     }
 }
 

@@ -65,13 +65,13 @@ private IEnumerator TypeNextDialogue()
         }
 
         currentState = DialogueState.WaitingForInput; 
-
+        
         if (currentText == "")
             {
                 currentState = DialogueState.Finished;
                 canvasGroup.alpha = 0f; // Hide the canvas
                 canvasGroup.interactable = false; 
-                // Exit the coroutine
+                canvasGroup.blocksRaycasts = false;
             }
             // Wait until the button is clicked to continue
         yield return new WaitUntil(() => currentState == DialogueState.Finished);

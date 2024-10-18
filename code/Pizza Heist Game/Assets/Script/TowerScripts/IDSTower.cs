@@ -14,6 +14,7 @@ public class IDSTower : Defense
     }
 
     private void Update(){
+        ClickEvent();
         if (target == null){
             FindTarget();
             return;

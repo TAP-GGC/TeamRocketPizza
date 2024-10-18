@@ -5063,7 +5063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1236783950609211819}
   spriteRenderer: {fileID: 4709224523584973798}
-  hitPoints: 3
+  hitPoints: 5
   coinsWorth: 15
   damage: 3
   speed: 3

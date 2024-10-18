@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 0.75f;
     [SerializeField] private float enemiesPerSecondCap = 15f;
     [SerializeField] private float timeBetweenWaves = 2f;
-    [SerializeField] private float difficultyScalingFactor = 0.75f;
+    [SerializeField] private float difficultyScalingFactor = 0.35f;
 
     [Header("Events")]
     public static UnityEvent enemyDestroy = new UnityEvent();
@@ -97,6 +97,7 @@ public class EnemySpawner : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currentEnemyWave++;
         // Show the button to allow starting the next wave
+        LevelManager.main.WaveComplete();
         startWaveButton.enabled = true;
     }
 

@@ -258,9 +258,11 @@ MonoBehaviour:
   firerate: 0.5
   rotationSpeed: 360
   targetRange: 3
-  cost: 50
+  cost: 65
   target: {fileID: 0}
   fireCooldown: 0
+  isSold: 0
+  occupiedSlot: {fileID: 0}
 --- !u!61 &2325860955871780378
 BoxCollider2D:
   m_ObjectHideFlags: 0

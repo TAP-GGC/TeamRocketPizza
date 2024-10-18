@@ -103,6 +103,7 @@
                         currentInstance.transform.position = closestSlot.position;
                         // Mark the slot as occupied by setting the tag
                         closestSlot.tag = "Occupied";
+                        tower.SetOccupiedSlot(closestSlot);
                     }
                     else
                     {
@@ -139,24 +140,27 @@
                     defName.text = "Network Defender";
                     defDesc.text = "===========\n A 2 shot defense, it also has the ability to detects worms and destroy them.";
                 }
+                if(clickedObject.CompareTag("FirewallTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                    defDesc.text = "";
+                    defName.text = "";
+                    defName.text = "Firewall Tower";
+                    defDesc.text = "===========\n A pulsing fire tower. It can slow down the viruses within its range.";
+                }
+                if(clickedObject.CompareTag("IDSTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                    defDesc.text = "";
+                    defName.text = "";
+                    defName.text = "IDS Tower";
+                    defDesc.text = "===========\n A powerful defense that can defends against anything, LASERRR BEAAM!!!";
+                }
+                if(clickedObject.CompareTag("BackupTower") && clickedObject.layer == LayerMask.NameToLayer("UI")){
+                    defDesc.text = "";
+                    defName.text = "";
+                    defName.text = "Back-up tower";
+                    defDesc.text = "===========\n A tower that pulse a shockwave, it helps gets rid of the ransomware.";
+                }
             }
             
         }
 
-    private void SellCurrentInstance()
-    {
-    // Assuming currentInstance has a 'Defense' component with the cost
-        Defense towerDefense = currentInstance.GetComponent<Defense>();
-        if (towerDefense != null)
-        {
-            int refundAmount = towerDefense.cost / 4;
-            LevelManager.main.sellTurret(refundAmount);
-
-            // Destroy the currentInstance
-            Destroy(currentInstance);
-            currentInstance = null; // Clear the reference to avoid further interaction
-
-            Debug.Log("Current turret sold for " + refundAmount + " coins.");
-        }
-    }
+    
 }

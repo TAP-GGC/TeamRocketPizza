@@ -7,13 +7,13 @@ public class FirewallTower : Defense
 {
     
     private ParticleSystem partSys;
-    private Virus virusSpeed;
 
     private void Start(){
         partSys = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update(){
+        ClickEvent();
         if (target == null){
             FindTarget();
             return;

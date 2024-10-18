@@ -8,7 +8,7 @@ public class MainJava : MonoBehaviour
     private Text messageText;
 
     private void Awake() {
-        messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
+        messageText = GameObject.Find("messageText").GetComponent<Text>();
     }
 
     private void Start() {

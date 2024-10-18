@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4343115744456443922}
   spriteRenderer: {fileID: 2800373004583112690}
-  hitPoints: 3
+  hitPoints: 4
   coinsWorth: 20
   damage: 1
   speed: 1
@@ -203,5 +203,5 @@ MonoBehaviour:
   target: {fileID: 0}
   happySprite: {fileID: -1387451681, guid: 4a200886b73f61f43b3f7d6415764cc0, type: 3}
   angrySprite: {fileID: 1084108809, guid: 4a200886b73f61f43b3f7d6415764cc0, type: 3}
-  berserkSpeed: 3
-  berserkHealth: 10
+  berserkSpeed: 4
+  berserkHealth: 20

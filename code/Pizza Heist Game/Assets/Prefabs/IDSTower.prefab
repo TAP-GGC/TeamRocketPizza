@@ -246,9 +246,11 @@ MonoBehaviour:
   firerate: 1
   rotationSpeed: 360
   targetRange: 3
-  cost: 100
+  cost: 350
   target: {fileID: 0}
   fireCooldown: 0
+  isSold: 0
+  occupiedSlot: {fileID: 0}
   laserDamage: 3
 --- !u!1 &8930750207080833285
 GameObject:
