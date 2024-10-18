@@ -14,19 +14,39 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public Transform startPoint;
     public Transform[] waypoints;
-    private Animator anim;
     private Text healthText;
     private Text coinText;
     private Text GameState;
-    private Text Detail;
     private CanvasGroup _cgroup;
+    private CanvasGroup wavegroup;
+    private CanvasGroup Chatcgroup;
     private CanvasGroup imgGroup;
-    private Button butt1;
-    private int currentState;
     public int coins;
     public int health;
     private bool gameOver;
-    
+    private GameStateEnum currentState;
+    private EnemySpawner enemySpawner;
+
+
+    [Header("Virus images")]
+    [SerializeField] private Image images;
+    [SerializeField] private Sprite malware;
+    [SerializeField] private Sprite Ransomware;
+    [SerializeField] private Sprite Dos;
+    [SerializeField] private Sprite Worm;
+    [SerializeField] private Sprite Trojan;
+    private enum GameStateEnum
+    {
+        StartGame,
+        Malware,
+        Worm,
+        Dos,
+        Ransomware,
+        Trojan,
+        EndGame
+    }
+     
+    private Dictionary<string, string> virusDescriptions;
 
     private void Awake()
     {
@@ -36,22 +56,26 @@ public class LevelManager : MonoBehaviour
 
     private void Start(){
 
-        currentState = 1;
-        Time.timeScale = 0;
-        coins = 70;
-        health = 20;
-        gameOver = false;
-        
+       
 
-        
+        enemySpawner = GetComponent<EnemySpawner>();
         _cgroup = GameObject.Find("StateMenu").GetComponent<CanvasGroup>();
-        imgGroup = GameObject.Find("VirusPanel").GetComponent<CanvasGroup>();
-        butt1 = GameObject.Find("BackButton").GetComponent<Button>();
-
+        Chatcgroup = GameObject.Find("BossChat").GetComponent<CanvasGroup>();
+        imgGroup = GameObject.Find("VirusImagePanel").GetComponent<CanvasGroup>();
+        wavegroup = GameObject.Find("WaveComplete").GetComponent<CanvasGroup>();
         GameState = GameObject.Find("GameState").GetComponent<Text>();
-        Detail = GameObject.Find("DetailText").GetComponent<Text>();
+        
         healthText = GameObject.Find("HealthText").GetComponent<Text>();
         coinText = GameObject.Find("CoinsText").GetComponent<Text>();
+
+        imgGroup.blocksRaycasts = false;
+        imgGroup.interactable = false;
+        currentState = GameStateEnum.Malware;
+        Time.timeScale = 0;
+        
+        gameOver = false;
+        
+        
     }
 
     public void IncreaseCoin(int amount){
@@ -69,9 +93,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void sellTurret(int amount){
-        coins += amount/4;
-    }
+    
 
     public void decreaseHealth(int amount){
         health -= amount;
@@ -80,71 +102,132 @@ public class LevelManager : MonoBehaviour
             
         }
     }
+    
 
-    public void TextSwitch(){
-        if(currentState == 0){
-            SceneManager.LoadScene("TDGame");
-        }
-        if(currentState == 1){
-            HideAllGroup();
-            currentState = 2;
-        }
-        else if(currentState == 2){
-            GameState.text = "";
-            ShowDetail();
-            currentState = 3;
-        }
-        else if(currentState == 3){
-           HideAllGroup();
-        }
-        else if(currentState == 4){
-            Time.timeScale = 1;
-            SceneManager.LoadScene("Desktop 2");
+    public void TextSwitch()
+    {
+        switch (currentState)
+        {
+            case GameStateEnum.StartGame:
+                SceneManager.LoadScene("TDGame");
+                break;
+            case GameStateEnum.Malware:
+                HideAllGroup();
+                Time.timeScale = 1;
+                ShowGroup();
+                ShowImage(malware,102,5,103);
+                currentState = GameStateEnum.Ransomware; // Transition to hide Malware
+                break;
+            case GameStateEnum.Ransomware:
+                HideAllGroup();
+                Time.timeScale = 1;
+                ShowGroup();
+                ShowImage(Ransomware,190,159,38);
+                currentState = GameStateEnum.Dos; // Transition to Worm detail
+                break;
+            case GameStateEnum.Dos:
+                HideAllGroup();
+                Time.timeScale = 1;
+                ShowGroup();
+                ShowImage(Dos,65,123,219);
+                currentState = GameStateEnum.Worm; // Transition to hide Worm
+                break;
+            case GameStateEnum.Worm:
+                HideAllGroup();
+                Time.timeScale = 1;
+                ShowGroup();
+                ShowImage(Worm,200,12,94);
+                currentState = GameStateEnum.Trojan; // Transition to start the game
+                break;
+            case GameStateEnum.Trojan:
+                HideAllGroup();
+                Time.timeScale = 1;
+                ShowGroup();
+                ShowImage(Trojan,251,230,51);
+                currentState = GameStateEnum.EndGame; // Transition to hide Worm
+                break;
+            case GameStateEnum.EndGame:
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Desktop 2");
+                break;
         }
     }
 
     public void WinGame(){
-
+        HideGroup();
         GameState.text = "You Win! \nClick button to go back";
         _cgroup.alpha = 1f;
         GameState.fontSize = 100;
         _cgroup.interactable = true;
         Time.timeScale = 0;
-        currentState = 4;
+        currentState = GameStateEnum.EndGame;
     }
 
     public void LoseGame(){
-        
-        GameState.text = "Game Over!\nYou Lose\nClick below to Restart";
+        HideGroup();
+        GameState.text = "Game Over!\nYou Lose\nClick to Restart";
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
+        _cgroup.blocksRaycasts = true;
         Time.timeScale = 0;
-
-        currentState = 0;
+        currentState = GameStateEnum.StartGame;
     }
     public void HideAllGroup(){
         GameState.text = "";
-        Detail.text = "";
         imgGroup.alpha = 0f;
         _cgroup.alpha = 0f;
         _cgroup.interactable = false;
-        Time.timeScale = 1;
+        _cgroup.blocksRaycasts = false;
+        
+    }
+    public void ShowImage(Sprite sprite, float r, float g, float b)
+    {
+        images.sprite = sprite;
+
+        // Create a Color using the provided RGB values, with an optional alpha value of 1 (fully opaque)
+        Color color = new Color(r / 255f, g / 255f, b / 255f, 1f);
+
+        // Apply the color to the image
+        images.color = color;
+    }
+
+    public void ShowGroup(){
+        imgGroup.alpha = 1f;
+        Chatcgroup.alpha = 1f;
+        Chatcgroup.interactable = true;
+        Chatcgroup.blocksRaycasts = true;
+        
+    }
+
+
+    public void HideGroup(){
+        imgGroup.alpha = 0f;
+        Chatcgroup.alpha = 0f;
+        Chatcgroup.interactable = false;
+        Chatcgroup.blocksRaycasts = false;
+        ;
     }
 
     public void Warning()
     {
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
+        _cgroup.blocksRaycasts = true;
         Time.timeScale = 0;
         GameState.fontSize = 120;
         GameState.text = "Warning! A New Virus is Approaching";
         
     }
 
-    public void ShowDetail(){
+    public void WaveComplete(){
+        wavegroup.alpha = 1f;
+        StartCoroutine(waitAndHide());
         
-        imgGroup.alpha = 1f;
-        Detail.text = "worm viruses are malware that self-replicate and spreads itself across your network. Normal malware anti-virus can't detect them. They mainly attack network system and can infect it quickly. \n\n\n Effective defenses: Network Tower. \n Abilities: duplication.";
+    }
+
+    public IEnumerator waitAndHide(){
+        yield return new WaitForSeconds(2f);
+        wavegroup.alpha = 0f;
     }
 
     // Update is called once per frame
