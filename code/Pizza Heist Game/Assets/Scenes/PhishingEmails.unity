@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1564964625}
   m_Direction: 2
   m_Value: -0.00000010003449
-  m_Size: 0
+  m_Size: 0.4537148
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3595,6 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11780f7b43524c23b7cc82afd7bf358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReplayTransition: {fileID: 2126289794}
   emailsJson: {fileID: 4900000, guid: 0a91c3051d41147648ef25b0ba5f03f2, type: 3}
   emailObjectPrefab: {fileID: 662264876632894695, guid: 8b63a1c5b45ab864e97027891e636db3, type: 3}
   emailDetailsPrefab: {fileID: 5681734869054208923, guid: 2933426d81935478fa92554594bdafed, type: 3}

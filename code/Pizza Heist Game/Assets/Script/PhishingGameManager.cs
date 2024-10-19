@@ -8,6 +8,7 @@ public class PhishingGameController : MonoBehaviour
 {
 
     //PREFAB SETUP -------------------------------------------------------------------------------------------------------------
+    public LevelLoader ReplayTransition;
     public TextAsset emailsJson; // JSON file containing the emails
     public GameObject emailObjectPrefab; // Prefab for the email Inbox object
     public GameObject emailDetailsPrefab; // Prefab for the email details object
@@ -544,7 +545,7 @@ public class PhishingGameController : MonoBehaviour
     void addListenersToMenuButtons()
     {
         menuButton.onClick.AddListener(() => menuPanel.SetActive(!menuPanel.activeSelf));
-        reloadGameButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
+        reloadGameButton.onClick.AddListener(() => ReplayTransition.LoadNextLevel(SceneManager.GetActiveScene().name));
         reloadInstructionsButton.onClick.AddListener(() => bossChatTutorialIntro());
         logOutButton.onClick.AddListener(() => stopPlayerExit());
     }
