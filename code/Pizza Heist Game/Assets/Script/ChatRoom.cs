@@ -17,9 +17,10 @@ public class ChatRoom : MonoBehaviour
     private string[] messageArray;
 
     private void Awake() {
+
     messageText = transform.Find("message").Find("bossMessage").GetComponent<Text>();
     clickToContinue = transform.Find("message2").Find("clickToContinue").GetComponent<Text>();
-
+    
         messageArray = new string[] {
             "Welcome new recruit.",
             "Welcome new recruit.",
@@ -31,16 +32,18 @@ public class ChatRoom : MonoBehaviour
             "Click on the 'E-mail' folder when you're ready to begin."
             
         };
-
+        
         startChatButton.onClick.AddListener(OnStartChatClicked);
         messageText.gameObject.SetActive(false);
         chatImage.gameObject.SetActive(false);
         bossIcon.gameObject.SetActive(false);
         clickToContinue.gameObject.SetActive(false);
+        
+        
     }
-
     private void OnStartChatClicked() {
         startChatButton.gameObject.SetActive(false);
+        
         chatImage.gameObject.SetActive(true);
         StartCoroutine(DelayedChatStart());
     }

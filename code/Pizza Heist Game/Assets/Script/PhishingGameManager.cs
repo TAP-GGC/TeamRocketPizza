@@ -112,7 +112,7 @@ public class PhishingGameController : MonoBehaviour
             //Win text will be Green
             gameEndPrefab.SetActive(true);
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "Good Job!!";
-
+            Time.timeScale = 1;
         }
         else if (attemptsLeft <= 0 && emailLeft > 0)
         {
@@ -125,7 +125,7 @@ public class PhishingGameController : MonoBehaviour
             gameEndPrefab.transform.Find("Panel").Find("ReturnButton").gameObject.SetActive(false);
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().color = Color.red;
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "You got hacked!!";
-            
+            Time.timeScale = 1;
         }
         
 

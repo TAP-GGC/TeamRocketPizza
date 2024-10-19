@@ -10,7 +10,7 @@ public class InputHandlerCopy : MonoBehaviour
     [SerializeField] InputField userName;
     [SerializeField] Text resultText;
     [SerializeField] Button submitButton;
-    private NavController nav;
+    public LevelLoader transitionLoad;
     Boolean login;
     public Image accessBar;
     public Text accessGranted;
@@ -22,7 +22,7 @@ public class InputHandlerCopy : MonoBehaviour
 
         private void Start() 
     {
-        nav = FindObjectOfType<NavController>();
+       
         submitButton.onClick.AddListener(ValidateInput);
     }
 
@@ -124,6 +124,6 @@ public class InputHandlerCopy : MonoBehaviour
     }
 
     public void NavigateToDesktop() {
-        nav.GoToScene("Desktop");
+        transitionLoad.LoadNextLevel("Desktop");
     }
 }

@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: eeef9e7b0f3d8064f9c14adda0f4e257
   - enabled: 1
     path: Assets/Scenes/OpeningCutscene2.unity
-    guid: 10a247f86c1b0d140bc4e6d97713ee03
+    guid: 3d4ba42eef1fb7b4d98140a82868a817
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 87ba1ed9133b0a8439600f338b5dd4f4
@@ -27,14 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Desktop.unity
     guid: 4a7e488bd53a7d84bbdde11d9e02813b
   - enabled: 1
-    path: Assets/Scenes/TDGame.unity
-    guid: da017c8cb73169448bf03dee79111b61
+    path: Assets/Scenes/PhishingEmails.unity
+    guid: 0a8b5a038394a4e85a7c50136c71cef7
   - enabled: 1
     path: Assets/Scenes/Desktop 2.unity
     guid: 695d3ffa7bd28e94ca6daaf5e79e7cf6
   - enabled: 1
-    path: Assets/Scenes/PhishingEmails.unity
-    guid: 0a8b5a038394a4e85a7c50136c71cef7
+    path: Assets/Scenes/TDGame.unity
+    guid: da017c8cb73169448bf03dee79111b61
   - enabled: 1
     path: Assets/Scenes/Desktop 3.unity
     guid: 10e8aafdeb836c041861515563d4a60e

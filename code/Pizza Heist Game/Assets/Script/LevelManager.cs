@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public Transform startPoint;
     public Transform[] waypoints;
+    public LevelLoader transitionRef;
     private Text healthText;
     private Text coinText;
     private Text GameState;
@@ -35,6 +37,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Sprite Dos;
     [SerializeField] private Sprite Worm;
     [SerializeField] private Sprite Trojan;
+    
     private enum GameStateEnum
     {
         StartGame,
@@ -71,7 +74,7 @@ public class LevelManager : MonoBehaviour
         imgGroup.blocksRaycasts = false;
         imgGroup.interactable = false;
         currentState = GameStateEnum.Malware;
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         
         gameOver = false;
         
@@ -109,7 +112,7 @@ public class LevelManager : MonoBehaviour
         switch (currentState)
         {
             case GameStateEnum.StartGame:
-                SceneManager.LoadScene("TDGame");
+                transitionRef.LoadNextLevel("TDGame");
                 break;
             case GameStateEnum.Malware:
                 HideAllGroup();
@@ -148,7 +151,7 @@ public class LevelManager : MonoBehaviour
                 break;
             case GameStateEnum.EndGame:
                 Time.timeScale = 1;
-                SceneManager.LoadScene("Desktop 2");
+                transitionRef.LoadNextLevel("Desktop 3");
                 break;
         }
     }
@@ -160,7 +163,7 @@ public class LevelManager : MonoBehaviour
         GameState.fontSize = 100;
         _cgroup.interactable = true;
         _cgroup.blocksRaycasts = true;
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         currentState = GameStateEnum.EndGame;
     }
 
@@ -170,7 +173,7 @@ public class LevelManager : MonoBehaviour
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
         _cgroup.blocksRaycasts = true;
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         currentState = GameStateEnum.StartGame;
     }
     public void HideAllGroup(){
@@ -211,13 +214,18 @@ public class LevelManager : MonoBehaviour
 
     public void Warning()
     {
+        
+        StartCoroutine(waitInWarning());
+    }
+
+    IEnumerator waitInWarning(){
+        yield return new WaitForSeconds(3f);
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
         _cgroup.blocksRaycasts = true;
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         GameState.fontSize = 120;
         GameState.text = "Warning! A New Virus is Approaching";
-        
     }
 
     public void WaveComplete(){

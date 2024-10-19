@@ -10,7 +10,7 @@ public class GameEndController : MonoBehaviour
 
     public Button ReplayButton;
     public Button ReturnButton;
-
+    public LevelLoader transitionRef;
 
     public string returnSceneName;
 
@@ -44,7 +44,8 @@ public class GameEndController : MonoBehaviour
     {
         // Load the game scene
         Debug.Log("Replay button clicked");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+        transitionRef.LoadNextLevel(SceneManager.GetActiveScene().name);
     }
 
     public void OnReturnButtonClicked()
@@ -53,7 +54,8 @@ public class GameEndController : MonoBehaviour
         Debug.Log("Return button clicked");
         if (returnSceneName != null)
         {
-            SceneManager.LoadScene(returnSceneName);
+            Time.timeScale = 1;
+            transitionRef.LoadNextLevel(returnSceneName);
         }
         else
         {
