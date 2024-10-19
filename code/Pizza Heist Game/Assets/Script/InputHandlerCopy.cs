@@ -31,9 +31,9 @@ public class InputHandlerCopy : MonoBehaviour
         login = false;
 
         // Check if the password length is between 6 and 12 characters
-        if (input.Length < 6 || input.Length > 12)
+        if (input.Length < 12 || input.Length > 24)
         {
-            resultText.text = "Password must be between 6 and 12 characters.";
+            resultText.text = "Password must be between 12 and 24 characters.";
             return;
         }
 
