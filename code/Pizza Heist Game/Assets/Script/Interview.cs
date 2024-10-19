@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Interview : MonoBehaviour
 {
+    //public Button NextCutsceneButton;
     private Text messageText;
     private TextWriter.TextWriterSingle textWriterSingle;
     private string[] messageArray;
@@ -15,9 +16,17 @@ public class Interview : MonoBehaviour
     messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
     messageArray = new string[] {
         "Welcome.",
-        "I have been waiting for your arrival.",
-        "Big Caesars is in need of your help. Our pizza rivals, Mama Johns, are trying to get their hands on our secret pizza formula."
+        "I have a job for you.",
+        "But before you begin, you must create an account in our database.",
+        "Decide on a username and develop a secure password.",
+        "You won't be granted access until your password is secure enough.",
+        "I expect great work from you today.",
+        "...",
+        "I hope this will be enough compensation."
     };
+
+    //NextCutsceneButton.gameObject.SetActive(false);
+
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
             if (textWriterSingle != null && textWriterSingle.IsActive()) {
                 textWriterSingle.WriteAllAndDestroy();
@@ -37,6 +46,9 @@ public class Interview : MonoBehaviour
             currentMessageIndex++;
             textWriterSingle = TextWriter.AddWriter_Static(messageText, message, .05f, true, true);
         }
+        // } else {
+        //     NextCutsceneButton.gameObject.SetActive(true);
+        // }
     }
 
 }
