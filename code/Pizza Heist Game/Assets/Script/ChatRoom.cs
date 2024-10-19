@@ -23,9 +23,13 @@ public class ChatRoom : MonoBehaviour
         messageArray = new string[] {
             "Welcome new recruit.",
             "Welcome new recruit.",
-            "Our pizza shop is in danger of being hacked.",
-            "You will ensure the safety of our network starting with setting up the anti-virus software.",
-            "Click the anti-virus folder to begin your first task."
+            "Congratulations on successfully logging in.",
+            "I'll walk you through everything since it's your first day.",
+            "The folders on your screen will help you complete today's tasks.",
+            "We're going to start off simple.",
+            "We recieved an influx of emails so we need your help to sort it all",
+            "Click on the 'E-mail' folder when you're ready to begin."
+            
         };
 
         startChatButton.onClick.AddListener(OnStartChatClicked);

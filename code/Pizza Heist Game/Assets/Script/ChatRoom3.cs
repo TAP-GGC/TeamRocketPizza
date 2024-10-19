@@ -20,8 +20,11 @@ public class ChatRoom3 : MonoBehaviour
 
     messageArray = new string[] {
         "Good work, new recruit.",
-        "You've completed all of your tasks.",
+        "Your survived your first day on the job.",
+        "And you even saved our shop!",
+        "Maybe I'll actually keep you around, rookie.",
         "It's about time you clock out for the day.",
+        "I'll see you again tomorrow, bright and early.",
         "Don't forget to log out!"
     };
 

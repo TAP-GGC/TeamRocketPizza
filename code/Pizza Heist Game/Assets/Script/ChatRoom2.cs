@@ -19,10 +19,17 @@ public class ChatRoom2 : MonoBehaviour
     clickToContinue.gameObject.SetActive(false);
 
     messageArray = new string[] {
-        "Great job. The Anti-virus software is now up and running.",
-        "We've recieved an influx of emails.",
-        "We need you to identify and report all of the phishing emails.",
-        "Click on the E-mail folder to get started."
+        "Oh shoot! Rookie, I have bad news.",
+        "I clicked on a phishing link and now the shop is compromised.",
+        "ksj7^%Bu we%$NSpw9 2&456",
+        "Quick! There's still a way to fix it!",
+        "We have an advanced anti-virus program built just for this.",
+        "IOkl j*&687sjK J^%456",
+        "Once you get it working, it will be as if none of this happened in the first place!",
+        "It will detect irregular patterns and defend against anything malicious.",
+        "us*89sdJH &*65hdHJ KJ^&*989fsd",
+        "It's a bit complicated, but I'll walk you through it.",
+        "Click on the 'Anti-Virus' folder. Hurry!"
     };
 
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
