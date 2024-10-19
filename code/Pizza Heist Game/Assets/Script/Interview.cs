@@ -11,6 +11,7 @@ public class Interview : MonoBehaviour
     private TextWriter.TextWriterSingle textWriterSingle;
     private string[] messageArray;
     private int currentMessageIndex = 0;
+    public Animator anim;
 
     private void Awake() {
     messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
@@ -49,6 +50,19 @@ public class Interview : MonoBehaviour
         // } else {
         //     NextCutsceneButton.gameObject.SetActive(true);
         // }
+    }
+
+    private void Update(){
+        StartCoroutine(waitAnimation());
+    }
+
+    private IEnumerator waitAnimation(){
+        if(currentMessageIndex == messageArray.Length-1){
+            yield return new WaitForSeconds(2f);
+            anim.SetTrigger("Slide");
+            yield return new WaitForSeconds(0.2f);
+            anim.SetTrigger("Floating");
+        }
     }
 
 }

@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/FrontPage.unity
     guid: 204b659934113a1499d4c90067e3cb35
   - enabled: 1
+    path: Assets/Scenes/OpeningCutscene1.unity
+    guid: 8c53be4aad7944c4ebafa45cee168109
+  - enabled: 1
+    path: Assets/Scenes/BossInterview.unity
+    guid: eeef9e7b0f3d8064f9c14adda0f4e257
+  - enabled: 1
+    path: Assets/Scenes/OpeningCutscene2.unity
+    guid: 10a247f86c1b0d140bc4e6d97713ee03
+  - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 87ba1ed9133b0a8439600f338b5dd4f4
   - enabled: 1
