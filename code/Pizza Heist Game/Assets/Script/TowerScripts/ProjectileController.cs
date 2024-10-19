@@ -21,7 +21,7 @@ public class ProjectileController : MonoBehaviour
     void Start(){
         // If no target is set, move in the default forward direction
         if (target == null){
-            direction = transform.up; // Default forward direction of the projectile
+            Destroy(gameObject,0.2f); // Default forward direction of the projectile
         }
     }
     

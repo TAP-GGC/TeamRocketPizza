@@ -31,8 +31,9 @@ public class BackupTower : Defense
     {
         for (int i = 0; i < 3; i++)
         {
-            Shoot();
-            
+            if(target != null){
+                Shoot();
+            }
             // Wait for a short delay between shots
             yield return new WaitForSeconds(0.4f); // Adjust the delay as needed
         }
