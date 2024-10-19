@@ -34,6 +34,7 @@ public class PhishingGameController : MonoBehaviour
     public GameObject menuPanel; // computer menu panel
     public Button reloadGameButton; // reload game button in computer menu
     public Button reloadInstructionsButton; // reload instructions button in computer menu
+    public Button logOutButton; // log out button in computer menu, this will open a boss chat, preventing the player from ending the game
 
 
 
@@ -60,6 +61,9 @@ public class PhishingGameController : MonoBehaviour
     //Game Over Controlls
     public int emailLeft=0; //Number of emails left in the inbox
     public int attemptsLeft = 3; //Number of attempts left to guess the email
+
+    public int numPhishingEmails = 0; //Number of phishing emails in the inbox
+    public int numNotPhishingEmails = 0; //Number of non-phishing emails in the inbox
     
 
     void Start()
@@ -142,6 +146,7 @@ public class PhishingGameController : MonoBehaviour
         // Store the list of emails
         if (emailListWrapper != null)
         {
+            countEmailTypes(emailListWrapper.emails);
             emails = emailRandomizer(emailListWrapper.emails);
             
         }
@@ -150,6 +155,21 @@ public class PhishingGameController : MonoBehaviour
             Debug.LogError("Failed to load emails from JSON");
         }
 
+    }
+
+    private void countEmailTypes(List<Email> emails)
+    {
+        foreach (Email email in emails)
+        {
+            if (email.IsPhishing)
+            {
+                numPhishingEmails++;
+            }
+            else
+            {
+                numNotPhishingEmails++;
+            }
+        }
     }
 
     private List<Email> emailRandomizer(List<Email> emails)
@@ -334,15 +354,6 @@ public class PhishingGameController : MonoBehaviour
 
     void OnPlayerMistake() 
     {   
-        // bossChatPrefab.SetActive(true);
-        // bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>().text = currentEmail.phishingExplanation;
-        // Button ContinueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
-        // ContinueButton.onClick.AddListener(() => bossChatPrefab.SetActive(false));
-
-        //Break the phishingexplanation into an array of strings by splitting it after each period
-        
-
-        
 
         bossChatPrefab.SetActive(true);
         dialogueText = bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>();
@@ -362,11 +373,11 @@ public class PhishingGameController : MonoBehaviour
         messages = new string[] {
             "Alright Roookie, \nlets take a moment to talk about phishing emails.",
             "Phishing is a type of cyber attack where a malicious actor sends an email that appears to be from a legitimate source.\nAll in an attempt to trick you to interact with it, like clicking on a link that looks real for example.",
-            "Attackers use phishing emails to steal sensitive information, install malware, or gain access to your computer and do damage.\nIts important to be able to identify these kinds of attacks and avoid them.",
+            "Attackers use phishing to steal sensitive information, install malware, or gain access to your computer and do damage.\nIts important to be able to identify these kinds of attacks and avoid them.",
             "I need you to clean up our emails, some of which are phishing emails.\nYour job is to identify them and destroy them. So pay close attention to the details.",
             "On your left is the list of emails, click on an email to view its details.\n\nOnce you've identified a phishing email, click on the 'Phishing' button to mark it as phishing. I will take care of the rest.\n\nIf you think an email is not phishing, click on the 'Not Phishing' button.",
             "You have 3 attempts to guess the phishing emails correctly.\nIf you run out of attempts, you will be hacked and I am not gonna be happy.",
-            "Our domain name is 'BigCaesarsPizza.com', so keep that in mind as well. Play close attention to the sender's email and the content of the email.",
+            "Our domain name is 'BigCaesars.com', so keep that in mind as well. Play close attention to the sender's email and the content of the email.",
             "If you get stuck, click on the 'Start' button to open the menu and I'll help you out.\n\nGood luck Rookie, I'm counting on you.",
         };
 
@@ -393,7 +404,7 @@ public class PhishingGameController : MonoBehaviour
     private void ShowMessage(string message)
     {
         // Start typewriter effect for the current message
-        textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.025f, false, true);
+        textWriterSingle = TextWriter.AddWriter_Static(dialogueText, message, 0.02f, false, true);
         
         isTyping = true;  // Set typing flag
         StartCoroutine(WaitForTypewriterToFinish());
@@ -535,9 +546,51 @@ public class PhishingGameController : MonoBehaviour
         menuButton.onClick.AddListener(() => menuPanel.SetActive(!menuPanel.activeSelf));
         reloadGameButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
         reloadInstructionsButton.onClick.AddListener(() => bossChatTutorialIntro());
+        logOutButton.onClick.AddListener(() => stopPlayerExit());
     }
 
-    
+    private void stopPlayerExit()
+    {   
+        //An Array of different stop logout messages from the boss
+        string[] stopLogoutDialogues = new string[] {
+            "Hold on there Rookie, you can't leave yet.",
+            "You can't leave yet, we have work to do.",
+            "You can't leave yet, we have emails to clean up.",
+            "Not so fast Rookie.",
+            "Don't even think about logging out now!",
+            "Wait! You still have unfinished business.",
+            "The mission isn't complete yet, Rookie.",
+            "Leaving so soon? Not yet, we've got emails to review.",
+            "You’re not off the hook yet, Rookie.",
+            "There's still work to be done. Stay sharp!",
+            "Don’t be in such a hurry, Rookie. We have tasks ahead.",
+            "You can’t just leave in the middle of a mission.",
+            "Before you go, make sure everything is secure.",
+            "No logout for you yet. We have to finish the job.",
+            "Stay put! There's still more to be done.",
+            "This isn't over yet, Rookie. Stay on task.",
+            "The emails aren’t clean yet. Let’s finish the job.",
+            "You're not done until I say you're done.",
+            "There’s still phishing lurking around. Don't go yet.",
+            "You can't bail out now. We’re close to wrapping this up.",
+            "You’ve got more to do. Let’s see this through.",
+            "The network’s not safe yet, Rookie. Stick around.",
+        };
+
+        int randomIndex = Random.Range(0, stopLogoutDialogues.Length);
+
+
+
+
+        bossChatPrefab.SetActive(true);
+        dialogueText = bossChatPrefab.transform.Find("Panel").Find("BossDialogue").GetComponent<Text>();
+        continueButton = bossChatPrefab.transform.Find("Panel").Find("Continue").GetComponent<Button>();
+
+        continueButton.onClick.AddListener(OnContinuePressed);
+        dialogueText.text = "";         // Clear the dialogue box initially
+        continueButton.gameObject.SetActive(false); // Hide the button at first
+        ShowMessage(stopLogoutDialogues[randomIndex]);
+    }
 }
 
 

@@ -1,101 +1,711 @@
 {
-    "emails": [
-      {
-        "Subject": "Free Pizza Coupon - Claim Now!",
-        "SenderEmail": "promo@bigcaesars.pizza",
-        "SenderName": "Big Caesars Promo Team",
-        "Body": "Congratulations! You've won a free pizza. Click this link to claim your coupon: http://bit.ly/freepizza",
-        "IsPhishing": true,
-        "phishingExplanation": "Hey kid, this one's clearly a scam. We don't give out free pizzas like this, especially from a weird link that isn't even our website. Real promos come from BigCaesars.com, not some shady short URL."
-      },
-      {
-        "Subject": "Order Confirmation #12345",
-        "SenderEmail": "orders@bigcaesars.pizza",
-        "SenderName": "Big Caesars Orders",
-        "Body": "Thanks for your order! Your pizza will arrive in 30 minutes or it's free. If you didn't make this order, contact us immediately.",
-        "IsPhishing": false,
-        "phishingExplanation": "You almost flagged this one, huh? But it's a real confirmation from us. Notice the email's right, and there’s nothing suspicious here. Just the usual pizza business. Always check the sender’s email before you panic."
-      },
-      {
-        "Subject": "Immediate Action Required - Account Compromised",
-        "SenderEmail": "security@bigcaesars.pizza",
-        "SenderName": "Big Caesars Security",
-        "Body": "Your account has been compromised. Please log in immediately to verify your details: http://verify.bigcaesars.secure-login.com",
-        "IsPhishing": true,
-        "phishingExplanation": "Whoa, slow down. That link's fishier than a tuna pizza. Real security alerts wouldn't ask you to log in through some weird URL. Always go to the official site directly, don’t trust sneaky links."
-      },
-      {
-        "Subject": "Staff Pizza Party This Friday!",
-        "SenderEmail": "manager@bigcaesars.pizza",
-        "SenderName": "Big Caesars Manager",
-        "Body": "Hey team, don't forget about the pizza party this Friday! It's on me. See you all there.",
-        "IsPhishing": false,
-        "phishingExplanation": "I get it, this might look suspicious, but it's from me, the Big Boss! This one's legit. Nothing fishy about a staff pizza party, right? Just check the sender if you're unsure."
-      },
-      {
-        "Subject": "Update Your Payment Info Now",
-        "SenderEmail": "billing@bigcaesars.payments.com",
-        "SenderName": "Big Caesars Billing Dept",
-        "Body": "We noticed an issue with your last payment. Please update your credit card info here: http://update-billing.com",
-        "IsPhishing": true,
-        "phishingExplanation": "This email's a straight-up con. We’d never ask for payment info through some third-party site. Look at that link—it’s nowhere near our official 'bigcaesars.pizza' domain. Watch out for these tricks!"
-      },
-      {
-        "Subject": "Exclusive Pizza Deal for You!",
-        "SenderEmail": "offers@bigcaesars.pizza",
-        "SenderName": "Big Caesars Offers",
-        "Body": "Hey there! As a loyal customer, you're getting an exclusive deal: 50% off your next order. Just use code LOYALTY50 at checkout.",
-        "IsPhishing": false,
-        "phishingExplanation": "Gotcha worried again, huh? This one’s totally legit. We do send out exclusive deals like this, especially if you’re one of our regulars. No weird links or suspicious requests—just pizza love."
-      },
-      {
-        "Subject": "Order Receipt for Order #54321",
-        "SenderEmail": "order-confirm@big-ceasers.pizza",
-        "SenderName": "Big Caesars Support",
-        "Body": "Your order has been processed. Please find your receipt attached.",
-        "IsPhishing": true,
-        "phishingExplanation": "Look closely at that sender's email—'big-ceasers' instead of 'bigcaesars.' They switched up the name! A classic phishing move. Always check the small details, they're trying to trick you."
-      },
-      {
-        "Subject": "Employee Survey: Help Us Improve!",
-        "SenderEmail": "hr@bigcaesars.pizza",
-        "SenderName": "Big Caesars HR",
-        "Body": "We value your feedback! Take 5 minutes to complete this survey and help us improve the workplace. Your responses are anonymous.",
-        "IsPhishing": false,
-        "phishingExplanation": "A simple survey from HR. Nothing unusual here. It’s not asking for personal info or sending you to a shady site. When it’s just about feedback, you're probably in the clear."
-      },
-      {
-        "Subject": "Urgent: Pizza Recipe Stolen",
-        "SenderEmail": "executive@bigcaesars.secrets.com",
-        "SenderName": "Big Caesars Executive",
-        "Body": "The secret pizza recipe has been stolen! Click here to secure it before it's too late: http://emergency-recipe.com",
-        "IsPhishing": true,
-        "phishingExplanation": "Whoa, kid, calm down. We don’t handle ‘emergencies’ like this through email, especially not with a random URL. They’re preying on your fear. Stick to official channels and ignore this nonsense."
-      },
-      {
-        "Subject": "Special Pizza Toppings Now Available!",
-        "SenderEmail": "toppings@bigcaesars.pizza",
-        "SenderName": "Big Caesars Toppings Dept",
-        "Body": "We’ve added new toppings to our menu! Try them out: Garlic Crust, Buffalo Chicken, and Truffle Oil. Order today!",
-        "IsPhishing": false,
-        "phishingExplanation": "New toppings? Sounds delicious! And legit. Look at the sender and the offer—nothing shady, just us expanding the menu. Not every new offer is phishing!"
-      },
-      {
-        "Subject": "Final Notice: Unpaid Pizza Bill",
-        "SenderEmail": "billing@bigcaesars-pizza-support.com",
-        "SenderName": "Big Caesars Billing Dept",
-        "Body": "You have an unpaid bill. Please resolve this now: http://pay-now.com",
-        "IsPhishing": true,
-        "phishingExplanation": "Look at that email closely—'bigcaesars-pizza-support.com'? That's fake! We’d never send you a link like that. Don't fall for this trick!"
-      },
-      {
-        "Subject": "New Pizza Store Opening: You're Invited!",
-        "SenderEmail": "events@bigcaesars.pizza",
-        "SenderName": "Big Caesars Events",
-        "Body": "You're invited to our grand opening next Saturday! Free slices for the first 50 guests. Don’t miss it!",
-        "IsPhishing": false,
-        "phishingExplanation": "It’s just an invite to our grand opening! You almost flagged this one, but it’s real. Check the email address—it’s from our events team, no tricks here."
-      }
-    ]    
-  }
-  
+  "emails": [
+    {
+      "Subject": "You've Been Awarded Employee of the Month!",
+      "SenderEmail": "hr@bigcaesars.co",
+      "SenderName": "Big Caesars HR Team",
+      "Body": "Congratulations, Rookie! As part of our appreciation, you've won a $100 gift card. Please click the link to verify your identity and claim your prize: http://bigcaesars.co/employee-award",
+      "IsPhishing": true,
+      "phishingExplanation": "Careful, Rookie. Notice the domain? It says bigcaesars.co, not our real domain bigcaesars.com. This is a phishing attempt to steal your personal info!"
+    },
+    {
+      "Subject": "Pizza Delivery Confirmation",
+      "SenderEmail": "deliveries@bigcaesar5.com",
+      "SenderName": "Big Caesars Delivery",
+      "Body": "Your order is on the way! If you didn't make this order, click here to cancel: http://bit.ly/cancelpizzaorder",
+      "IsPhishing": true,
+      "phishingExplanation": "Nice try, Rookie. The sender email is from 'bigcaesar5.com' not our official domain. Also, watch out for shortened URLs—always double-check!"
+    },
+    {
+      "Subject": "Urgent: Software Update Required!",
+      "SenderEmail": "it-support@bigcaesars.com",
+      "SenderName": "IT Support",
+      "Body": "Dear Employee, please install the critical security patch for your company-issued laptop to prevent malware attacks. Download here: http://bit.ly/securitypatch.exe\n\nSecurityPatch.exe",
+      "IsPhishing": true,
+      "phishingExplanation": "Don't fall for this one, Rookie. We don't send .exe files. Always double-check with IT through the chat system, not through email!"
+    },
+    {
+      "Subject": "Your Password Expires in 24 Hours",
+      "SenderEmail": "it-admin@bigcaesars.com",
+      "SenderName": "Big Caesars IT Admin",
+      "Body": "Hello Rookie, your password will expire in 24 hours. To reset it, please click the link below:\n\nhttp://bigcaesars.com/passwordreset",
+      "IsPhishing": false,
+      "phishingExplanation": "This one's legit. Real emails about password resets come directly from IT. The domain is correct and there are no shady links."
+    },
+    {
+      "Subject": "Invoice for Last Month's Pizza Supplies",
+      "SenderEmail": "billing@bigcaesars.com",
+      "SenderName": "Big Caesars Billing",
+      "Body": "Attached is the invoice for last month’s pizza supplies. Please process payment by the end of the week.\n\nInvoice.pdf",
+      "IsPhishing": false,
+      "phishingExplanation": "Good job. Invoices from Billing are typically real. The domain is correct and no suspicious links or attachments here."
+    },
+    {
+      "Subject": "Security Alert: Account Compromised",
+      "SenderEmail": "alerts@bigcaesars.com",
+      "SenderName": "Security Alerts",
+      "Body": "Your account has been flagged for unusual activity. To secure your account, click the following link: http://bigcaesars-secure.com/reset-password",
+      "IsPhishing": true,
+      "phishingExplanation": "Hold up, Rookie! This is a scam. Look closely at the domain: 'bigcaesars-secure.com' is NOT our real site. Stick with bigcaesars.com only."
+    },
+    {
+      "Subject": "Free Pizza for a Year – Limited Offer",
+      "SenderEmail": "rewards@bigcaesarspromo.com",
+      "SenderName": "Big Caesars Rewards",
+      "Body": "You've been randomly selected to receive free pizza for a year! Click here to register: http://freepizza2024.com/signup",
+      "IsPhishing": true,
+      "phishingExplanation": "Don't fall for this one, Rookie. Real rewards come from our main domain, and there’s no such thing as 'bigcaesarspromo.com'!"
+    },
+    {
+      "Subject": "Training Session Tomorrow - Download Materials",
+      "SenderEmail": "training@bigcaesars.com",
+      "SenderName": "Training Department",
+      "Body": "Please review the attached materials for tomorrow's cybersecurity training session.\n\nTrainingMaterials.zip",
+      "IsPhishing": true,
+      "phishingExplanation": "Be cautious, Rookie! Legit training emails wouldn't ask you to download a .zip file. Training materials are shared internally through secure links."
+    },
+    {
+      "Subject": "Account Update Required",
+      "SenderEmail": "customer-service@b1gcaesars.com",
+      "SenderName": "Customer Support",
+      "Body": "We need you to confirm your account details. Please click the link to verify your account: http://b1gcaesars.com/verify",
+      "IsPhishing": true,
+      "phishingExplanation": "Watch out, Rookie! 'b1gcaesars' with a 1 is fake. Always be sure the domain is 'bigcaesars.com' with no weird numbers."
+    },
+    {
+      "Subject": "Important Company Policy Update",
+      "SenderEmail": "admin@bigcaesars.com",
+      "SenderName": "Big Caesars Admin",
+      "Body": "Please review the latest company policy updates attached below.\n\nCompanyPolicyUpdate.doc",
+      "IsPhishing": false,
+      "phishingExplanation": "This is a valid email, Rookie. The domain is correct, and the file type looks like a legitimate company document."
+    },
+    {
+      "Subject": "Pizza Recipe Secrets Unveiled - Download Now",
+      "SenderEmail": "secretfiles@bigcaesars.com",
+      "SenderName": "Big Caesars Secret Vault",
+      "Body": "You've been granted access to the secret pizza recipe vault. Download the exclusive document here: http://bit.ly/pizzarecipe.docx",
+      "IsPhishing": true,
+      "phishingExplanation": "Nope! This is a trap. The shortened link and the sender's name should give it away. We don’t have a 'Secret Vault'!"
+    },
+    {
+      "Subject": "Delivery System Failure – Restart Required",
+      "SenderEmail": "support@bigcaesars.com",
+      "SenderName": "Big Caesars Support Team",
+      "Body": "The delivery system has encountered an error. Download the fix below to prevent further downtime:\n\nDeliveryFix.exe",
+      "IsPhishing": true,
+      "phishingExplanation": "Don't trust this one, Rookie. Big Caesars would never send .exe files through email. Reach out through the chat if you're unsure."
+    },
+    {
+      "Subject": "Update Your Security Information",
+      "SenderEmail": "security@bigcaesars.com",
+      "SenderName": "Big Caesars Security",
+      "Body": "Please update your security questions to ensure your account stays protected. Click here to start the process: http://bigcaesars.com/security-update",
+      "IsPhishing": false,
+      "phishingExplanation": "This one's real, Rookie. It's important to keep your security info up-to-date, and the link is safe."
+    },
+    {
+      "Subject": "Internal Memo – Confidential",
+      "SenderEmail": "internal@bigcaesars.com",
+      "SenderName": "Internal Communications",
+      "Body": "Please see the attached confidential memo regarding an upcoming announcement.\n\nConfidentialMemo.pdf",
+      "IsPhishing": false,
+      "phishingExplanation": "You're clear, Rookie. Internal memos like these are normal, and the attachment type looks legitimate."
+    },
+    {
+      "Subject": "Payment Reminder – Final Notice",
+      "SenderEmail": "billing@b1gcaesars.com",
+      "SenderName": "Big Caesars Billing",
+      "Body": "Final reminder: Your payment is due. Click here to make the payment now: http://b1gcaesars.com/payment",
+      "IsPhishing": true,
+      "phishingExplanation": "Did you catch that, Rookie? The domain uses a '1' instead of an 'i.' That's a red flag for phishing!"
+    },
+    {
+      "Subject": "Join Our Pizza Ambassador Program!",
+      "SenderEmail": "ambassador@bigcaesars.com",
+      "SenderName": "Big Caesars Ambassador Team",
+      "Body": "Apply to become a Big Caesars Pizza Ambassador and get exclusive rewards! Click here to learn more: http://bigcaesars.com/ambassador",
+      "IsPhishing": false,
+      "phishingExplanation": "This one's legitimate, Rookie. We do have an ambassador program, and the domain checks out."
+    },
+    {
+      "Subject": "XfQZl39tHk&*WxZ@Plo",
+      "SenderEmail": "admin@bigcaesrs.com",
+      "SenderName": "Big Caesars Admin",
+      "Body": "Urgent! Please verify your account before the next billing cycle. Click here: http://bigcaesrs.com/verify",
+      "IsPhishing": true,
+      "phishingExplanation": "Nice catch, Rookie. The domain has a typo: 'bigcaesrs.com' instead of 'bigcaesars.com'. This one's a fake."
+    },
+    {
+      "Subject": "sJk90#l2!vGk@aopFG",
+      "SenderEmail": "secure@bigcaesrs.com",
+      "SenderName": "Big Caesars Security",
+      "Body": "Important security update! Download the latest patch now to avoid data breaches.\n\nSecurityPatch.exe",
+      "IsPhishing": true,
+      "phishingExplanation": "This email is shady, Rookie. Not only is the domain wrong, but .exe files are dangerous—never trust them."
+    },
+    {
+      "Subject": "p0AjsL9@uFQexG$Z*12",
+      "SenderEmail": "support@bigcaesarz.com",
+      "SenderName": "Big Caesars Support",
+      "Body": "Hello, Rookie! We’ve noticed some unusual activity on your account. Please log in here: http://bigcaesarz.com/security",
+      "IsPhishing": true,
+      "phishingExplanation": "The domain 'bigcaesarz.com' uses a 'z' instead of an 's.' This is a classic phishing attempt to steal login info."
+    },
+    {
+      "Subject": "EwJx2@1zLjTq&$#Fk09",
+      "SenderEmail": "alert@bigceasars.com",
+      "SenderName": "Big Caesars Alerts",
+      "Body": "Immediate action required! Your account is compromised. Change your password now: http://bigceasars.com/reset",
+      "IsPhishing": true,
+      "phishingExplanation": "Check that domain, Rookie! 'bigceasars.com' has swapped letters—this is a phishing attack."
+    },
+    {
+      "Subject": "vK38!mL0pJzFqWf%@d2",
+      "SenderEmail": "promo@bigczesars.com",
+      "SenderName": "Big Caesars Promo Team",
+      "Body": "Congrats! You've won a year of free pizza. Claim your prize now: http://bigczesars.com/win",
+      "IsPhishing": true,
+      "phishingExplanation": "Don't fall for this one, Rookie. The domain 'bigczesars.com' uses a 'z' instead of an 'a'—clear phishing attempt."
+    },
+    {
+      "Subject": "Your Package Delivery Status",
+      "SenderEmail": "support@delivryservice.com",
+      "SenderName": "Delivery Support",
+      "Body": "Your package is waiting for delivery confirmation. Please verify your address here: http://delivryservice.com/confirm",
+      "IsPhishing": true,
+      "phishingExplanation": "Notice the slight misspelling, Rookie: 'delivryservice' instead of 'deliveryservice.' This one's a scam."
+    },
+    {
+      "Subject": "Account Update Required",
+      "SenderEmail": "security@onlinbank.com",
+      "SenderName": "Online Bank Security",
+      "Body": "Your online bank account needs to be updated. Click here to update your information: http://onlinbank.com/update",
+      "IsPhishing": true,
+      "phishingExplanation": "There's a typo in the domain, Rookie: 'onlinbank.com' instead of 'onlinebank.' This email's a phishing attempt."
+    },
+    {
+      "Subject": "Subscription Renewal Reminder",
+      "SenderEmail": "billing@streamtv.co",
+      "SenderName": "StreamTV Billing",
+      "Body": "Your subscription is due for renewal. Please update your payment information: http://streamtv.co/paynow",
+      "IsPhishing": true,
+      "phishingExplanation": "The domain 'streamtv.co' could look legitimate, but it's not the official one—this is phishing."
+    },
+    {
+      "Subject": "Security Alert: Unusual Activity Detected",
+      "SenderEmail": "alerts@paympal.com",
+      "SenderName": "Paympal Alerts",
+      "Body": "Unusual activity has been detected on your account. Please log in here to review: http://paympal.com/review",
+      "IsPhishing": true,
+      "phishingExplanation": "Tricky, but look closely—'paympal.com' is a phishing domain meant to mimic 'paypal.com.'"
+    },
+    {
+      "Subject": "Verify Your Identity",
+      "SenderEmail": "support@securityportal.org",
+      "SenderName": "Security Portal",
+      "Body": "Please verify your identity to continue using our service: http://securityportal.org/verify",
+      "IsPhishing": true,
+      "phishingExplanation": "Watch out for third-party domains like 'securityportal.org.' It's not related to any real service."
+    },
+    {
+      "Subject": "Final Warning: Payment Overdue",
+      "SenderEmail": "accounts@servprotection.com",
+      "SenderName": "Service Protection Accounts",
+      "Body": "Your account is overdue for payment. Pay now to avoid service interruption: http://servprotection.com/pay",
+      "IsPhishing": true,
+      "phishingExplanation": "This one's tough, Rookie. The domain sounds official, but it's not a known service. Be cautious!"
+    },
+    {
+      "Subject": "Action Required: Account Lockout",
+      "SenderEmail": "support@securezone.io",
+      "SenderName": "SecureZone Support",
+      "Body": "Your account has been locked due to suspicious activity. Unlock it here: http://securezone.io/unlock",
+      "IsPhishing": true,
+      "phishingExplanation": "The domain 'securezone.io' could be confusing, but it's not a real service related to your accounts."
+    },
+    {
+      "Subject": "Invoice Payment Required",
+      "SenderEmail": "billing@yourinvoice.com",
+      "SenderName": "Invoice Team",
+      "Body": "Please pay your invoice here: http://yourinvoice.com/payment\n\nInvoiceDetails.pdf",
+      "IsPhishing": true,
+      "phishingExplanation": "That invoice attachment seems normal, but the domain 'yourinvoice.com' isn't affiliated with any trusted service."
+    },
+    {
+      "Subject": "Security Alert: Password Reset Request",
+      "SenderEmail": "security@hsjadjkbsjkasx.net",
+      "SenderName": "CloudSafety",
+      "Body": "We received a request to reset your password. If this was not you, click here to cancel: http://cloudsafety.net/cancel",
+      "IsPhishing": true,
+      "phishingExplanation": "Though it looks legit, 'cloudsafety.net' is a fake site trying to steal your credentials, Rookie."
+    },
+    {
+      "Subject": "Order Confirmation #593472",
+      "SenderEmail": "orders@shoppinghub.co",
+      "SenderName": "ShoppingHub Orders",
+      "Body": "Your recent order has been confirmed. Track your package here: http://shoppinghub.co/track",
+      "IsPhishing": true,
+      "phishingExplanation": "This one's sneaky, Rookie. While it looks like a standard order email, 'shoppinghub.co' isn't a trusted domain."
+    },
+    {
+      "Subject": "Your Recent Order – Confirmation #894732",
+      "SenderEmail": "orders@Gamazon.com",
+      "SenderName": "Gamazon Orders",
+      "Body": "Thank you for your purchase! Your order will be delivered by October 15. Track your order here: http://amazon.com/orders",
+      "IsPhishing": false,
+      "phishingExplanation": "This is a normal order confirmation from Amazon. No issues here."
+    },
+    {
+      "Subject": "Hey Big Bro!",
+      "SenderEmail": "lil_brother@familymail.com",
+      "SenderName": "Your Little Brother",
+      "Body": "Can you pick me up from school today? Mom's busy with work.",
+      "IsPhishing": false,
+      "phishingExplanation": "Your little brother's asking for a ride. Totally safe."
+    },
+    {
+      "Subject": "Your Playlist is Ready!",
+      "SenderEmail": "noreply@spatify.com",
+      "SenderName": "Spatify",
+      "Body": "Hey! Your new playlist for the week is ready. Listen here: http://spatify.com/myplaylist",
+      "IsPhishing": false,
+      "phishingExplanation": "This email is from Spotify and looks legitimate. No need to worry."
+    },
+    {
+      "Subject": "Bill Reminder",
+      "SenderEmail": "billing@utilitycompany.net",
+      "SenderName": "Utility Company Billing",
+      "Body": "This is a reminder that your bill is due on October 10. Please make sure to pay on time.",
+      "IsPhishing": false,
+      "phishingExplanation": "A standard bill reminder from your utility company. It’s good to go."
+    },
+    {
+      "Subject": "Check This Out!",
+      "SenderEmail": "maria@gmail.com",
+      "SenderName": "Maria Lastname",
+      "Body": "Hey, did you see this article? It’s about the recent tech trends. Thought you’d be interested: http://newsdaily.org/techupdate",
+      "IsPhishing": false,
+      "phishingExplanation": "It’s just your friend Maria sharing a news article. No signs of phishing."
+    },
+    {
+      "Subject": "Your Target Order",
+      "SenderEmail": "orders@torget.com",
+      "SenderName": "Torget",
+      "Body": "Your recent order is on its way! You can expect delivery by October 14.",
+      "IsPhishing": false,
+      "phishingExplanation": "This is a legit confirmation from Torget. Nothing fishy here."
+    },
+    {
+      "Subject": "Wanna Catch Up?",
+      "SenderEmail": "alex.t@officemail.net",
+      "SenderName": "Alex T.",
+      "Body": "Hey, long time no talk! Wanna grab coffee sometime next week?",
+      "IsPhishing": false,
+      "phishingExplanation": "Just an invite from an old coworker. This one's perfectly safe."
+    },
+    {
+      "Subject": "What Happened?",
+      "SenderEmail": "news@globalnews.org",
+      "SenderName": "Global News",
+      "Body": "Breaking: Major event shakes the city. Read the full story here: http://globalnews.org/story",
+      "IsPhishing": false,
+      "phishingExplanation": "A news site sharing a breaking story. No danger here."
+    },
+    {
+      "Subject": "Family Dinner Tonight",
+      "SenderEmail": "dad@familymail.com",
+      "SenderName": "Dad",
+      "Body": "Don't forget, dinner is at 7 tonight. Be on time!",
+      "IsPhishing": false,
+      "phishingExplanation": "Just a message from your dad. Safe as can be."
+    },
+    {
+      "Subject": "Your Subscription Renewal",
+      "SenderEmail": "noreply@netflip.com",
+      "SenderName": "Netflix",
+      "Body": "Your subscription will renew on October 20. No action needed.",
+      "IsPhishing": false,
+      "phishingExplanation": "This is a regular email from Netflip about your subscription renewal."
+    },
+    {
+      "Subject": "New Job Posting Available",
+      "SenderEmail": "careers@Macrosoft.com",
+      "SenderName": "Tech Careers",
+      "Body": "We just posted a new job opening in your field. Apply here: http://macrosoft.com/careers",
+      "IsPhishing": false,
+      "phishingExplanation": "A typical job opening email from a tech company. Safe to ignore or check."
+    },
+    {
+      "Subject": "Your Package is Ready for Pickup",
+      "SenderEmail": "shipping@postofficeservice.org",
+      "SenderName": "Post Office Service",
+      "Body": "Your package is now ready for pickup at your local post office. Please bring your ID to collect it.",
+      "IsPhishing": false,
+      "phishingExplanation": "Standard post office pickup notice. Looks legitimate."
+    },
+    {
+      "Subject": "Missed Call from Mom",
+      "SenderEmail": "mom@familymail.com",
+      "SenderName": "Mom",
+      "Body": "Hey, I tried calling you earlier. Call me back when you can.",
+      "IsPhishing": false,
+      "phishingExplanation": "Nothing suspicious here. Just a missed call from your mom."
+    },
+    {
+      "Subject": "Your Event Tickets",
+      "SenderEmail": "tickets@localmovietheater.com",
+      "SenderName": "EventWorld Tickets",
+      "Body": "Your tickets for the upcoming 'Minions 6: Rise of the Guardians of the Transformers' are ready. Download them here: http://localmovietheater.com/aliststubs/tickets",
+      "IsPhishing": false,
+      "phishingExplanation": "This one’s safe, Rookie. Just an email confirming your event tickets."
+    },
+    {
+      "Subject": "Help, I'm stuck!",
+      "SenderEmail": "mom@familymail.com",
+      "SenderName": "Mom",
+      "Body": "Can you grab me some toilet paper? I'm stuck in the bathroom and can't reach any!",
+      "IsPhishing": false,
+      "phishingExplanation": "Alright, Rookie, this one’s safe. It's just your mom in a... weird situation. Totally legit, but maybe tell her to text you next time."
+    },
+    {
+      "Subject": "Where are you???",
+      "SenderEmail": "dad@familymail.com",
+      "SenderName": "Dad",
+      "Body": "I asked you to vacuum and clean the dishes. Where did you go? The house is a mess!",
+      "IsPhishing": false,
+      "phishingExplanation": "It's your dad. No phishing here, just disappointment. Looks like you've got chores to do, Rookie."
+    },
+    {
+      "Subject": "Can you pick me up?",
+      "SenderEmail": "brother@familymail.com",
+      "SenderName": "Your Little Brother",
+      "Body": "Hey, can you come pick me up from school? I forgot my lunch... and also my shoes.",
+      "IsPhishing": false,
+      "phishingExplanation": "Your little brother strikes again. This one's safe, but seriously, Rookie, how does he forget his shoes?"
+    },
+    {
+      "Subject": "I Need Your Netflip Password",
+      "SenderEmail": "uncle.eddie@familymail.com",
+      "SenderName": "Uncle Eddie",
+      "Body": "Hey, I forgot the Netflip password again. Can you send it over? Also, did you see that new show?",
+      "IsPhishing": false,
+      "phishingExplanation": "Uncle Eddie's at it again. This one's legit, but seriously, Rookie, tell him to write down the password this time."
+    },
+    {
+      "Subject": "Did You See My Glasses?",
+      "SenderEmail": "grandpa@familymail.com",
+      "SenderName": "Grandpa",
+      "Body": "I lost my glasses again. Have you seen them anywhere? I swear they were just on the table...",
+      "IsPhishing": false,
+      "phishingExplanation": "It's your grandpa. This one's totally safe, Rookie. Though I’d say maybe check under his couch cushions next time."
+    },
+    {
+      "Subject": "URGENT: Cat on the Roof!",
+      "SenderEmail": "aunt.sally@familymail.com",
+      "SenderName": "Aunt Sally",
+      "Body": "Help! My cat climbed up on the roof and won't come down! Can you come get him? I can't reach!",
+      "IsPhishing": false,
+      "phishingExplanation": "This one's safe, Rookie, but Aunt Sally really needs to invest in a ladder or some cat training. Just your average family drama!"
+    },
+    {
+      "Subject": "Why Is There a Frog in My Shoe?",
+      "SenderEmail": "cousin.lucas@familymail.com",
+      "SenderName": "Cousin Lucas",
+      "Body": "Hey, I just found a frog in my shoe. What should I do? Can you come help me get it out? It's staring at me!",
+      "IsPhishing": false,
+      "phishingExplanation": "A classic Lucas moment. No phishing here, Rookie, just your cousin needing a bit of moral support for his amphibian encounter."
+    },
+    {
+      "Subject": "Can You Send Me Your Left Sock?",
+      "SenderEmail": "sister@familymail.com",
+      "SenderName": "Your Sister",
+      "Body": "I accidentally threw my left sock out with the trash. Can you mail me your left sock? I promise I'll return it!",
+      "IsPhishing": false,
+      "phishingExplanation": "Ah, the classic sock exchange! Safe email, but you might want to question her laundry skills, Rookie."
+    },
+    {
+      "Subject": "Do Fish Have Feelings?",
+      "SenderEmail": "mom@familymail.com",
+      "SenderName": "Mom",
+      "Body": "Quick question: Do you think fish can feel sad? Asking for a friend. Also, can you bring home pizza?",
+      "IsPhishing": false,
+      "phishingExplanation": "Your mom’s philosophical side is showing. Totally safe, but maybe suggest she googles that one next time, Rookie!"
+    },
+    {
+      "Subject": "What Time is it on Mars?",
+      "SenderEmail": "brother@familymail.com",
+      "SenderName": "Your Little Brother",
+      "Body": "Hey, can you check what time it is on Mars? I need to know before I start my homework!",
+      "IsPhishing": false,
+      "phishingExplanation": "Just your little brother being... well, himself. Safe email, but I’d recommend focusing on Earth time for now, Rookie!"
+    },
+    {
+      "Subject": "Lost in the Supermarket",
+      "SenderEmail": "dad@familymail.com",
+      "SenderName": "Dad",
+      "Body": "I got lost in the supermarket! Can you come find me? I’m in the cereal aisle... or is it the frozen foods?",
+      "IsPhishing": false,
+      "phishingExplanation": "Your dad's grocery skills are questionable, but no phishing here, Rookie! Time to rescue him from his shopping adventure."
+    },
+    {
+      "Subject": "Why Are My Shoes Wet?",
+      "SenderEmail": "aunt.linda@familymail.com",
+      "SenderName": "Aunt Linda",
+      "Body": "I just put on my shoes and they're all wet! Did you spill something? Help!",
+      "IsPhishing": false,
+      "phishingExplanation": "Aunt Linda strikes again! Safe email, but I think a conversation about shoe care is in order, Rookie."
+    },
+    {
+      "Subject": "Can You Buy Me a Pet Rock?",
+      "SenderEmail": "cousin.mia@familymail.com",
+      "SenderName": "Cousin Mia",
+      "Body": "I really want a pet rock! Can you buy me one and bring it over? I'll name it Rocky!",
+      "IsPhishing": false,
+      "phishingExplanation": "It's safe, but let's be honest, Rookie, this is a new level of 'weird' for the family. Good luck finding a pet rock!"
+    },
+    {
+      "Subject": "What's Your Favorite Color of Grass?",
+      "SenderEmail": "uncle.bob@familymail.com",
+      "SenderName": "Uncle Bob",
+      "Body": "Hey, I’ve been thinking... what’s your favorite color of grass? I’m doing some research!",
+      "IsPhishing": false,
+      "phishingExplanation": "Just Uncle Bob being quirky! Safe email, but maybe encourage him to pick a more grounded topic next time, Rookie."
+    },
+    {
+      "Subject": "I Need a Pickle Recipe",
+      "SenderEmail": "grandma@familymail.com",
+      "SenderName": "Grandma",
+      "Body": "I need a good recipe for pickles! Can you send me one? Also, what’s the weather like?",
+      "IsPhishing": false,
+      "phishingExplanation": "Classic Grandma. No phishing here, Rookie, but you might want to remind her to check the weather app instead."
+    },
+    {
+      "Subject": "Claim Your Inheritance Now!",
+      "SenderEmail": "longlostuncle@gmail.com",
+      "SenderName": "Long Lost Uncle",
+      "Body": "Congratulations! You are eligible to claim a massive inheritance. Just click this link to provide your details: http://fakeinheritance.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This one’s a big red flag, Rookie. No real family member would contact you like this. Definitely a scam!"
+    },
+    {
+      "Subject": "Your Favorite Aunt Needs Cash!",
+      "SenderEmail": "aunt.mary@familymail.net",
+      "SenderName": "Aunt Mary",
+      "Body": "Hi! I’m in a bit of a financial bind. Could you send me some money through this link? I promise I’ll pay you back! http://getrichquick.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Aunt Mary should never ask for money like this, Rookie. If it sounds too good to be true, it probably is!"
+    },
+    {
+      "Subject": "Urgent: Family Gathering Tomorrow!",
+      "SenderEmail": "cousin.bob@randommail.com",
+      "SenderName": "Cousin Bob",
+      "Body": "We’re having a family gathering tomorrow, but I need you to confirm your attendance by clicking this link: http://familygatheringconfirmation.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, this is not how family invites work. Avoid clicking any links and reach out to Cousin Bob directly!"
+    },
+    {
+      "Subject": "Your Security Settings Are Compromised!",
+      "SenderEmail": "mom@securefamily.com",
+      "SenderName": "Mom",
+      "Body": "Urgent! Your security settings are compromised. Click this link to fix it: http://fakesecurityupdate.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Yikes! No real mom would send something like this. Always be cautious with urgent requests like this, Rookie!"
+    },
+    {
+      "Subject": "You've Won a Family Vacation!",
+      "SenderEmail": "familywinners@luckyemail.com",
+      "SenderName": "Family Contest",
+      "Body": "Congratulations! You’ve won a free family vacation! Click here to claim your prize: http://fakefamilyvacation.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, this is definitely a scam! No legitimate contest would ask for personal info like this. Don’t fall for it!"
+    },
+    {
+      "Subject": "Let's Go Shopping! I Found a Deal!",
+      "SenderEmail": "sister@dealsandsteals.com",
+      "SenderName": "Your Sister",
+      "Body": "Hey! I found an amazing deal on something you love. Click this link to see it: http://getthedeal.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Your sister wouldn’t send you a deal like this, Rookie. Always be wary of deals that seem too good to be true!"
+    },
+    {
+      "Subject": "Grandma Needs Help with Her Computer!",
+      "SenderEmail": "grandma@familymail.com",
+      "SenderName": "Grandma",
+      "Body": "My computer is acting weird! Can you click this link to help me fix it? http://computerfix.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This sounds suspicious, Rookie. Grandma wouldn’t ask for help like this! Never click links without verifying first."
+    },
+    {
+      "Subject": "Immediate Action Required: Verify Your Account!",
+      "SenderEmail": "aunt.linda@jsdhkgjd.com",
+      "SenderName": "Aunt Linda",
+      "Body": "We need to verify your account immediately. Please click this link: http://verifyyouraccount.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Aunt Linda would never send you something like this, Rookie. This is a classic phishing attempt!"
+    },
+    {
+      "Subject": "Surprise Family Reunion!",
+      "SenderEmail": "mom@familymail.net",
+      "SenderName": "Unknown Relative",
+      "Body": "You’ve been select to join a surprise family reunion! Can you sen d me money",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, you should know better! A surprise reunion from an unknown relative? Sounds like a scam to me!"
+    },
+    {
+      "Subject": "I Know Your Secret...",
+      "SenderEmail": "cousin.jake@bmail.com",
+      "SenderName": "Cousin Jake",
+      "Body": "Hey, I know what you did last summer... Don’t worry, I’m not going to tell anyone. But if you want to keep it that way, click this link and confirm your silence: http://darksecret.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Cousin Jake wouldn’t threaten you like this, Rookie. This is a clear sign of phishing. Always be cautious with emails that make you uneasy!"
+    },
+    {
+      "Subject": "They’re Watching You!",
+      "SenderEmail": "aunt.susan@wahoo.com",
+      "SenderName": "Aunt Susan",
+      "Body": "Dear Rookie, I can see you. They’re watching you too. If you want to stay safe, you need to follow these instructions: http://stayhidden.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This is way too creepy to be from Aunt Susan. Rookie, don't fall for it! Always verify strange messages!"
+    },
+    {
+      "Subject": "Your Secret Is Out...",
+      "SenderEmail": "brother.tom@bmail.com",
+      "SenderName": "Tommy",
+      "Body": "Hey! I accidentally stumbled upon something you might not want others to see. If you want it gone, click this link: http://unseeit.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Your brother wouldn’t do this, Rookie! This email is a classic phishing tactic designed to scare you into clicking a dangerous link."
+    },
+    {
+      "Subject": "Do You Think You're Safe?",
+      "SenderEmail": "sister.lisa@wahoo.com",
+      "SenderName": "Sister Lisa",
+      "Body": "Hi, I know where you are right now. Don’t think about ignoring this. If you want to stay safe, click this link: http://notimeleft.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, this is beyond strange! No one in your family would send something like this. Be careful and avoid clicking any links!"
+    },
+    {
+      "Subject": "I Can Expose You...",
+      "SenderEmail": "grandpa.joe@bmail.com",
+      "SenderName": "Grandpa Joe",
+      "Body": "I’ve found some very interesting things about you, and I can make them public. If you want to avoid that, click here: http://exposeyou.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This is NOT how Grandpa Joe communicates. Rookie, always be skeptical of threats like this—they're usually phishing scams!"
+    },
+    {
+      "Subject": "We Need to Talk... Now!",
+      "SenderEmail": "aunt.mary@wahoo.com",
+      "SenderName": "Aunt Mary",
+      "Body": "I know what you’ve been hiding. If you don’t want anyone to find out, you need to act fast. Click this link: http://secretreveal.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Aunt Mary wouldn’t scare you like this. Rookie, this email is clearly a phishing attempt meant to intimidate you!"
+    },
+    {
+      "Subject": "I’m Coming for You...",
+      "SenderEmail": "cousin.kate@gmail.com",
+      "SenderName": "Cousin Kate",
+      "Body": "You think you can hide? I’m right outside your door. If you want to make it stop, you need to respond. Click here: http://stopme.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This sounds way too creepy, Rookie! Cousin Kate would never send something like this. Trust your instincts and don't click!"
+    },
+    {
+      "Subject": "Time's Up!",
+      "SenderEmail": "mom@randommail.com",
+      "SenderName": "Mom",
+      "Body": "I know you’ve been ignoring my calls. If you want to make this go away, you need to click this link: http://getoutnow.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Mom would never communicate like this! Rookie, this is a phishing scam trying to instill fear. Stay alert!"
+    },
+    {
+      "Subject": "You Can't Run Forever...",
+      "SenderEmail": "brother.ben@wahoo.com",
+      "SenderName": "Brother Ben",
+      "Body": "I have eyes everywhere. If you want to keep your secrets safe, just follow this link: http://neverseen.com",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, don’t let this scare you. Brother Ben wouldn’t send something like this. Always be wary of intimidation tactics!"
+    },
+    {
+      "Subject": "You're Not Alone...",
+      "SenderEmail": "sister.jane@bmail.com",
+      "SenderName": "Sister Jane",
+      "Body": "I know things about you that no one else does. If you want to stay safe, I need you to drop something where for me or else. open this for details\n\ninfo.pdf",
+      "IsPhishing": true,
+      "phishingExplanation": "This is way too disturbing for Sister Jane! Rookie, don't engage with emails that make you feel threatened."
+    },
+    {
+      "Subject": "I See Everything...",
+      "SenderEmail": "uncle.dan@bmail.com",
+      "SenderName": "Uncle Dan",
+      "Body": "I know what you did. Don’t think I haven’t noticed. If you want this to stay between us, you better do something for me. Open this up\n\nfile.exe",
+      "IsPhishing": true,
+      "phishingExplanation": "Uncle Dan wouldn’t send something like this, Rookie! This is a phishing attempt designed to scare you into action."
+    },
+    {
+      "Subject": "Your Time is Running Out!",
+      "SenderEmail": "cousin.mike@wahoo.com",
+      "SenderName": "Cousin Mike",
+      "Body": "You can’t hide from the truth forever. If you want to avoid the consequences, you need to respond. I know where you live, send me money Or i will tell everyone",
+      "IsPhishing": true,
+      "phishingExplanation": "This email sounds way too intense for Cousin Mike. Rookie, always be cautious with threats like this—they're usually phishing scams!"
+    },
+    {
+      "Subject": "I'm in Your Room...",
+      "SenderEmail": "aunt.lily@bmail.com",
+      "SenderName": "Aunt Lily",
+      "Body": "I’m closer than you think. If you want to make this go away, just click this link: http://gooile.com/safe",
+      "IsPhishing": true,
+      "phishingExplanation": "Aunt Lily wouldn’t scare you like this! Rookie, this email is clearly an attempt to phish for your information."
+    },
+    {
+      "Subject": "We Need to Talk About What You Did...",
+      "SenderEmail": "grandma.mary@wahoo.com",
+      "SenderName": "Grandma Mary",
+      "Body": "I’ve heard things that you should be worried about. If you want me to keep quiet, follow this link: http://sgajdskjjjkkmaswubjk.com",
+      "IsPhishing": true,
+      "phishingExplanation": "This is NOT how Grandma Mary communicates. Rookie, always be skeptical of emails that invoke fear!"
+    },
+    {
+      "Subject": "The Walls Have Eyes...",
+      "SenderEmail": "sister.kate@bmail.com",
+      "SenderName": "Sister Kate",
+      "Body": "I’ve been watching you. If you want to stay safe, you need to do something for me. Send me 10000 bite coin. If you dont know what that is, google it. Dont even think about contacting the police.",
+      "IsPhishing": true,
+      "phishingExplanation": "Rookie, Sister Kate would never send something like this! This is a phishing email meant to frighten you into compliance."
+    },
+    {
+      "Subject": "TAP needs you!",
+      "SenderEmail": "informationtechnology@ggc.edu",
+      "SenderName": "GGC ITEC",
+      "Body": "Hello, we are looking for students to join the Technology Ambassadors Program (TAP). If you are interested, please click the link below to apply: http://ggc.edu/tap",
+      "IsPhishing": false,
+      "phishingExplanation": "If you're reading this, then you're super lucky! TAP is a wonderful program and the team presenting recommmends it! No IT knowledge required! Willing to do your best is more than enough!"
+    },
+    {
+      "Subject": "Email from Agent Pineapple",
+      "SenderEmail": "Pineapple@ggc.edu",
+      "SenderName": "Agent Pineapple",
+      "Body": "hey there :] I hope you're liking the game so far! I'm here to help. If you need anything, just let me know!",
+      "IsPhishing": false,
+      "phishingExplanation": "Agent Pineapple is a trusted source, Rookie. Just look up and wave! No need to worry about this email!"
+    },
+    {
+      "Subject": "Email from Agent Meatball",
+      "SenderEmail": "meatball@ggc.edu",
+      "SenderName": "Agent Meatball",
+      "Body": "Gimme ur money or else",
+      "IsPhishing": true,
+      "phishingExplanation": "Agent Meatball is a trusted source but hes being a jerk here... Rookie, don't give him your money! He's just joking around."
+    },
+    {
+      "Subject": "Email from Agent Supreme",
+      "SenderEmail": "supreme@ggc.edu",
+      "SenderName": "Agent Supreme",
+      "Body": "Hey new recruit,\n\nRemember not to forget all of the pizza toppings on my order. NO PINEAPPLE!\n\nThanks, Supreme :))",
+      "IsPhishing": false,
+      "phishingExplanation": "Agent Supreme is a trusted source, Rookie. Just look up and wave! No need to worry about this email!"
+    }
+
+
+  ]
+
+}
