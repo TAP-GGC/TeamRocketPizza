@@ -60,6 +60,12 @@ private IEnumerator TypeNextDialogue()
 
         for (int i = 0; i < currentText.Length; i++)
         {
+            if (currentState != DialogueState.Typing)
+                {
+                    // If current state changes, complete the dialogue instantly
+                    uiText.text = currentText;
+                    break;
+                }
             uiText.text += currentText[i];
             yield return new WaitForSeconds(typingSpeed);
         }
@@ -87,6 +93,12 @@ private void ContinueDialogue()
     if (currentState == DialogueState.WaitingForInput)
     {
         currentState = DialogueState.Finished; // Move to finished state
+        Debug.Log("Continuing to the next dialogue...");
+    }
+    if (currentState == DialogueState.Typing)
+    {
+        uiText.text = dialogues[currentDialogueIndex];
+        currentState = DialogueState.WaitingForInput; // Move to finished state
         Debug.Log("Continuing to the next dialogue...");
     }
 }
