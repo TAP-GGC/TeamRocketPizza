@@ -104,21 +104,24 @@ public class PhishingGameController : MonoBehaviour
 
     void Update()
     {
+        //Count All Active Emails objects in EmailListPane
+        emailLeft = GameObject.FindGameObjectsWithTag("Email Inbox Item").Length;
+
+
                 
         if(emailLeft <= 0 && attemptsLeft > 0)
         {
             //Pause Game and Display Game Over
-            Time.timeScale = 0;
             //Instantiate the Game End Object for the entire screen 
             //Win text will be Green
             gameEndPrefab.SetActive(true);
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "Good Job!!";
-            Time.timeScale = 1;
+            //gameEndPrefab.transform.Find("Panel").Find("ReplayButton").gameObject.SetActive(false);
         }
         else if (attemptsLeft <= 0 && emailLeft > 0)
         {
             //Pause Game and Display Game Over
-            Time.timeScale = 0;
+            
             //Instantiate the Game End Object for the entire screen
             //Lose text will be Red
             gameEndPrefab.SetActive(true);
@@ -126,7 +129,17 @@ public class PhishingGameController : MonoBehaviour
             gameEndPrefab.transform.Find("Panel").Find("ReturnButton").gameObject.SetActive(false);
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().color = Color.red;
             gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "You got hacked!!";
-            Time.timeScale = 1;
+        } else if (attemptsLeft <= 0 && emailLeft <= 0){
+            //Pause Game and Display Game Over
+            
+            //Instantiate the Game End Object for the entire screen
+            //Lose text will be Red
+            gameEndPrefab.SetActive(true);
+            gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().color = Color.yellow;
+            gameEndPrefab.transform.Find("Panel").Find("GameOverText").GetComponent<Text>().text = "You won and lost??!";
+            
+
+
         }
         
 
@@ -226,7 +239,6 @@ public class PhishingGameController : MonoBehaviour
 
             CreateEmailDetailsPane(email, emailObject);
             
-            emailLeft++;
         }
         
     }
@@ -341,17 +353,27 @@ public class PhishingGameController : MonoBehaviour
 
         currentEmailDetailsObject.tag = "Phished";
         currentEmailInboxObject.tag = "Phished";
+        minimizeEmailScrollView();
 
         currentEmailDetailsObject.SetActive(false);
         currentEmailInboxObject.SetActive(false);
 
-        emailLeft--;
+        //emailLeft--;
         Debug.Log("Number of Emails Left: " + emailLeft);
         Debug.Log("Number of Attempts Left: " + attemptsLeft);
 
         
     }
 
+    private void minimizeEmailScrollView()
+    {
+        //Minimize the emailListPane's Rect Transfrom's Height by 200 but do not let it go past go past 1200
+        RectTransform emailListPaneRectTransform = emailListPane.GetComponent<RectTransform>();
+        if (emailListPaneRectTransform.sizeDelta.y > 1200){
+            emailListPaneRectTransform.sizeDelta = new Vector2(emailListPaneRectTransform.sizeDelta.x, emailListPaneRectTransform.sizeDelta.y - 200);
+        }
+
+    }
 
     void OnPlayerMistake() 
     {   
@@ -362,7 +384,7 @@ public class PhishingGameController : MonoBehaviour
 
         continueButton.onClick.AddListener(OnContinuePressed);
         dialogueText.text = "";         // Clear the dialogue box initially
-        continueButton.gameObject.SetActive(false); // Hide the button at first
+        //continueButton.gameObject.SetActive(false); // Hide the button at first
         ShowMessage(currentEmail.phishingExplanation); 
 
 
@@ -388,7 +410,7 @@ public class PhishingGameController : MonoBehaviour
 
         continueButton.onClick.AddListener(OnContinuePressed);
         dialogueText.text = "";         // Clear the dialogue box initially
-        continueButton.gameObject.SetActive(false); // Hide the button at first
+        //continueButton.gameObject.SetActive(false); // Hide the button at first
         ShowMessages(messages); 
 
         
@@ -428,7 +450,7 @@ public class PhishingGameController : MonoBehaviour
     {
         if (!isTyping)
         {
-            continueButton.gameObject.SetActive(false);  // Hide button after it's clicked
+            //continueButton.gameObject.SetActive(false);  // Hide button after it's clicked
             
             currentMessageIndex++;  // Move to the next message
 
@@ -445,8 +467,11 @@ public class PhishingGameController : MonoBehaviour
                 bossChatPrefab.SetActive(false);
                 
             }
+        } else if(isTyping){
+            textWriterSingle.WriteAllAndDestroy();
         }
     }
+    
 
 
 
