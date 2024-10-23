@@ -11578,8 +11578,8 @@ MonoBehaviour:
   baseEnemyCount: 8
   spawnInterval: 0.5
   enemiesPerSecondCap: 15
-  timeBetweenWaves: 5
-  difficultyScalingFactor: 0.75
+  timeBetweenWaves: 2
+  difficultyScalingFactor: 0.35
   startWaveButton: {fileID: 1474893385}
   originalColor: {r: 0, g: 1, b: 0, a: 1}
   dullColor: {r: 0.18195978, g: 0.4433962, b: 0.18195978, a: 1}
