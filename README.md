@@ -78,7 +78,7 @@ Example:
 ## :mag_right: Similar Projects
 <i>Use this section to link to a project done in the TAP program that is related in some way to your own. This can be a sister project done during your TAP semester or a TAP project done in the past. Example: </i> 
 
-If you're interested in more workshops that utilize Scratch, check out [Space Mechanic](https://github.com/TAP-GGC/NinjaTurtles)!
+If you're interested in more workshops that utilize Unity, check out [SliceIt](https://github.com/TAP-GGC/SliceIT)!
 
 ## :computer: Technology
 <i> Replace Scratch with whatever technology you're using and make sure to have a logo of that technology uploaded to the technology folder within the media folder. </i>
