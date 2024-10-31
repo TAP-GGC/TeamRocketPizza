@@ -2,7 +2,7 @@
 <!-- This section is where you will replace the link to your transparent logo, the title of your project, and the very short desciptor of your project -->
 <!-- If you used Canva to make your icon and don't want to pay for a background remover, you can use the website https://www.remove.bg/ to do so -->
 <p align="center">
-  <img alt="pizza heist logo" src="media/logos/PizzaHeistTransparent.jpeg" width="" height="500" />
+  <img alt="pizza heist logo" src="media/logos/PizzaHeistDark.jpeg" width="" height="500" />
   <h1 align="center">Pizza Heist: A Cybersecurity Threat Awareness Game</h1>
   <p align="center">A project for students by team Rocket Pizza </p>
 </p>
@@ -84,7 +84,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 <i> Replace Scratch with whatever technology you're using and make sure to have a logo of that technology uploaded to the technology folder within the media folder. </i>
 <!-- be sure to use the alt text feature in case anybody viewing your repo is using  screen reader! you want your workshop to be as accessible as possible -->
 <p align="center">
-  <img alt="unity logo" src = "media/technology/UnityLogo.png" width="500" height=""/>
+  <img alt="unity logo" src = "media/technology/UnityLogoDark.png" width="500" height=""/>
 </p>
 
 * [Unity](https://unity.com/) is a cross-platform game engine that allows users to develop and create intereactive experiences and games in a 2D or 3D environment.
