@@ -47,12 +47,12 @@ You can select from a range of audiences or a single auidience. Examples:
 <!-- Use the team photo of your choice once youve uploaded it to the team photo folder within the media folder -->
 <img alt="art featuring batman, wonder woman, and superman" src = "media/team photos/Team Photo.JPG" width="" height="300">
 
-> (From left to right: Batman,  Wonder Woman, Superman.)
+> (From left to right: Nikki Thao, Brian Ramos, Daniel To.)
 <!-- replace with full names of your team members -->
 
-* Daniel To
-* Brian Ramos
 * Nikki Thao
+* Brian Ramos
+* Daniel To
 
 ## :mortar_board: Advisors
 <!-- name of the two professors overseeing your TAP class -->
@@ -72,8 +72,8 @@ This project is an exciting cybersecurity hacking game designed specifically for
 
 Example:
 
-1. <b>TAP Expo</b>, April 1, 2021, Georgia Gwinnett College: to promote the IT field and encourage college students to sign up for TAP.
-2. <b>Class Workshops</b>, April 13-15, 2021, Georgia Gwinnett College: to promote the IT field to non-IT students.
+1. <b>TAP Expo</b>, October 8, 2024, Georgia Gwinnett College: to promote the IT field and encourage college students to sign up for TAP.
+2. <b>Class Workshops</b>, October 22-24, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
 
 ## :mag_right: Similar Projects
 <i>Use this section to link to a project done in the TAP program that is related in some way to your own. This can be a sister project done during your TAP semester or a TAP project done in the past. Example: </i> 
