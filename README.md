@@ -2,9 +2,9 @@
 <!-- This section is where you will replace the link to your transparent logo, the title of your project, and the very short desciptor of your project -->
 <!-- If you used Canva to make your icon and don't want to pay for a background remover, you can use the website https://www.remove.bg/ to do so -->
 <p align="center">
-  <img alt="pizza heist logo" src="media/logos/PizzaHeistTransparent.jpeg" width="" height="350" />
-  <h1 align="center">Project Template (Example: A Game that Emphasizes the Importance of Programming Statements)</h1>
-  <p align="center">A project for ... by team ... </p>
+  <img alt="pizza heist logo" src="media/logos/PizzaHeistTransparent.jpeg" width="" height="500" />
+  <h1 align="center">Pizza Heist: A Cybersecurity Threat Awareness Game</h1>
+  <p align="center">A project for students by team Rocket Pizza </p>
 </p>
 <!-- the emojis are not set in stone! If you'd like you can remove them entirely or select your own from https://gist.github.com/rxaviers/7360908 you are welcome to -->
 
@@ -33,7 +33,7 @@ You can select from a range of audiences or a single auidience. Examples:
 * <b>Target Audience:</b> K12 - College (edit .md file to view all options presented in the markdown comments)
 * <b>Duration of Workshop:</b> How long your workshop takes (1 hour, 30 minutes, etc.) 
 * <b>Needed Materials:</b> Materials needed to do your workshop (computer with keyboard, sphero, etc.)
-* <b>Learning Outcomes:</b> The primary goal of this project is to teach participants ...
+* <b>Learning Outcomes:</b> To teach participants about the importance of internet safety through the implementation of a fun and entertaining environment using Unity
 * <b>Your Main Technology</b> Name of Technology and then a brief descriptor. You will go more in depth on the technology used in a different section. 
 * [Technology Ambassador Program](https://tapggc.org/) <b>(TAP)</b> is a project-based class that provides a collaborative environment for students to work with their fellow classmates on a semester-long project using technologies of their choice. TAP strives to increase participation in IT through numerous outreach activities and workshops that are designed to showcase the creative and fun side of technology.
 <!-- Commercial Video stored in the Media folder will be linked here -->
@@ -45,7 +45,7 @@ You can select from a range of audiences or a single auidience. Examples:
 ## :pencil2: Team: Rocket Pizza
 
 <!-- Use the team photo of your choice once youve uploaded it to the team photo folder within the media folder -->
-<img alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="300">
+<img alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="500">
 
 > (From left to right: Nikki Thao, Brian Ramos, Daniel To.)
 <!-- replace with full names of your team members -->
@@ -87,7 +87,7 @@ If you're interested in more workshops that utilize Scratch, check out [Space Me
   <img alt="unity logo" src = "media/technology/UnityLogo.png" width="500" height=""/>
 </p>
 
-* [Unity](https://unity.com/) is a block-based programming language developed by the MIT Media Lab as an education tool for children to learn computing in a fun and interactive way.
+* [Unity](https://unity.com/) is a cross-platform game engine that allows users to develop and create intereactive experiences and games in a 2D or 3D environment.
 * Scratch has drag-and-drop interfaces. Unlike text-based programming language like Java or C where you physically type every line of code, in Scratch, you can drag and drop pre-made codes and organize them into an algorithm. It's like solving a jigsaw puzzle!
 * Explain why your team chose this technology for this workshop.
 
@@ -95,7 +95,7 @@ If you're interested in more workshops that utilize Scratch, check out [Space Me
 <img src = "media/technology/block-based language.png" width ="400" height="200">
 </p>
 
-## Project Setup/Installation 
+## Project Setup
 <i> This section is dedicated to linking to .md files in your documents/tutorial/ folder that will contain instructions on installation
 
 Your repo doesn't have to have every section used below. This is just an example so you can get an idea of what your own repo should look like</i>
