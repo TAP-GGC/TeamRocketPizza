@@ -3,7 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Slots
+  - MalwareTower
+  - NetTower
+  - Wall
+  - Turret
+  - Email Inbox Item
+  - Email Details
+  - NotPhishing
+  - IsPhishing
+  - Phished
+  - Occupied
+  - Email Details
+  - NotPhishing
+  - IsPhishing
+  - FirewallTower
+  - IDSTower
+  - BackupTower
   layers:
   - Default
   - TransparentFX
@@ -11,13 +29,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Malware
+  - Worm
+  - Projectile
+  - Turret
+  - DoS
+  - Ransomware
+  - Trojan
   - 
   - 
   - 

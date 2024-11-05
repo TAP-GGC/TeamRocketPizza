@@ -9,6 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/FrontPage.unity
     guid: 204b659934113a1499d4c90067e3cb35
   - enabled: 1
-    path: Assets/Scenes/TeamSelectionPage.unity
-    guid: 7e589a3c45e68474f8a08326e0131b79
+    path: Assets/Scenes/OpeningCutscene1.unity
+    guid: 8c53be4aad7944c4ebafa45cee168109
+  - enabled: 1
+    path: Assets/Scenes/BossInterview.unity
+    guid: eeef9e7b0f3d8064f9c14adda0f4e257
+  - enabled: 1
+    path: Assets/Scenes/OpeningCutscene2.unity
+    guid: 3d4ba42eef1fb7b4d98140a82868a817
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 87ba1ed9133b0a8439600f338b5dd4f4
+  - enabled: 1
+    path: Assets/Scenes/Help.unity
+    guid: 168e63c61bf443e409623d896773f40c
+  - enabled: 1
+    path: Assets/Scenes/Desktop.unity
+    guid: 4a7e488bd53a7d84bbdde11d9e02813b
+  - enabled: 1
+    path: Assets/Scenes/PhishingEmails.unity
+    guid: 0a8b5a038394a4e85a7c50136c71cef7
+  - enabled: 1
+    path: Assets/Scenes/Desktop 2.unity
+    guid: 695d3ffa7bd28e94ca6daaf5e79e7cf6
+  - enabled: 1
+    path: Assets/Scenes/TDGame.unity
+    guid: da017c8cb73169448bf03dee79111b61
+  - enabled: 1
+    path: Assets/Scenes/Desktop 3.unity
+    guid: 10e8aafdeb836c041861515563d4a60e
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 62f99b5f9684250449e2d488b991a4aa
   m_configObjects: {}
