@@ -34,7 +34,7 @@ You can select from a range of audiences or a single auidience. Examples:
 * <b>Duration of Workshop:</b> 1 hour
 * <b>Needed Materials:</b> Computer or laptop with a keyboard and mouse/trackpad
 * <b>Learning Outcomes:</b> To teach participants about the importance of internet safety through the implementation of a fun and entertaining environment using Unity
-* <b>Your Main Technology</b> Name of Technology and then a brief descriptor. You will go more in depth on the technology used in a different section. 
+* <b>Your Main Technology</b> Unity: A cross-platform game engine
 * [Technology Ambassador Program](https://tapggc.org/) <b>(TAP)</b> is a project-based class that provides a collaborative environment for students to work with their fellow classmates on a semester-long project using technologies of their choice. TAP strives to increase participation in IT through numerous outreach activities and workshops that are designed to showcase the creative and fun side of technology.
 <!-- Commercial Video stored in the Media folder will be linked here -->
 
@@ -74,6 +74,7 @@ Example:
 
 1. <b>TAP Expo</b>, October 8, 2024, Georgia Gwinnett College: to promote the IT field and encourage college students to sign up for TAP.
 2. <b>Class Workshops</b>, October 22-24, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
+3. <b>CCSC Conference</b>, November 1-2, 2024, Furman University: to help teach tips and tricks for developing successful technology projects for introduction to programming and outreach.
 
 ## :mag_right: Similar Projects
 <i>Use this section to link to a project done in the TAP program that is related in some way to your own. This can be a sister project done during your TAP semester or a TAP project done in the past. Example: </i> 
