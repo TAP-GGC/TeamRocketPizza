@@ -29,12 +29,12 @@ You can select from a range of audiences or a single auidience. Examples:
     K-12
   You will be presenting most often to your peers who are taking introductory technology classes, so more often than not you should be including college in your target audience range. 
 -->
-* <b>Difficulty Level:</b> Choose your workshop difficulty (Beginner/Intermediate/Advanced)
-* <b>Target Audience:</b> K12 - College (edit .md file to view all options presented in the markdown comments)
+* <b>Difficulty Level:</b> Beginner
+* <b>Target Audience:</b> Middle School - College
 * <b>Duration of Workshop:</b> 1 hour
 * <b>Needed Materials:</b> Computer or laptop with a keyboard and mouse/trackpad
 * <b>Learning Outcomes:</b> To teach participants about the importance of internet safety through the implementation of a fun and entertaining environment using Unity
-* <b>Your Main Technology</b> Unity: A cross-platform game engine
+* <b>Your Main Technology</b> Unity, a cross-platform game engine
 * [Technology Ambassador Program](https://tapggc.org/) <b>(TAP)</b> is a project-based class that provides a collaborative environment for students to work with their fellow classmates on a semester-long project using technologies of their choice. TAP strives to increase participation in IT through numerous outreach activities and workshops that are designed to showcase the creative and fun side of technology.
 <!-- Commercial Video stored in the Media folder will be linked here -->
 
