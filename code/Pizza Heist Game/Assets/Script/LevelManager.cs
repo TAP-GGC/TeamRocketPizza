@@ -16,6 +16,9 @@ public class LevelManager : MonoBehaviour
     public Transform startPoint;
     public Transform[] waypoints;
     public LevelLoader transitionRef;
+    [SerializeField] private Button fastForwardButton;
+    [SerializeField] private Color originalColor; // Original color
+    [SerializeField] private Color dullColor; // Dull color
     private Text healthText;
     private Text coinText;
     private Text GameState;
@@ -28,7 +31,7 @@ public class LevelManager : MonoBehaviour
     private bool gameOver;
     private GameStateEnum currentState;
     private EnemySpawner enemySpawner;
-
+    private bool isFastForwarding = false;
 
     [Header("Virus images")]
     [SerializeField] private Image images;
@@ -156,6 +159,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void ToggleFastFoward(){
+        isFastForwarding = !isFastForwarding; // Toggle the boolean state
+    }
     public void WinGame(){
         HideGroup();
         GameState.text = "You Win! \nClick button to go back";
@@ -163,7 +169,7 @@ public class LevelManager : MonoBehaviour
         GameState.fontSize = 100;
         _cgroup.interactable = true;
         _cgroup.blocksRaycasts = true;
-        Time.timeScale = 1;
+
         currentState = GameStateEnum.EndGame;
     }
 
@@ -173,7 +179,7 @@ public class LevelManager : MonoBehaviour
         _cgroup.alpha = 1f;
         _cgroup.interactable = true;
         _cgroup.blocksRaycasts = true;
-        Time.timeScale = 1;
+
         currentState = GameStateEnum.StartGame;
     }
     public void HideAllGroup(){
@@ -246,6 +252,17 @@ public class LevelManager : MonoBehaviour
             LoseGame();
         }
         
+        if (isFastForwarding)
+        {
+            Time.timeScale = 2.0f; // Enable fast-forward
+            fastForwardButton.image.color = dullColor;
+        }
+        else
+        {
+            Time.timeScale = 1.0f; // Set to normal speed
+            fastForwardButton.image.color = originalColor;
+        }
+
         coinText.text = "Coins: " + coins;
         healthText.text = "Health: " + health;
     }

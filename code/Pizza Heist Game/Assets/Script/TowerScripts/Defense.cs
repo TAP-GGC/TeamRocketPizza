@@ -92,6 +92,8 @@ public class Defense : MonoBehaviour
             }
         }
     }
+
+    
     public void SellCurrentInstance()
     {
     // Assuming currentInstance has a 'Defense' component with the cost

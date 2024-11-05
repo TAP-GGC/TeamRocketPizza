@@ -34,13 +34,12 @@ public class EnemySpawner : MonoBehaviour
     private Text wave;
     
 
-    private void Awake(){
-        enemyDestroy.AddListener(EnemiesDestroyed);
-    }
+
 
 
     void Start()
     {   
+    
         buttonImage = startWaveButton.GetComponent<Image>();
         wave = GameObject.Find("WaveText").GetComponent<Text>();
         if (startWaveButton != null)
@@ -60,11 +59,11 @@ public class EnemySpawner : MonoBehaviour
         if(!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
+        enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         if(timeSinceLastSpawn >= (1f/eps) && enemiesLeftToSpawn > 0){
             SpawnEnemy();
             enemiesLeftToSpawn--;
-            enemiesAlive++;
             timeSinceLastSpawn = 0f;
         }
 
@@ -73,20 +72,20 @@ public class EnemySpawner : MonoBehaviour
         if(enemiesAlive <= 0 && enemiesLeftToSpawn <= 0){
             EndWave();
         }
-        if(currentEnemyWave >=20){
+        if(currentEnemyWave >=16){
             LevelManager.main.WinGame();
             
         }
-        if(currentEnemyWave == 4 && !isSpawning){
+        if(currentEnemyWave == 3 && !isSpawning){
             LevelManager.main.Warning();
         }
-        if(currentEnemyWave == 8 && !isSpawning){
+        if(currentEnemyWave == 6 && !isSpawning){
+            LevelManager.main.Warning();
+        }
+        if(currentEnemyWave == 9 && !isSpawning){
             LevelManager.main.Warning();
         }
         if(currentEnemyWave == 12 && !isSpawning){
-            LevelManager.main.Warning();
-        }
-        if(currentEnemyWave == 16 && !isSpawning){
             LevelManager.main.Warning();
         }
     }
@@ -103,25 +102,21 @@ public class EnemySpawner : MonoBehaviour
         startWaveButton.enabled = true;
     }
 
-    private void EnemiesDestroyed()
-    {
-        enemiesAlive--;
-    }
     private void SpawnEnemy()
     {
-        if(currentEnemyWave >= 16){
+        if(currentEnemyWave >= 12){
             GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,5)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
-        else if(currentEnemyWave >= 12){
+        else if(currentEnemyWave >= 9){
             GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,4)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
-        else if(currentEnemyWave >= 8){
+        else if(currentEnemyWave >= 6){
             GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,3)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }
-        else if(currentEnemyWave >= 4){
+        else if(currentEnemyWave >= 3){
             GameObject prefabSpawn = enemyPrefabs[UnityEngine.Random.Range(0,2)];
             Instantiate(prefabSpawn, LevelManager.main.startPoint.position,Quaternion.identity);
         }

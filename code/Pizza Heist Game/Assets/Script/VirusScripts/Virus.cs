@@ -71,7 +71,7 @@ public abstract class Virus : MonoBehaviour
     }
     
     public virtual void OnDeath(){
-            EnemySpawner.enemyDestroy.Invoke();
+            
             LevelManager.main.IncreaseCoin(coinsWorth);
             Destroy(gameObject);
     }
