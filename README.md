@@ -65,16 +65,17 @@ This project is an exciting cybersecurity hacking game designed specifically for
 
 ## :memo: Publications
 <!-- team members, then professors/advisors. "Name of Publication", event, month and day, year, Georgia Gwinnett College. -->
-1. Team Member, Team Member, Team Member, John Doe, Jane Doe. "A Real Fake Workshop", Fake Event, April 1, 2024, Georgia Gwinnett College.  
+1. <b>CCSC:SE Abstract</b> - Brian Ramos-Cazares, Niiki Thao, Daniel To. Pizza Heist: Cybersecurity Threat Awareness Game, Consortium for Computing Sciences in
+Colleges: Southeastern Region (CCSC:SE), November 1-2, 2024, Greenville, SC.
+2. <b>CREATE Symposium Poster </b> - Brian Ramos-Cazares, Niiki Thao, Daniel To. CREATE Symposium Poster, Nov. 21, 2019, Georgia Gwinnett College.
 
 ## :open_hands: Outreach
-<i>List the outreach events your team has participated in. </i>
-
-Example:
+<i>List the outreach events we have participated in. </i>
 
 1. <b>TAP Expo</b>, October 8, 2024, Georgia Gwinnett College: to promote the IT field and encourage college students to sign up for TAP.
 2. <b>Class Workshops</b>, October 22-24, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
 3. <b>CCSC Conference</b>, November 1-2, 2024, Furman University: to help teach tips and tricks for developing successful technology projects for introduction to programming and outreach.
+4. <b>Super Saturday Series</b>, November 16, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
 
 ## :mag_right: Similar Projects
 <i>Use this section to link to a project done in the TAP program that is related in some way to your own. This can be a sister project done during your TAP semester or a TAP project done in the past. Example: </i> 
@@ -88,13 +89,15 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
   <img alt="unity logo" src = "media/technology/UnityLogoDark.png" width="500" height=""/>
 </p>
 
-* [Unity](https://unity.com/) is a cross-platform game engine that allows users to develop and create intereactive experiences and games in a 2D or 3D environment.
-* Scratch has drag-and-drop interfaces. Unlike text-based programming language like Java or C where you physically type every line of code, in Scratch, you can drag and drop pre-made codes and organize them into an algorithm. It's like solving a jigsaw puzzle!
-* Explain why your team chose this technology for this workshop.
+* [Unity](https://unity.com/) is a versatile cross-platform game engine that allows users to develop and create intereactive experiences and games in both 2D and 3D environments.
 
-<p align="center">
-<img src = "media/technology/block-based language.png" width ="400" height="200">
-</p>
+#### Why We Chose Unity for This Project:
+* Our project leverages Unity to develop a cybersecurity-themed 2D game, aimed at simplifying cybersecurity concepts for a non-technical audience. Unity's robust 2D framework, featuring the Canvas and Tilemap systems, facilitates the creation of engaging mini-games where players interact with simulated Windows applications, teaching cybersecurity principles. The engine's extensive asset library and physics capabilities also enhance gameplay, providing dynamic and user-friendly experiences.
+* We considered Unity, Blender, and Scratch as candidate for our games. Unity was the clear choice due to its strong support for 2D game mechanics, UI systems, and physics components. While Blender is excellent for 3D modeling and rendering, it lacks focus on game development logic. Scratch, though simple and accessible, does not support the depth of features we need for our game.
+* Unity’s asset store offers a variety of resources, saving time in finding or creating objects and sprites, despite us not utilize the assets besides sounds.
+* Since our team has a background in Java, transitioning to Unity’s primary language, C#, is efficient due to the similarities in syntax and structure.
+* We also sought the challenge of using a full-featured game engine to gain hands-on experience with its functionality, enabling us to build a comprehensive game with a custom graphical user interface.
+
 
 ## Project Setup
 <i> This section is dedicated to linking to .md files in your documents/tutorial/ folder that will contain instructions on installation
