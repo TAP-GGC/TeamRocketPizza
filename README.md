@@ -9,11 +9,12 @@
 <!-- the emojis are not set in stone! If you'd like you can remove them entirely or select your own from https://gist.github.com/rxaviers/7360908 you are welcome to -->
 
 ## :loudspeaker: About
-The objective of the workshop is teach Cybersecurity Concepts.
-<!-- You can look at other TAP projects if you need a better idea of how to describe your workshops objectives -->
 
-This workshop has participants do ...
-
+This workshop is designed to introduce students to foundational cybersecurity concepts,
+covering topics such as password protection,phishing, and virus identification. 
+Through an engaging presentation and interactive discussions, participants will gain insights into safeguarding personal digital data. 
+Following this, students will apply their knowledge in a hands-on game,
+navigating a series of mini-games with the objective of reaching the end without falling victim to cyber threats.
 ## :bulb: Project Information
 <!-- 
 Your Options for target audience: 
@@ -61,7 +62,10 @@ You can select from a range of audiences or a single auidience. Examples:
 
 
 ## :page_with_curl: Project Description
-This project is an exciting cybersecurity hacking game designed specifically for beginners. The game offers an engaging and interactive experience that introduces players to the fundamentals of cybersecurity and internet safety. As players navigate through various challenges, they'll learn about crucial topics like phishing, password encryption, IP configurations, and more. The game is thoughtfully designed to provide hints and clues along the way, guiding players as they solve puzzles and master the basics of cybersecurity in a fun and immersive environment.
+This project was inspired by the rising number of individuals falling victim to cybersecurity threats like phishing and malware.
+In response, this project aims to design and develop an engaging introductory cybersecurity game tailored for beginners. 
+The game provides an interactive experience that introduces players to essential cybersecurity concepts, including phishing, password security, viruses, and antivirus measures. 
+Thoughtfully designed with hints and guidance, the game helps players understand the purpose and learning objectives behind each mini-game, making cybersecurity education both accessible and enjoyable.
 
 ## :memo: Publications
 <!-- team members, then professors/advisors. "Name of Publication", event, month and day, year, Georgia Gwinnett College. -->
