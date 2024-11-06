@@ -2,7 +2,7 @@
 <!-- This section is where you will replace the link to your transparent logo, the title of your project, and the very short desciptor of your project -->
 <!-- If you used Canva to make your icon and don't want to pay for a background remover, you can use the website https://www.remove.bg/ to do so -->
 <p align="center">
-  <img alt="pizza heist logo" src="media/logos/PizzaHeistDark.jpeg" width="" height="500" />
+  <img alt="pizza heist logo" src="media/logos/PizzaHeistLogoTransparentOutline.png" width="" height="500" />
   <h1 align="center">Pizza Heist: A Cybersecurity Threat Awareness Game</h1>
   <p align="center">A project for students by team Rocket Pizza </p>
 </p>
