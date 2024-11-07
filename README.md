@@ -124,17 +124,17 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 Your repo doesn't have to have every section used below. This is just an example so you can get an idea of what your own repo should look like</i>
 
-### Opening a blank Scratch page 
-[Click here to view instructions](/Documents/tutorial/Opening%20a%20blank%20Scratch%20page.md)
+### Installation for Unity
+[Click here to view instructions](documents/tutorial%20materials/Instruction%20for%20Unity.pdf)
 
 [Video with Unity Instruction](https://youtu.be/v-GUbj7DMEE)
 
-<!-- if your project uses scratch, you can reuse any of these instructions (be sure to include CS First alternatives) -->
+<!-- if your project uses scratch, you can reuse any of these instructions (be sure to include CS First alternatives)
 ## CS First Installation Walkthrough
 [Click here to view instructions](/Documents/tutorial/CS%20FIRST/CS%20First%20Walkthrough.md)
 
 ### Getting to the game 
-[Click here to view instructions](/Documents/tutorial/Getting%20to%20the%20Game.md)
+[Click here to view instructions](/Documents/tutorial/Getting%20to%20the%20Game.md) -->
 
 ## Usage
 
