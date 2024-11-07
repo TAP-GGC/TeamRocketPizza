@@ -82,7 +82,6 @@ Colleges: Southeastern Region (CCSC:SE), November 1-2, 2024, Greenville, SC.
 4. <b>Super Saturday Series</b>, November 16, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
 
 ## :mag_right: Similar Projects
-<i>Use this section to link to a project done in the TAP program that is related in some way to your own. This can be a sister project done during your TAP semester or a TAP project done in the past. Example: </i> 
 
 If you're interested in more workshops that utilize Unity, check out [SliceIT!](https://github.com/TAP-GGC/SliceIT) or [PixelArcade](https://github.com/TAP-GGC/Pixel8)!
 
