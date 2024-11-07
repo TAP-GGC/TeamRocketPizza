@@ -46,7 +46,7 @@ You can select from a range of audiences or a single auidience. Examples:
 ## :pencil2: Team: Rocket Pizza
 
 <!-- Use the team photo of your choice once youve uploaded it to the team photo folder within the media folder -->
-<img align="Center" alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="500">
+<img align="center" alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="500">
 
 > (From left to right: Nikki Thao, Brian Ramos, Daniel To.)
 <!-- replace with full names of your team members -->
@@ -95,13 +95,16 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 * [Unity](https://unity.com/) is a versatile cross-platform game engine that allows users to develop and create intereactive experiences and games in both 2D and 3D environments.
 
-<p align="align="Center"">
-  <i>An image of the unity game engine and its different feature.</i>
+<p align="center"><i>An image of the unity game engine and its different feature.</i></p>
+<p align="center">
+  
   <img alt="unityGameEngine" src = "media/technology/UnityEngine.png" width="350" height=""/>
   
 </p>
 
-<p align="Center">
+<p align="center"><i>This is an image of C# code running in unity.</i></p>
+
+<p align="center">
   <i>This is an image of C# code running in unity.</i>
   <img alt="unity logo" src = "media/technology/CodeImg.png" width="300" height=""/>
 </p>
