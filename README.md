@@ -95,14 +95,14 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 * [Unity](https://unity.com/) is a versatile cross-platform game engine that allows users to develop and create intereactive experiences and games in both 2D and 3D environments.
 
-<p><i>An image of the unity game engine and its different feature.</i></p>
+<p align="left"><i>An image of the unity game engine and its different feature.</i></p>
 <p align="left">
   
   <img alt="unityGameEngine" src = "media/technology/UnityEngine.png" width="350" height=""/>
   
 </p>
 
-<p><i>This is an image of C# code running in unity.</i></p>
+<p align="right"><i>This is an image of C# code running in unity.</i></p>
 
 <p align="right">
   
