@@ -87,7 +87,7 @@ Colleges: Southeastern Region (CCSC:SE), November 1-2, 2024, Greenville, SC.
 If you're interested in more workshops that utilize Unity, check out [SliceIT!](https://github.com/TAP-GGC/SliceIT) or [PixelArcade](https://github.com/TAP-GGC/Pixel8)!
 
 ## :computer: Technology
-<i> Replace Scratch with whatever technology you're using and make sure to have a logo of that technology uploaded to the technology folder within the media folder. </i>
+
 <!-- be sure to use the alt text feature in case anybody viewing your repo is using  screen reader! you want your workshop to be as accessible as possible -->
 <p align="center">
   <img alt="unity logo" src = "media/technology/UnityLogoDark.png" width="500" height=""/>
@@ -95,13 +95,29 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 * [Unity](https://unity.com/) is a versatile cross-platform game engine that allows users to develop and create intereactive experiences and games in both 2D and 3D environments.
 
-#### Why We Chose Unity for This Project:
-* Our project leverages Unity to develop a cybersecurity-themed 2D game, aimed at simplifying cybersecurity concepts for a non-technical audience. Unity's robust 2D framework, featuring the Canvas and Tilemap systems, facilitates the creation of engaging mini-games where players interact with simulated Windows applications, teaching cybersecurity principles. The engine's extensive asset library and physics capabilities also enhance gameplay, providing dynamic and user-friendly experiences.
+<p><i>An image of the unity game engine and its different feature.</i></p>
+<p align="left">
+  
+  <img alt="unityGameEngine" src = "media/technology/UnityEngine.png" width="350" height=""/>
+  
+</p>
+
+<p><i>This is an image of C# code running in unity.</i></p>
+
+<p align="right">
+  
+  <img alt="unity logo" src = "media/technology/CodeImg.png" width="300" height=""/>
+</p>
+
+
+
+<!--#### Why We Chose Unity for This Project:
+ * Our project leverages Unity to develop a cybersecurity-themed 2D game, aimed at simplifying cybersecurity concepts for a non-technical audience. Unity's robust 2D framework, featuring the Canvas and Tilemap systems, facilitates the creation of engaging mini-games where players interact with simulated Windows applications, teaching cybersecurity principles. The engine's extensive asset library and physics capabilities also enhance gameplay, providing dynamic and user-friendly experiences.
 * We considered Unity, Blender, and Scratch as candidate for our games. Unity was the clear choice due to its strong support for 2D game mechanics, UI systems, and physics components. While Blender is excellent for 3D modeling and rendering, it lacks focus on game development logic. Scratch, though simple and accessible, does not support the depth of features we need for our game.
 * Unity’s asset store offers a variety of resources, saving time in finding or creating objects and sprites, despite us not utilize the assets besides sounds.
 * Since our team has a background in Java, transitioning to Unity’s primary language, C#, is efficient due to the similarities in syntax and structure.
 * We also sought the challenge of using a full-featured game engine to gain hands-on experience with its functionality, enabling us to build a comprehensive game with a custom graphical user interface.
-
+-->
 
 ## Project Setup
 <i> This section is dedicated to linking to .md files in your documents/tutorial/ folder that will contain instructions on installation
@@ -111,7 +127,7 @@ Your repo doesn't have to have every section used below. This is just an example
 ### Opening a blank Scratch page 
 [Click here to view instructions](/Documents/tutorial/Opening%20a%20blank%20Scratch%20page.md)
 
-[Video with Scratch instructions](https://youtu.be/v-GUbj7DMEE)
+[Video with Unity Instruction](https://youtu.be/v-GUbj7DMEE)
 
 <!-- if your project uses scratch, you can reuse any of these instructions (be sure to include CS First alternatives) -->
 ## CS First Installation Walkthrough
@@ -121,13 +137,14 @@ Your repo doesn't have to have every section used below. This is just an example
 [Click here to view instructions](/Documents/tutorial/Getting%20to%20the%20Game.md)
 
 ## Usage
-<i> Describe HOW to use your game. </i> 
-Example: 
-1. Press the Left arrow key to move to the left.
-2. Press the Right arrow key to move to the right.
-3. Press the Up arrow key to move up.
-4. Press the Down arrow key to move down.
-5. You may also replace the arrow keys with a Makey Makey. 
+
+#### Desktop and Phishing Game Controls
+1. Click LEFT mouse button to interact in the game.
+#### Virus Tower Defense Game Controls
+1. Click LEFT mouse button to interact in the game.
+2. Click & Drag LEFT mouse button to move the towers on the Square.
+3. Click Right mouse button to Sell Towers.
+
 
 ## Short Demo Instructions 
 [Demo Video on how to install and play our game](https://youtu.be/mA80Aa55t-U)
