@@ -105,7 +105,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 <p align="center"><i>This is an image of C# code running in unity.</i></p>
 
 <p align="center">
-  <i>This is an image of C# code running in unity.</i>
+
   <img alt="unity logo" src = "media/technology/CodeImg.png" width="300" height=""/>
 </p>
 
