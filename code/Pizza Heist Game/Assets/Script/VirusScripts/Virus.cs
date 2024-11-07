@@ -45,7 +45,7 @@ public abstract class Virus : MonoBehaviour
         
 
         if(waypointIndex == LevelManager.main.waypoints.Length){
-            EnemySpawner.enemyDestroy.Invoke();
+            
             Destroy(gameObject);
             dealDamage();
             return;
