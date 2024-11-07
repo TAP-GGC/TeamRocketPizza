@@ -46,7 +46,6 @@ public class Worm : Virus
     public override void OnDeath(){
         
         if(isOriginal){
-            EnemySpawner.enemyDestroy.Invoke();
             explode.Play();
             UseAbilties();
         }
