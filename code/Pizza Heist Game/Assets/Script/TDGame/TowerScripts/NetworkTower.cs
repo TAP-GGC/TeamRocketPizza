@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+// [BACKUP TOWER CHILD CLASS]
+// Purpose: A child class that only holds function for the backup tower
 public class NetworkTower : Defense
 {
     

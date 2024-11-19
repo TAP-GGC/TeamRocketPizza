@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
+// [FIREWALL TOWER CHILD CLASS]
+// Purpose: A child class that only holds function for the firewall tower
+
 public class FirewallTower : Defense
 {
     
     private ParticleSystem partSys;
     private new AudioSource audio;
-    private void Start(){
+    private void Start(){ // get game component at the start of the first frame
         partSys = GetComponentInChildren<ParticleSystem>();
         audio = GetComponent<AudioSource>();
     }
 
-    private void Update(){
+    private void Update(){ // New update method that changes the shooting and target Find
         ClickEvent();
         if (target == null){
             FindTarget();
@@ -32,6 +36,7 @@ public class FirewallTower : Defense
         }
     }
 
+    // Firewall pusle logic to slow down enemy for a certain time.
     public void Firepulse(){
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, targetRange);
         foreach(Collider2D c in colliders){
@@ -39,12 +44,14 @@ public class FirewallTower : Defense
 
             if(virus != null){
                 Debug.Log("Found Virus collider");
-                virus.ApplySlow(0.5f,3f);
+                virus.ApplySlow(0.5f,3f); // Apply slow to virus
                 
             }
         }
     }
-    public override void Shoot()
+    
+    // Override and perform a new shoot method
+    public override void Shoot() 
     {
         partSys.Play();
         audio.Play();

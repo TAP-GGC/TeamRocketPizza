@@ -4,6 +4,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+// [DEFENSE TOWER PARENT CLASS]
+// Purpose: hold function that all Tower Defense have
 public class Defense : MonoBehaviour
 {
 
@@ -22,36 +25,43 @@ public class Defense : MonoBehaviour
     public int cost;
     public Transform target;
     public float fireCooldown;
-
-    // public bool isColliding;
     public bool isSold = false;
     public Transform occupiedSlot;
+
+    
     private AudioSource audioOrig;
 
-    private void Start(){
+    private void Start(){ // get any component at the first frame
         audioOrig = GetComponent<AudioSource>();
     }
-    public void FindTarget(){
+    
+    // Cast a radius that helps the turret find a target
+    public void FindTarget(){ 
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
         transform.position,
         targetRange,
         (Vector2)transform.position,
         0f,enemyMask);
 
-        if(hits.Length > 0){
+        if(hits.Length > 0){ // If the there are more than 1 hit target
             target = hits[0].transform;
         }
     }
-    public virtual void Shoot(){
-        audioOrig.Play();
+    
+    // Shoot the instantiate game object (projectile bullet)
+    public virtual void Shoot(){ 
+        audioOrig.Play(); // play a shoot sound
         GameObject projectileObj = Instantiate(projectilePrefab,firingPoint.position,Quaternion.identity);
         ProjectileController projectileScript = projectileObj.GetComponent<ProjectileController>();
         projectileScript.SetTarget(target);
     }
-    public bool CheckTargetInRange(){ // Checks if the distance from target to the Turret within the range
+    
+    // Checks if the distance from target to the Turret within the range
+    public bool CheckTargetInRange(){ 
         return Vector2.Distance(target.position, transform.position) <= targetRange;
     }
 
+    // Rotates the turret towards the target
     public void RotateTowardsTarget(){
         float angle = Mathf.Atan2( // Algorithm to track angle rotation towards target
         target.position.y - transform.position.y,
@@ -69,35 +79,32 @@ public class Defense : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position,targetRange);
     }
 
-    public void SetOccupiedSlot(Transform slot)
-    {
-        occupiedSlot = slot;
+    public void SetOccupiedSlot(Transform slot){
+        occupiedSlot = slot; // helper method to set the state of the slots
     }
 
+    // 
     public void ClickEvent(){
         if (Input.GetMouseButtonDown(1)) // Right-click
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // gets the position of the mouse;
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 
             if (hit.collider != null)
             {
-                Debug.Log("Hit detected on: " + hit.collider.gameObject.name);
+                Debug.Log("Hit detected on: " + hit.collider.gameObject.name); // checks any hit detection
 
                 if (hit.collider.gameObject == gameObject)
                 {
-                    Debug.Log("Right-click detected on this turret");
+                    Debug.Log("Right-click detected on this turret"); // checks right click event on the turret
                     SellCurrentInstance(); // Call your sell method here
                 }
             }
         }
     }
 
-    
-    public void SellCurrentInstance()
-    {
-    // Assuming currentInstance has a 'Defense' component with the cost
-        
+    // Sells that exact instance of the defense
+    public void SellCurrentInstance(){
         if (gameObject != null)
         {
             int refundAmount = Mathf.FloorToInt(cost * 0.75f);
@@ -115,6 +122,8 @@ public class Defense : MonoBehaviour
             Debug.Log("Current turret sold for " + refundAmount + " coins.");
         }
     }
+
+
 }
 
 

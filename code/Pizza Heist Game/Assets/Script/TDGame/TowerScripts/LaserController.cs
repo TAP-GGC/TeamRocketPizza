@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// [LASER CONTROLLER CLASS]
+// Purpose: A child class that only holds function for the backup tower
 public class LaserController : MonoBehaviour
 {
-private IDSTower IDSTower;
+    private IDSTower IDSTower;
     public GameObject exploPref;
     private Dictionary<GameObject, float> enemyCooldowns = new Dictionary<GameObject, float>();
     public float hitCooldown = 0.5f; // Cooldown duration in seconds
@@ -30,7 +33,7 @@ private IDSTower IDSTower;
                 GameObject ex = Instantiate(exploPref, virus.transform.position, Quaternion.identity);
                 Destroy(ex, 1f); // Destroy the explosion effect after 1 second
 
-                // Set the cooldown time for this enemy
+                // Set the hit cooldown tiem for this enemy
                 enemyCooldowns[other] = Time.time + hitCooldown;
             }
 
@@ -45,18 +48,18 @@ private IDSTower IDSTower;
 
     void Update()
     {
-        // Optionally, clean up the dictionary by removing entries for enemies that no longer exist
+       // A list that keeps the key for enemy that was hit once
         List<GameObject> keysToRemove = new List<GameObject>();
         foreach (var entry in enemyCooldowns)
         {
             if (entry.Key == null)
             {
-                keysToRemove.Add(entry.Key);
+                keysToRemove.Add(entry.Key); // add to list
             }
         }
         foreach (var key in keysToRemove)
         {
-            enemyCooldowns.Remove(key);
+            enemyCooldowns.Remove(key); // remove from list
         }
     }
 }
