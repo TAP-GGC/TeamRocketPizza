@@ -130,7 +130,11 @@ Your repo doesn't have to have every section used below. This is just an example
 ### Installation for Unity
 [Click here to view instructions](documents/tutorial%20materials/Instruction%20for%20Unity.pdf)
 
-[Video with Unity Instruction](https://youtu.be/v-GUbj7DMEE)
+[Video with Unity Instruction](https://github.com/user-attachments/assets/5b51856d-932d-4d32-9733-a07da1e3140d)
+
+### Aesprite Tutorial
+[Video For Aesprite Tutorial](https://github.com/user-attachments/assets/2234447b-1d55-49bb-b98b-bd13512f1dd5)
+
 
 <!-- if your project uses scratch, you can reuse any of these instructions (be sure to include CS First alternatives)
 ## CS First Installation Walkthrough
@@ -155,6 +159,7 @@ Your repo doesn't have to have every section used below. This is just an example
 ## Workshop Instructions 
 [Click here to view workshop walkthrough pdf file](/Documents/tutorial/Scratch%20Workshop%20Walkthrough.pdf)
 
-[Our Game Workshop Video](https://youtu.be/Mtsre0iMStM)
+[Our Game Workshop Video](https://github.com/user-attachments/assets/5f82f821-cd4b-47e3-ada8-b617bd018bee)
+
 
 
