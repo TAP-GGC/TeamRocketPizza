@@ -158,7 +158,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 <i>Need link to our Game Demo Video
 
 ## Workshop Instructions 
-<i>Need PDF to our Workshop walkthrough
+<i>Need PDF instructions of our Workshop walkthrough
 
 [Our Game Workshop Video](https://github.com/user-attachments/assets/5f82f821-cd4b-47e3-ada8-b617bd018bee)
 
