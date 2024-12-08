@@ -127,9 +127,6 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 -->
 
 ## Project Setup
-<i> This section is dedicated to linking to .md files in your documents/tutorial/ folder that will contain instructions on installation
-
-Your repo doesn't have to have every section used below. This is just an example so you can get an idea of what your own repo should look like</i>
 
 ### Installation for Unity
 [Click here to view instructions](documents/tutorial%20materials/Instruction%20for%20Unity.pdf)
