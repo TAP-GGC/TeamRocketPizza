@@ -155,10 +155,10 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 
 ## Short Demo Instructions 
-[Demo Video on how to install and play our game](https://youtu.be/mA80Aa55t-U)
+<i>Need link to our Game Demo Video
 
 ## Workshop Instructions 
-[Click here to view workshop walkthrough pdf file](/Documents/tutorial/Scratch%20Workshop%20Walkthrough.pdf)
+<i>Need PDF to our Workshop walkthrough
 
 [Our Game Workshop Video](https://github.com/user-attachments/assets/5f82f821-cd4b-47e3-ada8-b617bd018bee)
 
