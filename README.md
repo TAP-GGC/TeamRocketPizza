@@ -152,16 +152,12 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 
 ## Short Demo Instructions 
-
-[Our Game Demo Video](https://github.com/user-attachments/assets/fed08917-d255-474f-ba2e-55a6dcbcf3e1)
-
-
-
+<b>Our Game Demo Video</b> Click on the image
+[<img align="center" src= "media/technology/Demo-PizzaHeist.PNG" width="" height="">](https://youtu.be/QgSUc8iSpE0)
 
 ## Workshop Instructions 
-<i>Need PDF instructions of our Workshop walkthrough
+<i>Need PDF instructions of our Workshop walkthrough</i>
 
-[Our Game Workshop Video](https://github.com/user-attachments/assets/5f82f821-cd4b-47e3-ada8-b617bd018bee)
-
-
+<b>Our Game Workshop Video</b> Click on the image
+[<img align="center" src= "media/technology/Workshop-PizzaHeist.PNG" width="" height="">](https://youtu.be/SCNCaxgNzoY)
 
