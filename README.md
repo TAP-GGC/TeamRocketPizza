@@ -39,7 +39,7 @@ You can select from a range of audiences or a single auidience. Examples:
 * [Technology Ambassador Program](https://tapggc.org/) <b>(TAP)</b> is a project-based class that provides a collaborative environment for students to work with their fellow classmates on a semester-long project using technologies of their choice. TAP strives to increase participation in IT through numerous outreach activities and workshops that are designed to showcase the creative and fun side of technology.
 <!-- Commercial Video stored in the Media folder will be linked here -->
 
-<b>Commercial Video</b> Click ont the image
+<b>Commercial Video</b> Click on the image
 [<img align="center" src= "media/technology/TrailerPizzaHeist.PNG" width="" height="">](https://youtu.be/t6F2AzUeuyw)
 
 
@@ -126,7 +126,8 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 ### Installation for Unity
 [Click here to view instructions](documents/tutorial%20materials/Instruction%20for%20Unity.pdf)
 
-[Video with Unity Instruction](https://github.com/user-attachments/assets/5b51856d-932d-4d32-9733-a07da1e3140d)
+<b>Video with Unity Instruction</b> Click on the image
+[<img align="center" src= "media/technology/UnityInstall-PizzaHeist.PNG" width="" height="">](https://youtu.be/MSXw6c6GuhQ)
 
 ### Aesprite Tutorial
 [Video For Aesprite Tutorial](https://github.com/user-attachments/assets/2234447b-1d55-49bb-b98b-bd13512f1dd5)
