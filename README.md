@@ -41,7 +41,7 @@ You can select from a range of audiences or a single auidience. Examples:
 
 [Commercial Video](https://github.com/user-attachments/assets/eceaebc8-4b74-4d95-939e-ff34d4e34a59)
 
-[<img align="center" src= "Media/technology/TrailerPizzaHeist.PNG" width="400" height="200">](https://youtu.be/_pExIUQkeek)
+[<img align="center" src= "media/technology/TrailerPizzaHeist.PNG" width="500" height="">](https://youtu.be/t6F2AzUeuyw)
 
 
 
