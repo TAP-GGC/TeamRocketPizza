@@ -41,9 +41,7 @@ You can select from a range of audiences or a single auidience. Examples:
 
 [Commercial Video](https://github.com/user-attachments/assets/eceaebc8-4b74-4d95-939e-ff34d4e34a59)
 
-[Commercial Video](https://youtu.be/t6F2AzUeuyw)
-
-
+[<img align="center" src= "Media/technology/TrailerPizzaHeist.PNG" width="400" height="200">](https://youtu.be/_pExIUQkeek)
 
 
 
@@ -53,7 +51,7 @@ You can select from a range of audiences or a single auidience. Examples:
 
 ## :pencil2: Team: Rocket Pizza
 
-<!-- Use the team photo of your choice once youve uploaded it to the team photo folder within the media folder -->
+<!-- Use the team photo of your choice once you have uploaded it to the team photo folder within the media folder -->
 <img align="center" alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="500">
 
 > (From left to right: Nikki Thao, Brian Ramos, Daniel To.)
