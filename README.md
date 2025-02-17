@@ -130,7 +130,8 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 [<img align="center" src= "media/technology/UnityInstall-PizzaHeist.PNG" width="" height="">](https://youtu.be/MSXw6c6GuhQ)
 
 ### Aesprite Tutorial
-[Video For Aesprite Tutorial](https://github.com/user-attachments/assets/2234447b-1d55-49bb-b98b-bd13512f1dd5)
+<b>Video For Aesprite Tutorial</b> Click on the image
+[<img align="center" src= "media/technology/Aesprite-PizzaHeist.PNG" width="" height="">](https://youtu.be/9e8ZUquH_-0)
 
 
 <!-- if your project uses scratch, you can reuse any of these instructions (be sure to include CS First alternatives)
