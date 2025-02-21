@@ -156,7 +156,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 [<img align="center" src= "media/technology/Demo-PizzaHeist.PNG" width="" height="">](https://youtu.be/QgSUc8iSpE0)
 
 ## Workshop Instructions 
-Workshop slides: [PDF](documents/workshop%20materials/PizzaHeist_Workshop_Slides.pdf), [PPTX](documents/workshop%20materials/PizzaHeist_Workshop_Slides.pptx)
+Workshop slides: [PDF](documents/workshop%20materials/PizzaHeistWorkshopSlides.pdf), [PPTX](documents/workshop%20materials/PizzaHeistWorkshopSlides.pptx)
 
 Workshop Slides Instructions: [PDF](documents/workshop%20materials/WorkshopSlidesInstruction.pdf)
 
