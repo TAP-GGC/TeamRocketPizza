@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class ChatRoom : MonoBehaviour
 {
+    //References to UI components
     public Button startChatButton;
     public Image chatImage;
     public Image bossIcon;
     private Text messageText;
     private Text clickToContinue;
+
     private TextWriter.TextWriterSingle textWriterSingle;
     private int currentMessageIndex = 0;
     public float delay = 30f;
@@ -21,6 +23,7 @@ public class ChatRoom : MonoBehaviour
     messageText = transform.Find("message").Find("bossMessage").GetComponent<Text>();
     clickToContinue = transform.Find("message2").Find("clickToContinue").GetComponent<Text>();
     
+        //Array of messages to be displayed
         messageArray = new string[] {
             "Welcome new recruit.",
             "Welcome new recruit.",
@@ -33,36 +36,40 @@ public class ChatRoom : MonoBehaviour
             
         };
         
-        startChatButton.onClick.AddListener(OnStartChatClicked);
+        startChatButton.onClick.AddListener(OnStartChatClicked); //Event listener to start chat when clicked
+
+        //Initially hides UI components
         messageText.gameObject.SetActive(false);
         chatImage.gameObject.SetActive(false);
         bossIcon.gameObject.SetActive(false);
         clickToContinue.gameObject.SetActive(false);
-        
-        
     }
+
     private void OnStartChatClicked() {
-        startChatButton.gameObject.SetActive(false);
+        startChatButton.gameObject.SetActive(false); //Hides start button when the chat starts
         
-        chatImage.gameObject.SetActive(true);
+        chatImage.gameObject.SetActive(true); //Shows chat UI and begins coroutine
         StartCoroutine(DelayedChatStart());
     }
 
     private IEnumerator DelayedChatStart() {
         yield return new WaitForSeconds(1f);
 
+        //Shows message text box and boss icon
         messageText.gameObject.SetActive(true);
         bossIcon.gameObject.SetActive(true);
 
         ShowNextMessage();
 
+        //Checks if there are more messages to print and repeats the process until there are no more
         if (currentMessageIndex < messageArray.Length) {
             string initialMessage = messageArray[currentMessageIndex];
             currentMessageIndex++;
-            textWriterSingle = TextWriter.AddWriter_Static(messageText, initialMessage, .05f, true, true);
-            StartCoroutine(ShowClickToContinueAfterTextIsFinished());
+            textWriterSingle = TextWriter.AddWriter_Static(messageText, initialMessage, .05f, true, true); //Text writer
+            StartCoroutine(ShowClickToContinueAfterTextIsFinished()); 
         }
 
+        //Functionality to continue the chat when the user clicks on the message box
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
             if (textWriterSingle != null && textWriterSingle.IsActive()) {
                 textWriterSingle.WriteAllAndDestroy();
@@ -78,6 +85,7 @@ public class ChatRoom : MonoBehaviour
         };
     }
 
+    //Prints each message in the array
     private void ShowNextMessage() {
     if (currentMessageIndex < messageArray.Length) {
         string message = messageArray[currentMessageIndex];
@@ -87,6 +95,7 @@ public class ChatRoom : MonoBehaviour
     }
 }
 
+    //Shows "Click To Continue" message after a set amount of time after the current line of text is finished printing
     private IEnumerator ShowClickToContinueAfterTextIsFinished() {
         while (textWriterSingle != null && textWriterSingle.IsActive()) {
             yield return null;
@@ -98,6 +107,7 @@ public class ChatRoom : MonoBehaviour
     }
     }
 
+    //Hides "Click To Continue" message
     private void HideClickToContinue() {
         clickToContinue.gameObject.SetActive(false);
     }

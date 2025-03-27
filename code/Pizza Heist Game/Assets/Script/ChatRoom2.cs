@@ -18,6 +18,7 @@ public class ChatRoom2 : MonoBehaviour
     clickToContinue = transform.Find("message2").Find("clickToContinue").GetComponent<Text>();
     clickToContinue.gameObject.SetActive(false);
 
+    //Array of messages to be displayed
     messageArray = new string[] {
         "Oh shoot! Rookie, I have bad news.",
         "I clicked on a phishing link and now the shop is compromised.",
@@ -32,6 +33,7 @@ public class ChatRoom2 : MonoBehaviour
         "Click on the 'Anti-Virus' folder. Hurry!"
     };
 
+        //Functionality to continue the chat when the user clicks on the message box
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
             if (textWriterSingle != null && textWriterSingle.IsActive()) {
                 textWriterSingle.WriteAllAndDestroy();
@@ -45,6 +47,7 @@ public class ChatRoom2 : MonoBehaviour
             ShowNextMessage();
     }
 
+    //Prints each message in the array
     private void ShowNextMessage() {
         if (currentMessageIndex < messageArray.Length) {
         HideClickToContinue();
@@ -55,6 +58,7 @@ public class ChatRoom2 : MonoBehaviour
         }
     }
 
+    //Shows "Click To Continue" message after a set amount of time after the current line of text is finished printing
     private IEnumerator ShowClickToContinueAfterTextIsFinished() {
         while (textWriterSingle != null && textWriterSingle.IsActive()) {
             yield return null;
@@ -68,6 +72,7 @@ public class ChatRoom2 : MonoBehaviour
         }
     }
 
+    //Hides "Click To Continue" message
     private void HideClickToContinue() {
         clickToContinue.gameObject.SetActive(false);
     }

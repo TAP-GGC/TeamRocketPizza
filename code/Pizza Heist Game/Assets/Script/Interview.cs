@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Interview : MonoBehaviour
 {
-    //public Button NextCutsceneButton;
     private Text messageText;
     private TextWriter.TextWriterSingle textWriterSingle;
     private string[] messageArray;
@@ -15,6 +14,8 @@ public class Interview : MonoBehaviour
 
     private void Awake() {
     messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
+    
+    //Array of messages to be displayed
     messageArray = new string[] {
         "Welcome.",
         "I have a job for you.",
@@ -26,8 +27,7 @@ public class Interview : MonoBehaviour
         "I hope this will be enough compensation."
     };
 
-    //NextCutsceneButton.gameObject.SetActive(false);
-
+        //Checks if there are more messages to print and repeats the process until there are no more
         transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
             if (textWriterSingle != null && textWriterSingle.IsActive()) {
                 textWriterSingle.WriteAllAndDestroy();
@@ -47,15 +47,13 @@ public class Interview : MonoBehaviour
             currentMessageIndex++;
             textWriterSingle = TextWriter.AddWriter_Static(messageText, message, .05f, true, true);
         }
-        // } else {
-        //     NextCutsceneButton.gameObject.SetActive(true);
-        // }
     }
 
     private void Update(){
         StartCoroutine(waitAnimation());
     }
 
+    //Functionality for animation
     private IEnumerator waitAnimation(){
         if(currentMessageIndex == messageArray.Length-1){
             yield return new WaitForSeconds(2f);

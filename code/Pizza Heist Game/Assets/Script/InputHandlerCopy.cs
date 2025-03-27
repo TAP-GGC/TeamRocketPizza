@@ -69,15 +69,18 @@ public class InputHandlerCopy : MonoBehaviour
 
         if (login) 
         {
+            //Hides login UI and shows accessBar
             inputField.gameObject.SetActive(false);
             userName.gameObject.SetActive(false);
             accessBar.gameObject.SetActive(true);
-            StartCoroutine(HandleAccessGranted());
+            StartCoroutine(HandleAccessGranted()); //Begins HandleAccessGranted coroutine
         }
     }
 
         private IEnumerator HandleAccessGranted() {
         yield return new WaitForSeconds(0.5f);
+
+        //Scrambles up "Access Granted" and decodes it on screen
         string correctMessage = "Access Granted";
         string jumbledMessage = ShuffleString(correctMessage);
         accessGranted.text = jumbledMessage; 
@@ -92,6 +95,7 @@ public class InputHandlerCopy : MonoBehaviour
             accessGranted.text = jumbledMessage; 
         }
 
+        //Decorative text
         yield return new WaitForSeconds(0.2f);
         resultText.text = "Logging in.";
         yield return new WaitForSeconds(0.2f);
@@ -109,6 +113,7 @@ public class InputHandlerCopy : MonoBehaviour
         NavigateToDesktop();
     }
 
+    //Function used to shuffle text
     private string ShuffleString(string input)
     {
         char[] characters = input.ToCharArray();
@@ -123,6 +128,7 @@ public class InputHandlerCopy : MonoBehaviour
         return new string(characters);
     }
 
+    //Navigation function
     public void NavigateToDesktop() {
         transitionLoad.LoadNextLevel("Desktop");
     }

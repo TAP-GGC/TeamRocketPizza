@@ -1,3 +1,5 @@
+//This file is not used in the game, please reference InputHandlerCopy.cs
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,8 +59,7 @@ public class InputHandler : MonoBehaviour
             return;
         }
 
-        // If all checks pass
-        //resultText.text = "Account Created.";
+        // If all checks pass, transition to next scene
         login = true;
 
         if (login) 

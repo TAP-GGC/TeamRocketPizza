@@ -1,3 +1,5 @@
+//This file just prints decorative text on the Desktop UI
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +20,7 @@ public class MainJava : MonoBehaviour
     private IEnumerator DelayTextDisplay() {
         yield return new WaitForSeconds(1f);
 
+        //Message to be displayed
         string codeBlock = 
         "public class AuthorizedAccess {\n" +
         "\n" +
@@ -43,6 +46,6 @@ public class MainJava : MonoBehaviour
         "        authorizedAccess();\n" +
         "    }\n" +
         "}";
-        TextWriter.AddWriter_Static(messageText, codeBlock, 0.01f, true, false);
+        TextWriter.AddWriter_Static(messageText, codeBlock, 0.01f, true, false); //Prints out the text
     }
 }

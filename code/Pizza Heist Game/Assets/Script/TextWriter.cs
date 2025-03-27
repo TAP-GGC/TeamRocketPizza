@@ -42,7 +42,6 @@ public class TextWriter : MonoBehaviour
     }
 
     private void Update() {
-        //Debug.Log(textWriterSingleList.Count);
         for (int i = 0; i <textWriterSingleList.Count; i++) {
             bool destroyInstance = textWriterSingleList[i].Update();
             if (destroyInstance) {
@@ -51,10 +50,8 @@ public class TextWriter : MonoBehaviour
             }
         }
     }
-
     
     //Represents a single TextWriter instance
-
     public class TextWriterSingle {
 
             private Text uiText;

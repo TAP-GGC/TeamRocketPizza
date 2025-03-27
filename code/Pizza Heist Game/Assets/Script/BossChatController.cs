@@ -20,6 +20,7 @@ public class BossChatController : MonoBehaviour
     messageText = transform.Find("message").Find("bossMessage").GetComponent<Text>();
     clickToContinue = transform.Find("message2").Find("clickToContinue").GetComponent<Text>();
 
+        //Array of messages to be displayed
         messageArray = new string[] {
             "Welcome new recruit.",
             "Congratulations on logging onto your desktop for the first time.",
@@ -31,7 +32,6 @@ public class BossChatController : MonoBehaviour
             "Click the anti-virus folder to begin your first task."
         };
 
-        //startChatButton.onClick.AddListener(OnStartChatClicked);
         messageText.gameObject.SetActive(false);
         chatImage.gameObject.SetActive(false);
         bossIcon.gameObject.SetActive(false);
@@ -43,7 +43,6 @@ public class BossChatController : MonoBehaviour
     }
 
     public void OnStartChatClicked() {
-        //startChatButton.gameObject.SetActive(false);
         chatImage.gameObject.SetActive(true);
         StartCoroutine(DelayedChatStart());
     }
@@ -78,38 +77,6 @@ public class BossChatController : MonoBehaviour
         };
     }
 
-    // private void OnStartChatClicked() {
-
-    //     startChatButton.gameObject.SetActive(false);
-
-    //     messageText.gameObject.SetActive(true);
-    //     chatImage.gameObject.SetActive(true);
-    //     bossIcon.gameObject.SetActive(true);
-
-    //     ShowNextMessage();
-
-    //     if (currentMessageIndex < messageArray.Length) {
-    //         string initialMessage = messageArray[currentMessageIndex];
-    //         currentMessageIndex++;
-    //         textWriterSingle = TextWriter.AddWriter_Static(messageText, initialMessage, .05f, true, true);
-    //         StartCoroutine(ShowClickToContinueAfterTextIsFinished());
-    //     }
-
-    //     transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
-    //         if (textWriterSingle != null && textWriterSingle.IsActive()) {
-    //             textWriterSingle.WriteAllAndDestroy();
-    //         } else {
-    //             if (currentMessageIndex < messageArray.Length) {
-    //                 HideClickToContinue();
-    //                 string message = messageArray[currentMessageIndex];
-    //                 currentMessageIndex++;
-    //                 textWriterSingle = TextWriter.AddWriter_Static(messageText, message, .05f, true, true);
-    //                 StartCoroutine(ShowClickToContinueAfterTextIsFinished());
-    //             }
-    //         }
-    //     };
-    // }
-
     private void ShowNextMessage() {
     if (currentMessageIndex < messageArray.Length) {
         string message = messageArray[currentMessageIndex];
@@ -119,6 +86,7 @@ public class BossChatController : MonoBehaviour
     }
 }
 
+    //Shows "Click To Continue" message after a set amount of time after the current line of text is finished printing
     private IEnumerator ShowClickToContinueAfterTextIsFinished() {
         // Wait until the text finishes writing
         while (textWriterSingle != null && textWriterSingle.IsActive()) {
