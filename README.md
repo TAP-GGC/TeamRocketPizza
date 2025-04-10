@@ -35,7 +35,7 @@ You can select from a range of audiences or a single auidience. Examples:
 * <b>Duration of Workshop:</b> 1 hour
 * <b>Needed Materials:</b> Computer or laptop with a keyboard and mouse/trackpad
 * <b>Learning Outcomes:</b> To teach participants about the importance of internet safety through the implementation of a fun and entertaining environment using Unity
-* <b>Your Main Technology</b> Unity, a cross-platform game engine
+* <b>Main Technology</b> Unity, a cross-platform game engine
 * [Technology Ambassador Program](https://tapggc.org/) <b>(TAP)</b> is a project-based class that provides a collaborative environment for students to work with their fellow classmates on a semester-long project using technologies of their choice. TAP strives to increase participation in IT through numerous outreach activities and workshops that are designed to showcase the creative and fun side of technology.
 <!-- Commercial Video stored in the Media folder will be linked here -->
 
@@ -77,8 +77,6 @@ Colleges: Southeastern Region (CCSC:SE), November 1-2, 2024, Greenville, SC.
 2. <b>CREATE Symposium Poster </b> - Brian Ramos-Cazares, Niiki Thao, Daniel To. CREATE Symposium Poster, Nov. 21, 2019, Georgia Gwinnett College.
 
 ## :open_hands: Outreach
-<i>List the outreach events we have participated in. </i>
-
 1. <b>TAP Expo</b>, October 8, 2024, Georgia Gwinnett College: to promote the IT field and encourage college students to sign up for TAP.
 2. <b>Class Workshops</b>, October 22-24, 2024, Georgia Gwinnett College: to promote the IT field to non-IT students.
 3. <b>CCSC Conference</b>, November 1-2, 2024, Furman University: to help teach tips and tricks for developing successful technology projects for introduction to programming and outreach.
@@ -121,7 +119,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 * We also sought the challenge of using a full-featured game engine to gain hands-on experience with its functionality, enabling us to build a comprehensive game with a custom graphical user interface.
 -->
 
-## Project Setup
+## :pizza: Project Setup
 
 ### Installation for Unity
 [Click here to view instructions](documents/tutorial%20materials/Instruction%20for%20Unity.pdf)
@@ -141,7 +139,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 ### Getting to the game 
 [Click here to view instructions](/Documents/tutorial/Getting%20to%20the%20Game.md) -->
 
-## Usage
+## :video_game: Usage
 
 #### Desktop and Phishing Game Controls
 1. Click LEFT mouse button to interact in the game.
@@ -151,11 +149,11 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 3. Click Right mouse button to Sell Towers.
 
 
-## Short Demo Instructions 
+## :video_camera: Short Demo Instructions 
 <b>Our Game Demo Video</b> Click on the image
 [<img align="center" src= "media/technology/Demo-PizzaHeist.PNG" width="" height="">](https://youtu.be/QgSUc8iSpE0)
 
-## Workshop Instructions 
+## :briefcase: Workshop Instructions 
 Workshop slides: [PDF](documents/workshop%20materials/PizzaHeist%20Workshop.pdf), [PPTX](documents/workshop%20materials/PizzaHeist%20Workshop.pptx)
 
 Workshop Slides Instructions: [PDF](documents/workshop%20materials/WorkshopSlidesInstruction.pdf)
