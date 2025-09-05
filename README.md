@@ -40,7 +40,7 @@ You can select from a range of audiences or a single auidience. Examples:
 <!-- Commercial Video stored in the Media folder will be linked here -->
 
 <b>Commercial Video</b> Click on the image
-[<img align="center" src= "media/technology/TrailerPizzaHeist.PNG" width="" height="">](https://youtu.be/t6F2AzUeuyw)
+[<img align="center" src= "media/technology/TrailerPizzaHeist.PNG" width="400" height="">](https://youtu.be/t6F2AzUeuyw)
 
 
 
@@ -49,7 +49,7 @@ You can select from a range of audiences or a single auidience. Examples:
 ## :pencil2: Team: Rocket Pizza
 
 <!-- Use the team photo of your choice once you have uploaded it to the team photo folder within the media folder -->
-<img align="center" alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="" height="500">
+<img align="center" alt="pizza heist team photo" src = "media/team photos/PizzaHeistTeam.jpeg" width="400" height="500">
 
 > (From left to right: Nikki Thao, Brian Ramos, Daniel To.)
 <!-- replace with full names of your team members -->
@@ -90,7 +90,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 <!-- be sure to use the alt text feature in case anybody viewing your repo is using  screen reader! you want your workshop to be as accessible as possible -->
 <p align="center">
-  <img alt="unity logo" src = "media/technology/UnityLogoDark.png" width="500" height=""/>
+  <img alt="unity logo" src = "media/technology/UnityLogoDark.png" width="200" height=""/>
 </p>
 
 * [Unity](https://unity.com/) is a versatile cross-platform game engine that allows users to develop and create interactive experiences and games in both 2D and 3D environments.
@@ -98,7 +98,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 <p align="center"><i>An image of the unity game engine and its different feature.</i></p>
 <p align="center">
   
-  <img alt="unityGameEngine" src = "media/technology/UnityEngine.png" width="350" height=""/>
+  <img alt="unityGameEngine" src = "media/technology/UnityEngine.png" width="200" height=""/>
   
 </p>
 
@@ -106,7 +106,7 @@ If you're interested in more workshops that utilize Unity, check out [SliceIT!](
 
 <p align="center">
 
-  <img alt="unity logo" src = "media/technology/CodeImg.png" width="300" height=""/>
+  <img alt="unity logo" src = "media/technology/CodeImg.png" width="200" height=""/>
 </p>
 
 
